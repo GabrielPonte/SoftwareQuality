@@ -1,0 +1,66 @@
+{
+  "fields": [
+    {
+      "fieldName": "Nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "CPF",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Idade",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "QtdSintomas",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Vacinas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "Cidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Estado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Endereco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Complemento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "CEP",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "NomePosto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "Data",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "Hora",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Agendamento",
+  "entityType": "domain",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "changelogDate": "20210401000001",
+  "skipFakeData": true,
+  "relationships": []
+}
