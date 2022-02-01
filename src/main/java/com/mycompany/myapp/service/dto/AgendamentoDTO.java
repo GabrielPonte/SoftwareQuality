@@ -35,7 +35,7 @@ public class AgendamentoDTO implements Serializable {
 
     private LocalDate data;
 
-    private LocalDate hora;
+    private String hora;
 
     public Long getId() {
         return id;
@@ -141,11 +141,11 @@ public class AgendamentoDTO implements Serializable {
         this.data = data;
     }
 
-    public LocalDate getHora() {
+    public String getHora() {
         return hora;
     }
 
-    public void setHora(LocalDate hora) {
+    public void setHora(String hora) {
         this.hora = hora;
     }
 

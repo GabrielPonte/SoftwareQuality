@@ -12,7 +12,7 @@ export interface IAgendamento {
   CEP?: string | null;
   nomePosto?: string | null;
   data?: Date | null;
-  hora?: Date | null;
+  hora?: string | null;
 }
 
 export class Agendamento implements IAgendamento {
@@ -30,6 +30,6 @@ export class Agendamento implements IAgendamento {
     public CEP?: string | null,
     public nomePosto?: string | null,
     public data?: Date | null,
-    public hora?: Date | null
+    public hora?: string | null
   ) {}
 }

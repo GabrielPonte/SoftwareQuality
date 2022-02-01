@@ -50,7 +50,7 @@
     },
     {
       "fieldName": "hora",
-      "fieldType": "LocalDate"
+      "fieldType": "String"
     }
   ],
   "relationships": [],

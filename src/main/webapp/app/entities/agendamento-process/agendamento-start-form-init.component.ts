@@ -11,7 +11,6 @@ const validations: any = {
   agendamentoProcess: {
     agendamento: {
       nomeCompleto: {},
-      CPF: {},
       idade: {},
       qtdVacinas: {},
       sintomas: {},

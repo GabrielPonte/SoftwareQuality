@@ -58,7 +58,7 @@ public class Agendamento implements Serializable {
     private LocalDate data;
 
     @Column(name = "hora")
-    private LocalDate hora;
+    private String hora;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -230,16 +230,16 @@ public class Agendamento implements Serializable {
         this.data = data;
     }
 
-    public LocalDate getHora() {
+    public String getHora() {
         return this.hora;
     }
 
-    public Agendamento hora(LocalDate hora) {
+    public Agendamento hora(String hora) {
         this.hora = hora;
         return this;
     }
 
-    public void setHora(LocalDate hora) {
+    public void setHora(String hora) {
         this.hora = hora;
     }
 
