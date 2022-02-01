@@ -1,0 +1,28 @@
+{
+  "jhipsterApp": {
+    "agendamento": {
+      "home": {
+        "title": "Agendamentos",
+        "refreshListLabel": "Refresh list",
+        "notFound": "No Agendamentos found"
+      },
+      "detail": {
+        "title": "Agendamento"
+      },
+      "id": "ID",
+      "nomeCompleto": "Nome Completo",
+      "CPF": "CPF",
+      "idade": "Idade",
+      "sintomas": "Sintomas",
+      "qtdVacinas": "Qtd Vacinas",
+      "cidade": "Cidade",
+      "estado": "Estado",
+      "endereco": "Endereco",
+      "complemento": "Complemento",
+      "CEP": "CEP",
+      "nomePosto": "Nome Posto",
+      "data": "Data",
+      "hora": "Hora"
+    }
+  }
+}

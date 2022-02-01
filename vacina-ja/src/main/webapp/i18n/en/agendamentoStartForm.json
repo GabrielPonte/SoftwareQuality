@@ -1,0 +1,28 @@
+{
+  "jhipsterApp": {
+    "agendamentoStartForm": {
+      "home": {
+        "title": "Agendamento Start Forms",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Agendamento Start Form",
+        "createOrEditLabel": "Create or edit a Agendamento Start Form",
+        "notFound": "No Agendamento Start Forms found"
+      },
+      "created": "A new Agendamento Start Form is created with identifier {{ param }}",
+      "updated": "A Agendamento Start Form is updated with identifier {{ param }}",
+      "deleted": "A Agendamento Start Form is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Agendamento Start Form {{ id }}?"
+      },
+      "detail": {
+        "title": "Agendamento Start Form"
+      },
+      "id": "ID",
+      "nomeCompleto": "Nome Completo",
+      "CPF": "CPF",
+      "idade": "Idade",
+      "qtdVacinas": "Qtd Vacinas",
+      "sintomas": "Sintomas"
+    }
+  }
+}

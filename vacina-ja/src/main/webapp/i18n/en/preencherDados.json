@@ -1,0 +1,31 @@
+{
+  "jhipsterApp": {
+    "preencherDados": {
+      "home": {
+        "title": "Preencher Dados",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Preencher Dados",
+        "createOrEditLabel": "Create or edit a Preencher Dados",
+        "notFound": "No Preencher Dados found"
+      },
+      "created": "A new Preencher Dados is created with identifier {{ param }}",
+      "updated": "A Preencher Dados is updated with identifier {{ param }}",
+      "deleted": "A Preencher Dados is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Preencher Dados {{ id }}?"
+      },
+      "detail": {
+        "title": "Preencher Dados"
+      },
+      "id": "ID",
+      "nomeCompleto": "Nome Completo",
+      "idade": "Idade",
+      "CPF": "CPF",
+      "CEP": "CEP",
+      "endereco": "Endereco",
+      "complemento": "Complemento",
+      "qtdVacinas": "Qtd Vacinas",
+      "sintomas": "Sintomas"
+    }
+  }
+}
