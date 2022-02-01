@@ -1,0 +1,50 @@
+{
+  "fields": [
+    {
+      "fieldName": "nomeCompleto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idade",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "CPF",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "CEP",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "endereco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "complemento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "qtdVacinas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "sintomas",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "AgendamentoProcess",
+  "processEntityName": "AgendamentoProcess",
+  "taskBpmnId": "taskPreencherDados",
+  "domainEntityName": "Agendamento",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "skipFakeData": true,
+  "name": "PreencherDados",
+  "changelogDate": "20210401000005"
+}

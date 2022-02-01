@@ -1,0 +1,26 @@
+{
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "hora",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "AgendamentoProcess",
+  "processEntityName": "AgendamentoProcess",
+  "taskBpmnId": "taskAgendar",
+  "domainEntityName": "Agendamento",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "skipFakeData": true,
+  "name": "AgendarTesteCovid",
+  "changelogDate": "20210401000004"
+}

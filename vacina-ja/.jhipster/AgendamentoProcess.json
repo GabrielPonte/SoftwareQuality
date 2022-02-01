@@ -1,0 +1,68 @@
+{
+  "fields": [
+    {
+      "fieldName": "nomeCompleto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "CPF",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idade",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "sintomas",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "qtdVacinas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "endereco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "complemento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "CEP",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomePosto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "data",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "hora",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [],
+  "entityType": "process-binding",
+  "processBpmnId": "AgendamentoProcess",
+  "domainEntityName": "Agendamento",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "AgendamentoProcess",
+  "changelogDate": "20210401000002",
+  "skipFakeData": true
+}
