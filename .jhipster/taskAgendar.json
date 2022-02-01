@@ -1,0 +1,26 @@
+{
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "hora",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "InformacoesProcess",
+  "processEntityName": "InformacoesProcess",
+  "taskBpmnId": "taskAgendar",
+  "domainEntityName": "Informacoes",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "skipFakeData": true,
+  "name": "taskAgendar",
+  "changelogDate": "20210401000004"
+}

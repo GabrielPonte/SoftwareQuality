@@ -1,0 +1,40 @@
+{
+  "softwareQualityApp": {
+    "informacoesProcess": {
+      "home": {
+        "title": "Informacoes Processes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Informacoes Process",
+        "createOrEditLabel": "Create or edit a Informacoes Process",
+        "notFound": "No Informacoes Processes found"
+      },
+      "created": "A new Informacoes Process is created with identifier {{ param }}",
+      "updated": "A Informacoes Process is updated with identifier {{ param }}",
+      "deleted": "A Informacoes Process is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Informacoes Process {{ id }}?"
+      },
+      "detail": {
+        "title": "Informacoes Process"
+      },
+      "id": "ID",
+      "name": "Name",
+      "nomeCompleto": "Nome Completo",
+      "CPF": "CPF",
+      "email": "Email",
+      "idade": "Idade",
+      "sintomas": "Sintomas",
+      "qtdVacinas": "Qtd Vacinas",
+      "cidade": "Cidade",
+      "estado": "Estado",
+      "endereco": "Endereco",
+      "complemento": "Complemento",
+      "CEP": "CEP",
+      "nomePosto": "Nome Posto",
+      "data": "Data",
+      "hora": "Hora",
+      "tipoDeInformacao": "Tipo De Informacao",
+      "local": "Local"
+    }
+  }
+}

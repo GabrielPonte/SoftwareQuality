@@ -1,0 +1,33 @@
+{
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomeCompleto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idade",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [],
+  "entityType": "start-form",
+  "processBpmnId": "InformacoesProcess",
+  "processEntityName": "InformacoesProcess",
+  "domainEntityName": "Informacoes",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "InformacoesStartForm",
+  "changelogDate": "20210401000002",
+  "skipFakeData": true
+}

@@ -14,7 +14,7 @@
       }
     ],
     "applicationType": "monolith",
-    "baseName": "jhipster",
+    "baseName": "SoftwareQuality",
     "jhipsterVersion": "7.0.1",
     "skipClient": false,
     "skipServer": false,
@@ -26,7 +26,7 @@
     "dtoSuffix": "DTO",
     "testFrameworks": [],
     "pages": [],
-    "creationTimestamp": 1643734751956,
+    "creationTimestamp": 1643756767753,
     "serviceDiscoveryType": false,
     "reactive": false,
     "authenticationType": "jwt",
@@ -49,10 +49,10 @@
     "enableTranslation": true,
     "nativeLanguage": "en",
     "packageFolder": "com/mycompany/myapp",
-    "jwtSecretKey": "ZTFhM2RkMGNhYTAzMDk0ZWFhMDZkMTVlNDZkNzkzNjIwMzU0NjgxZDBjMDJkNWVlZTM0NGIzZTkzNjcwOWZjMDcxZjgwYTI2MTQ5NmU1OWFmNzJkMWQyZGRlMmQxOTI4Zjk4NjM1MTdiY2UyMTU4MWFmODhiZGFkNDYxYjI0ODI=",
+    "jwtSecretKey": "OGRhNDNiZmRjMzE3OWQ3YjA0ZDBhMTkxYTZmZTdmOTc5MTQ3YzFjZTRlMTc5OWY0ODlhZGRjMzlmZDVlZjA4ZWVjMThmYWYzMWUxNmZiMDMyMzU1YzhjNTgyMzI0NzRmNjM3ZTFiYzNlMGM5MGYyZTU0YWE4NTJhNTI4MmRhNDk=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
     "languages": ["en"],
-    "entities": ["Agendamento"]
+    "entities": ["Informacoes"]
   }
 }

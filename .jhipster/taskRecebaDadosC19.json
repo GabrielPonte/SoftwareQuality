@@ -1,0 +1,26 @@
+{
+  "fields": [
+    {
+      "fieldName": "tipoDeInformacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "local",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "InformacoesProcess",
+  "processEntityName": "InformacoesProcess",
+  "taskBpmnId": "taskRecebaDadosC19",
+  "domainEntityName": "Informacoes",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "skipFakeData": true,
+  "name": "taskRecebaDadosC19",
+  "changelogDate": "20210401000006"
+}

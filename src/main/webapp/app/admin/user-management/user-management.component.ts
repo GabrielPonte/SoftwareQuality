@@ -94,8 +94,8 @@ export default class JhiUserManagementComponent extends Vue {
     this.userManagementService()
       .remove(this.removeId)
       .then(res => {
-        const message = this.$t(res.headers['x-jhipsterapp-alert'], {
-          param: decodeURIComponent(res.headers['x-jhipsterapp-params'].replace(/\+/g, ' ')),
+        const message = this.$t(res.headers['x-softwarequalityapp-alert'], {
+          param: decodeURIComponent(res.headers['x-softwarequalityapp-params'].replace(/\+/g, ' ')),
         });
         this.$bvToast.toast(message.toString(), {
           toaster: 'b-toaster-top-center',

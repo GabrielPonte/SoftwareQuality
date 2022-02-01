@@ -1,0 +1,32 @@
+{
+  "softwareQualityApp": {
+    "taskPreencherDados": {
+      "home": {
+        "title": "Task Preencher Dados",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Preencher Dados",
+        "createOrEditLabel": "Create or edit a Task Preencher Dados",
+        "notFound": "No Task Preencher Dados found"
+      },
+      "created": "A new Task Preencher Dados is created with identifier {{ param }}",
+      "updated": "A Task Preencher Dados is updated with identifier {{ param }}",
+      "deleted": "A Task Preencher Dados is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Preencher Dados {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Preencher Dados"
+      },
+      "id": "ID",
+      "nomeCompleto": "Nome Completo",
+      "email": "Email",
+      "idade": "Idade",
+      "CPF": "CPF",
+      "CEP": "CEP",
+      "endereco": "Endereco",
+      "complemento": "Complemento",
+      "qtdVacinas": "Qtd Vacinas",
+      "sintomas": "Sintomas"
+    }
+  }
+}

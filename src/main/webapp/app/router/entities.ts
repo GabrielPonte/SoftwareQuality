@@ -3,94 +3,110 @@ import { Authority } from '@/shared/security/authority';
 // prettier-ignore
 
 // prettier-ignore
-const Agendamento = () => import('@/entities/agendamento/agendamento.vue');
+const Informacoes = () => import('@/entities/informacoes/informacoes.vue');
 // prettier-ignore
-const AgendamentoDetails = () => import('@/entities/agendamento/agendamento-details.vue');
+const InformacoesDetails = () => import('@/entities/informacoes/informacoes-details.vue');
 // prettier-ignore
-const AgendamentoProcessDetails = () => import('@/entities/agendamento-process/agendamento-process-details.vue');
+const InformacoesProcessDetails = () => import('@/entities/informacoes-process/informacoes-process-details.vue');
 // prettier-ignore
-const AgendamentoProcessList = () => import('@/entities/agendamento-process/agendamento-process-list.vue');
+const InformacoesProcessList = () => import('@/entities/informacoes-process/informacoes-process-list.vue');
 // prettier-ignore
-const AgendamentoStartFormInit = () => import('@/entities/agendamento-process/agendamento-start-form-init.vue');
+const InformacoesStartFormInit = () => import('@/entities/informacoes-process/informacoes-start-form-init.vue');
 // prettier-ignore
-const AgendamentoProcess_AgendarTesteCovidDetails = () => import('@/entities/agendamento-process/agendar-teste-covid/agendar-teste-covid-details.vue');
+const InformacoesProcess_TaskAgendarDetails = () => import('@/entities/informacoes-process/task-agendar/task-agendar-details.vue');
 // prettier-ignore
-const AgendamentoProcess_AgendarTesteCovidExecute = () => import('@/entities/agendamento-process/agendar-teste-covid/agendar-teste-covid-execute.vue');
+const InformacoesProcess_TaskAgendarExecute = () => import('@/entities/informacoes-process/task-agendar/task-agendar-execute.vue');
 // prettier-ignore
-const AgendamentoProcess_BuscarPostoSaudeDetails = () => import('@/entities/agendamento-process/buscar-posto-saude/buscar-posto-saude-details.vue');
+const InformacoesProcess_TaskBuscaPostoDetails = () => import('@/entities/informacoes-process/task-busca-posto/task-busca-posto-details.vue');
 // prettier-ignore
-const AgendamentoProcess_BuscarPostoSaudeExecute = () => import('@/entities/agendamento-process/buscar-posto-saude/buscar-posto-saude-execute.vue');
+const InformacoesProcess_TaskBuscaPostoExecute = () => import('@/entities/informacoes-process/task-busca-posto/task-busca-posto-execute.vue');
 // prettier-ignore
-const AgendamentoProcess_PreencherDadosDetails = () => import('@/entities/agendamento-process/preencher-dados/preencher-dados-details.vue');
+const InformacoesProcess_TaskPreencherDadosDetails = () => import('@/entities/informacoes-process/task-preencher-dados/task-preencher-dados-details.vue');
 // prettier-ignore
-const AgendamentoProcess_PreencherDadosExecute = () => import('@/entities/agendamento-process/preencher-dados/preencher-dados-execute.vue');
+const InformacoesProcess_TaskPreencherDadosExecute = () => import('@/entities/informacoes-process/task-preencher-dados/task-preencher-dados-execute.vue');
+// prettier-ignore
+const InformacoesProcess_TaskRecebaDadosC19Details = () => import('@/entities/informacoes-process/task-receba-dados-c-19/task-receba-dados-c-19-details.vue');
+// prettier-ignore
+const InformacoesProcess_TaskRecebaDadosC19Execute = () => import('@/entities/informacoes-process/task-receba-dados-c-19/task-receba-dados-c-19-execute.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 export default [
   {
-    path: '/agendamento',
-    name: 'Agendamento',
-    component: Agendamento,
+    path: '/informacoes',
+    name: 'Informacoes',
+    component: Informacoes,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/agendamento/:agendamentoId/view',
-    name: 'AgendamentoView',
-    component: AgendamentoDetails,
+    path: '/informacoes/:informacoesId/view',
+    name: 'InformacoesView',
+    component: InformacoesDetails,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/instance/:processInstanceId/view',
-    name: 'AgendamentoProcessView',
-    component: AgendamentoProcessDetails,
+    path: '/process-definition/InformacoesProcess/instance/:processInstanceId/view',
+    name: 'InformacoesProcessView',
+    component: InformacoesProcessDetails,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/instances',
-    name: 'AgendamentoProcessList',
-    component: AgendamentoProcessList,
+    path: '/process-definition/InformacoesProcess/instances',
+    name: 'InformacoesProcessList',
+    component: InformacoesProcessList,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/init',
-    name: 'AgendamentoStartFormInit',
-    component: AgendamentoStartFormInit,
+    path: '/process-definition/InformacoesProcess/init',
+    name: 'InformacoesStartFormInit',
+    component: InformacoesStartFormInit,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/task/taskAgendar/:taskInstanceId/view',
-    name: 'AgendamentoProcess_AgendarTesteCovidDetails',
-    component: AgendamentoProcess_AgendarTesteCovidDetails,
+    path: '/process-definition/InformacoesProcess/task/taskAgendar/:taskInstanceId/view',
+    name: 'InformacoesProcess_TaskAgendarDetails',
+    component: InformacoesProcess_TaskAgendarDetails,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/task/taskAgendar/:taskInstanceId/execute',
-    name: 'AgendamentoProcess_AgendarTesteCovidExecute',
-    component: AgendamentoProcess_AgendarTesteCovidExecute,
+    path: '/process-definition/InformacoesProcess/task/taskAgendar/:taskInstanceId/execute',
+    name: 'InformacoesProcess_TaskAgendarExecute',
+    component: InformacoesProcess_TaskAgendarExecute,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/task/taskBuscaPosto/:taskInstanceId/view',
-    name: 'AgendamentoProcess_BuscarPostoSaudeDetails',
-    component: AgendamentoProcess_BuscarPostoSaudeDetails,
+    path: '/process-definition/InformacoesProcess/task/taskBuscaPosto/:taskInstanceId/view',
+    name: 'InformacoesProcess_TaskBuscaPostoDetails',
+    component: InformacoesProcess_TaskBuscaPostoDetails,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/task/taskBuscaPosto/:taskInstanceId/execute',
-    name: 'AgendamentoProcess_BuscarPostoSaudeExecute',
-    component: AgendamentoProcess_BuscarPostoSaudeExecute,
+    path: '/process-definition/InformacoesProcess/task/taskBuscaPosto/:taskInstanceId/execute',
+    name: 'InformacoesProcess_TaskBuscaPostoExecute',
+    component: InformacoesProcess_TaskBuscaPostoExecute,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/task/taskPreencherDados/:taskInstanceId/view',
-    name: 'AgendamentoProcess_PreencherDadosDetails',
-    component: AgendamentoProcess_PreencherDadosDetails,
+    path: '/process-definition/InformacoesProcess/task/taskPreencherDados/:taskInstanceId/view',
+    name: 'InformacoesProcess_TaskPreencherDadosDetails',
+    component: InformacoesProcess_TaskPreencherDadosDetails,
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/process-definition/AgendamentoProcess/task/taskPreencherDados/:taskInstanceId/execute',
-    name: 'AgendamentoProcess_PreencherDadosExecute',
-    component: AgendamentoProcess_PreencherDadosExecute,
+    path: '/process-definition/InformacoesProcess/task/taskPreencherDados/:taskInstanceId/execute',
+    name: 'InformacoesProcess_TaskPreencherDadosExecute',
+    component: InformacoesProcess_TaskPreencherDadosExecute,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/process-definition/InformacoesProcess/task/taskRecebaDadosC19/:taskInstanceId/view',
+    name: 'InformacoesProcess_TaskRecebaDadosC19Details',
+    component: InformacoesProcess_TaskRecebaDadosC19Details,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/process-definition/InformacoesProcess/task/taskRecebaDadosC19/:taskInstanceId/execute',
+    name: 'InformacoesProcess_TaskRecebaDadosC19Execute',
+    component: InformacoesProcess_TaskRecebaDadosC19Execute,
     meta: { authorities: [Authority.USER] },
   },
   // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
