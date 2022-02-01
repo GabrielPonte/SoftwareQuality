@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "Jhipster",
+    "title": "SoftwareQuality",
     "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
     "menu": {
       "home": "Home",
@@ -12,12 +12,13 @@
         "processInstance": "Process Instances",
         "taskInstance": "All Tasks",
         "myCandidateTasks": "My Tasks",
-        "agendamento": "Agendamento",
-        "agendamentoProcess": "Agendamento Process",
-        "agendamentoStartForm": "Agendamento Start Form",
-        "agendarTesteCovid": "Agendar Teste Covid",
-        "buscarPostoSaude": "Buscar Posto Saude",
-        "preencherDados": "Preencher Dados",
+        "informacoes": "Informacoes",
+        "informacoesProcess": "Informacoes Process",
+        "informacoesStartForm": "Informacoes Start Form",
+        "taskAgendar": "Task Agendar",
+        "taskBuscaPosto": "Task Busca Posto",
+        "taskPreencherDados": "Task Preencher Dados",
+        "taskRecebaDadosC19": "Task Receba Dados C 19",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

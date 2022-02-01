@@ -1,0 +1,32 @@
+{
+  "softwareQualityApp": {
+    "informacoes": {
+      "home": {
+        "title": "Informacoes",
+        "refreshListLabel": "Refresh list",
+        "notFound": "No Informacoes found"
+      },
+      "detail": {
+        "title": "Informacoes"
+      },
+      "id": "ID",
+      "name": "Name",
+      "nomeCompleto": "Nome Completo",
+      "CPF": "CPF",
+      "email": "Email",
+      "idade": "Idade",
+      "sintomas": "Sintomas",
+      "qtdVacinas": "Qtd Vacinas",
+      "cidade": "Cidade",
+      "estado": "Estado",
+      "endereco": "Endereco",
+      "complemento": "Complemento",
+      "CEP": "CEP",
+      "nomePosto": "Nome Posto",
+      "data": "Data",
+      "hora": "Hora",
+      "tipoDeInformacao": "Tipo De Informacao",
+      "local": "Local"
+    }
+  }
+}

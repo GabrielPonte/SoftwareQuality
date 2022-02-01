@@ -1,0 +1,27 @@
+{
+  "softwareQualityApp": {
+    "informacoesStartForm": {
+      "home": {
+        "title": "Informacoes Start Forms",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Informacoes Start Form",
+        "createOrEditLabel": "Create or edit a Informacoes Start Form",
+        "notFound": "No Informacoes Start Forms found"
+      },
+      "created": "A new Informacoes Start Form is created with identifier {{ param }}",
+      "updated": "A Informacoes Start Form is updated with identifier {{ param }}",
+      "deleted": "A Informacoes Start Form is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Informacoes Start Form {{ id }}?"
+      },
+      "detail": {
+        "title": "Informacoes Start Form"
+      },
+      "id": "ID",
+      "name": "Name",
+      "nomeCompleto": "Nome Completo",
+      "email": "Email",
+      "idade": "Idade"
+    }
+  }
+}

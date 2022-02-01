@@ -40,27 +40,27 @@ export default class NotifyMixin extends Vue {
   }
 
   public getErrorMessageFromResponse(error: any): any {
-    const paramLength: number = error.response.headers['x-jhipsterapp-param-length'];
+    const paramLength: number = error.response.headers['x-softwarequalityapp-param-length'];
     if (!paramLength || paramLength == 0) {
-      return this.$t(error.response.headers['x-jhipsterapp-error']);
+      return this.$t(error.response.headers['x-softwarequalityapp-error']);
     }
 
     if (paramLength == 1) {
-      return this.$t(error.response.headers['x-jhipsterapp-error'], {
-        param: decodeURIComponent(error.response.headers['x-jhipsterapp-param'].replace(/\+/g, ' ')),
+      return this.$t(error.response.headers['x-softwarequalityapp-error'], {
+        param: decodeURIComponent(error.response.headers['x-softwarequalityapp-param'].replace(/\+/g, ' ')),
       });
     }
 
     const params = {};
     for (let i = 0; i < paramLength; i++) {
-      params['param' + i] = decodeURIComponent(error.response.headers['x-jhipsterapp-param' + i].replace(/\+/g, ' '));
+      params['param' + i] = decodeURIComponent(error.response.headers['x-softwarequalityapp-param' + i].replace(/\+/g, ' '));
     }
-    return this.$t(error.response.headers['x-jhipsterapp-error'], params);
+    return this.$t(error.response.headers['x-softwarequalityapp-error'], params);
   }
 
   public getAlertMessageFromResponse(response: any): any {
-    return this.$t(response.headers['x-jhipsterapp-alert'], {
-      param: decodeURIComponent(response.headers['x-jhipsterapp-params'].replace(/\+/g, ' ')),
+    return this.$t(response.headers['x-softwarequalityapp-alert'], {
+      param: decodeURIComponent(response.headers['x-softwarequalityapp-params'].replace(/\+/g, ' ')),
     });
   }
 }

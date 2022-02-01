@@ -114,8 +114,8 @@ export default class JhiUserManagementEdit extends Vue {
   }
 
   private getMessageFromHeader(res: any): any {
-    return this.$t(res.headers['x-jhipsterapp-alert'], {
-      param: decodeURIComponent(res.headers['x-jhipsterapp-params'].replace(/\+/g, ' ')),
+    return this.$t(res.headers['x-softwarequalityapp-alert'], {
+      param: decodeURIComponent(res.headers['x-softwarequalityapp-params'].replace(/\+/g, ' ')),
     });
   }
 }

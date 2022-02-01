@@ -15,12 +15,13 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210401000001_added_entity_Agendamento.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210401000002_added_entity_AgendamentoProcess.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210401000002_added_entity_AgendamentoStartForm.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210401000004_added_entity_AgendarTesteCovid.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210401000005_added_entity_BuscarPostoSaude.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210401000005_added_entity_PreencherDados.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000001_added_entity_Informacoes.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000002_added_entity_InformacoesProcess.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000002_added_entity_InformacoesStartForm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000004_added_entity_TaskAgendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000005_added_entity_TaskBuscaPosto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000005_added_entity_TaskPreencherDados.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000006_added_entity_TaskRecebaDadosC19.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->

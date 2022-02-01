@@ -31,8 +31,8 @@ import TranslationService from '@/locale/translation.service';
 import UserOAuth2Service from '@/entities/user/user.oauth2.service';
 /* tslint:disable */
 
-import AgendamentoService from '@/entities/agendamento/agendamento.service';
-import AgendamentoProcessService from '@/entities/agendamento-process/agendamento-process.service';
+import InformacoesService from '@/entities/informacoes/informacoes.service';
+import InformacoesProcessService from '@/entities/informacoes-process/informacoes-process.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -96,8 +96,8 @@ new Vue({
 
     userOAuth2Service: () => new UserOAuth2Service(),
     translationService: () => translationService,
-    agendamentoService: () => new AgendamentoService(),
-    agendamentoProcessService: () => new AgendamentoProcessService(),
+    informacoesService: () => new InformacoesService(),
+    informacoesProcessService: () => new InformacoesProcessService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },
