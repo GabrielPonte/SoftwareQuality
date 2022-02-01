@@ -69,8 +69,8 @@ class AgendamentoResourceIT {
     private static final LocalDate DEFAULT_DATA = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_DATA = LocalDate.now(ZoneId.systemDefault());
 
-    private static final LocalDate DEFAULT_HORA = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HORA = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HORA = "AAAAAAAAAA";
+    private static final String UPDATED_HORA = "BBBBBBBBBB";
 
     private static final String ENTITY_API_URL = "/api/agendamentos";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -169,7 +169,7 @@ class AgendamentoResourceIT {
             .andExpect(jsonPath("$.[*].CEP").value(hasItem(DEFAULT_CEP)))
             .andExpect(jsonPath("$.[*].nomePosto").value(hasItem(DEFAULT_NOME_POSTO)))
             .andExpect(jsonPath("$.[*].data").value(hasItem(DEFAULT_DATA.toString())))
-            .andExpect(jsonPath("$.[*].hora").value(hasItem(DEFAULT_HORA.toString())));
+            .andExpect(jsonPath("$.[*].hora").value(hasItem(DEFAULT_HORA)));
     }
 
     @Test
@@ -196,7 +196,7 @@ class AgendamentoResourceIT {
             .andExpect(jsonPath("$.CEP").value(DEFAULT_CEP))
             .andExpect(jsonPath("$.nomePosto").value(DEFAULT_NOME_POSTO))
             .andExpect(jsonPath("$.data").value(DEFAULT_DATA.toString()))
-            .andExpect(jsonPath("$.hora").value(DEFAULT_HORA.toString()));
+            .andExpect(jsonPath("$.hora").value(DEFAULT_HORA));
     }
 
     @Test

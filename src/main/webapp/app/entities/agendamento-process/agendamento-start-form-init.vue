@@ -35,23 +35,6 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('jhipsterApp.agendamentoStartForm.CPF')" for="agendamento-start-form-CPF"
-                    >CPF</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="CPF"
-                    id="agendamento-start-form-CPF"
-                    data-cy="CPF"
-                    :class="{
-                      valid: !$v.agendamentoProcess.agendamento.CPF.$invalid,
-                      invalid: $v.agendamentoProcess.agendamento.CPF.$invalid,
-                    }"
-                    v-model="$v.agendamentoProcess.agendamento.CPF.$model"
-                  />
-                </div>
-                <div class="form-group">
                   <label class="form-control-label" v-text="$t('jhipsterApp.agendamentoStartForm.idade')" for="agendamento-start-form-idade"
                     >Idade</label
                   >

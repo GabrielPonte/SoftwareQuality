@@ -47,7 +47,7 @@ describe('Service Tests', () => {
         'AAAAAAA',
         'AAAAAAA',
         currentDate,
-        currentDate
+        'AAAAAAA'
       );
     });
 
@@ -56,7 +56,6 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             data: dayjs(currentDate).format(DATE_FORMAT),
-            hora: dayjs(currentDate).format(DATE_FORMAT),
           },
           elemDefault
         );
@@ -92,14 +91,13 @@ describe('Service Tests', () => {
             CEP: 'BBBBBB',
             nomePosto: 'BBBBBB',
             data: dayjs(currentDate).format(DATE_FORMAT),
-            hora: dayjs(currentDate).format(DATE_FORMAT),
+            hora: 'BBBBBB',
           },
           elemDefault
         );
         const expected = Object.assign(
           {
             data: currentDate,
-            hora: currentDate,
           },
           returnedFromService
         );

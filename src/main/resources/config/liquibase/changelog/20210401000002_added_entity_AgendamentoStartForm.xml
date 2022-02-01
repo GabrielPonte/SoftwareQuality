@@ -17,9 +17,6 @@
             <column name="nome_completo" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="cpf" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="idade" type="integer">
                 <constraints nullable="true" />
             </column>

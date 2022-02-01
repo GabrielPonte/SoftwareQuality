@@ -5,10 +5,6 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "CPF",
-      "fieldType": "String"
-    },
-    {
       "fieldName": "idade",
       "fieldType": "Integer"
     },

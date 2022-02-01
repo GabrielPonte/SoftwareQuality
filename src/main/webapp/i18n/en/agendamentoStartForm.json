@@ -19,7 +19,6 @@
       },
       "id": "ID",
       "nomeCompleto": "Nome Completo",
-      "CPF": "CPF",
       "idade": "Idade",
       "qtdVacinas": "Qtd Vacinas",
       "sintomas": "Sintomas"
