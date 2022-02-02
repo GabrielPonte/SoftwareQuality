@@ -29,7 +29,7 @@
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_12u7oxq" sourceRef="Event_0x4orpb" targetRef="Gateway_19usbgv" />
     <bpmn:sequenceFlow id="Flow_00j3iut" name="Agendamento do Teste de Covid" sourceRef="Gateway_19usbgv" targetRef="taskPreencherDados">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!pi.getInformacoes().getName().contains("covidData")}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!pi.getInformacoes().getOpcao().contains("0")}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1xdvd3u" sourceRef="taskAgendar" targetRef="Event_0vmah7f" />
     <bpmn:userTask id="taskRecebaDadosC19" name="Escolher Informações que deseja receber">
@@ -38,7 +38,7 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_1r0fa4v" sourceRef="taskRecebaDadosC19" targetRef="Event_0vmah7f" />
     <bpmn:sequenceFlow id="Flow_1nabo6m" name="Acessar dados sobre a covid-19" sourceRef="Gateway_19usbgv" targetRef="taskRecebaDadosC19">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${pi.getInformacoes().getName().contains("covidData")}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${pi.getInformacoes().getOpcao().contains("0")}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">

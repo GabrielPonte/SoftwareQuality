@@ -10,7 +10,7 @@
         "title": "Informacoes"
       },
       "id": "ID",
-      "name": "Name",
+      "opcao": "Opcao",
       "nomeCompleto": "Nome Completo",
       "CPF": "CPF",
       "email": "Email",

@@ -1,6 +1,6 @@
 export interface IInformacoes {
   id?: number;
-  name?: string | null;
+  opcao?: string | null;
   nomeCompleto?: string | null;
   CPF?: string | null;
   email?: string | null;
@@ -22,7 +22,7 @@ export interface IInformacoes {
 export class Informacoes implements IInformacoes {
   constructor(
     public id?: number,
-    public name?: string | null,
+    public opcao?: string | null,
     public nomeCompleto?: string | null,
     public CPF?: string | null,
     public email?: string | null,

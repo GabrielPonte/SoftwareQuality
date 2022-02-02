@@ -18,7 +18,7 @@
         <thead>
           <tr>
             <th scope="row"><span v-text="$t('global.field.id')">ID</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.name')">Name</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.opcao')">Opcao</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.nomeCompleto')">Nome Completo</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.CPF')">CPF</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.email')">Email</span></th>
@@ -43,7 +43,7 @@
             <td>
               <router-link :to="{ name: 'InformacoesView', params: { informacoesId: informacoes.id } }">{{ informacoes.id }}</router-link>
             </td>
-            <td>{{ informacoes.name }}</td>
+            <td>{{ informacoes.opcao }}</td>
             <td>{{ informacoes.nomeCompleto }}</td>
             <td>{{ informacoes.CPF }}</td>
             <td>{{ informacoes.email }}</td>
