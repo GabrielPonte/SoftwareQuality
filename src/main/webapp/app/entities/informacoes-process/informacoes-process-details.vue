@@ -16,15 +16,15 @@
               </h5>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.name')">name</label>
+                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.opcao')">opcao</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="name"
-                    id="informacoes-name"
-                    data-cy="name"
-                    v-model="informacoesProcess.informacoes.name"
+                    name="opcao"
+                    id="informacoes-opcao"
+                    data-cy="opcao"
+                    v-model="informacoesProcess.informacoes.opcao"
                   />
                 </div>
               </div>

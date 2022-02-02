@@ -10,7 +10,7 @@ import InformacoesProcessService from './informacoes-process.service';
 const validations: any = {
   informacoesProcess: {
     informacoes: {
-      name: {},
+      opcao: {},
       nomeCompleto: {},
       email: {},
       idade: {},

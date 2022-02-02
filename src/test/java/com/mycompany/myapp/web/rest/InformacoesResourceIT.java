@@ -33,8 +33,8 @@ import org.springframework.transaction.annotation.Transactional;
 @WithMockUser
 class InformacoesResourceIT {
 
-    private static final String DEFAULT_NAME = "AAAAAAAAAA";
-    private static final String UPDATED_NAME = "BBBBBBBBBB";
+    private static final String DEFAULT_OPCAO = "AAAAAAAAAA";
+    private static final String UPDATED_OPCAO = "BBBBBBBBBB";
 
     private static final String DEFAULT_NOME_COMPLETO = "AAAAAAAAAA";
     private static final String UPDATED_NOME_COMPLETO = "BBBBBBBBBB";
@@ -112,7 +112,7 @@ class InformacoesResourceIT {
      */
     public static Informacoes createEntity(EntityManager em) {
         Informacoes informacoes = new Informacoes()
-            .name(DEFAULT_NAME)
+            .opcao(DEFAULT_OPCAO)
             .nomeCompleto(DEFAULT_NOME_COMPLETO)
             .CPF(DEFAULT_CPF)
             .email(DEFAULT_EMAIL)
@@ -140,7 +140,7 @@ class InformacoesResourceIT {
      */
     public static Informacoes createUpdatedEntity(EntityManager em) {
         Informacoes informacoes = new Informacoes()
-            .name(UPDATED_NAME)
+            .opcao(UPDATED_OPCAO)
             .nomeCompleto(UPDATED_NOME_COMPLETO)
             .CPF(UPDATED_CPF)
             .email(UPDATED_EMAIL)
@@ -177,7 +177,7 @@ class InformacoesResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(informacoes.getId().intValue())))
-            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
+            .andExpect(jsonPath("$.[*].opcao").value(hasItem(DEFAULT_OPCAO)))
             .andExpect(jsonPath("$.[*].nomeCompleto").value(hasItem(DEFAULT_NOME_COMPLETO)))
             .andExpect(jsonPath("$.[*].CPF").value(hasItem(DEFAULT_CPF)))
             .andExpect(jsonPath("$.[*].email").value(hasItem(DEFAULT_EMAIL)))
@@ -208,7 +208,7 @@ class InformacoesResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(informacoes.getId().intValue()))
-            .andExpect(jsonPath("$.name").value(DEFAULT_NAME))
+            .andExpect(jsonPath("$.opcao").value(DEFAULT_OPCAO))
             .andExpect(jsonPath("$.nomeCompleto").value(DEFAULT_NOME_COMPLETO))
             .andExpect(jsonPath("$.CPF").value(DEFAULT_CPF))
             .andExpect(jsonPath("$.email").value(DEFAULT_EMAIL))

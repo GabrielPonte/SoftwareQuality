@@ -83,7 +83,7 @@ describe('Service Tests', () => {
       it('should return a list of Informacoes', async () => {
         const returnedFromService = Object.assign(
           {
-            name: 'BBBBBB',
+            opcao: 'BBBBBB',
             nomeCompleto: 'BBBBBB',
             CPF: 'BBBBBB',
             email: 'BBBBBB',

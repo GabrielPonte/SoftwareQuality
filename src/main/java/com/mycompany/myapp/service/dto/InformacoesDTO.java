@@ -11,7 +11,7 @@ public class InformacoesDTO implements Serializable {
 
     private Long id;
 
-    private String name;
+    private String opcao;
 
     private String nomeCompleto;
 
@@ -53,12 +53,12 @@ public class InformacoesDTO implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getOpcao() {
+        return opcao;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOpcao(String opcao) {
+        this.opcao = opcao;
     }
 
     public String getNomeCompleto() {
@@ -215,7 +215,7 @@ public class InformacoesDTO implements Serializable {
     public String toString() {
         return "InformacoesDTO{" +
             "id=" + getId() +
-            ", name='" + getName() + "'" +
+            ", opcao='" + getOpcao() + "'" +
             ", nomeCompleto='" + getNomeCompleto() + "'" +
             ", CPF='" + getCPF() + "'" +
             ", email='" + getEmail() + "'" +

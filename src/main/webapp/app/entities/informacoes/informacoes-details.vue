@@ -7,10 +7,10 @@
         </h2>
         <dl class="row jh-entity-details">
           <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.name')">Name</span>
+            <span v-text="$t('softwareQualityApp.informacoes.opcao')">Opcao</span>
           </dt>
           <dd>
-            <span>{{ informacoes.name }}</span>
+            <span>{{ informacoes.opcao }}</span>
           </dd>
           <dt>
             <span v-text="$t('softwareQualityApp.informacoes.nomeCompleto')">Nome Completo</span>

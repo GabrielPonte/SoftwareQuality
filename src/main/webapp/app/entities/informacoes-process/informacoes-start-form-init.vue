@@ -17,21 +17,21 @@
                 <div class="form-group">
                   <label
                     class="form-control-label"
-                    v-text="$t('softwareQualityApp.informacoesStartForm.name')"
-                    for="informacoes-start-form-name"
-                    >Name</label
+                    v-text="$t('softwareQualityApp.informacoesStartForm.opcao')"
+                    for="informacoes-start-form-opcao"
+                    >Opcao</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    name="name"
-                    id="informacoes-start-form-name"
-                    data-cy="name"
+                    name="opcao"
+                    id="informacoes-start-form-opcao"
+                    data-cy="opcao"
                     :class="{
-                      valid: !$v.informacoesProcess.informacoes.name.$invalid,
-                      invalid: $v.informacoesProcess.informacoes.name.$invalid,
+                      valid: !$v.informacoesProcess.informacoes.opcao.$invalid,
+                      invalid: $v.informacoesProcess.informacoes.opcao.$invalid,
                     }"
-                    v-model="$v.informacoesProcess.informacoes.name.$model"
+                    v-model="$v.informacoesProcess.informacoes.opcao.$model"
                   />
                 </div>
                 <div class="form-group">

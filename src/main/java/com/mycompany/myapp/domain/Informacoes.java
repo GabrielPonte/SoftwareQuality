@@ -21,8 +21,8 @@ public class Informacoes implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "opcao")
+    private String opcao;
 
     @Column(name = "nome_completo")
     private String nomeCompleto;
@@ -86,17 +86,17 @@ public class Informacoes implements Serializable {
         return this;
     }
 
-    public String getName() {
-        return this.name;
+    public String getOpcao() {
+        return this.opcao;
     }
 
-    public Informacoes name(String name) {
-        this.name = name;
+    public Informacoes opcao(String opcao) {
+        this.opcao = opcao;
         return this;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOpcao(String opcao) {
+        this.opcao = opcao;
     }
 
     public String getNomeCompleto() {
@@ -331,7 +331,7 @@ public class Informacoes implements Serializable {
     public String toString() {
         return "Informacoes{" +
             "id=" + getId() +
-            ", name='" + getName() + "'" +
+            ", opcao='" + getOpcao() + "'" +
             ", nomeCompleto='" + getNomeCompleto() + "'" +
             ", CPF='" + getCPF() + "'" +
             ", email='" + getEmail() + "'" +
