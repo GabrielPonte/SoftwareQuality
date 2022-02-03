@@ -26,11 +26,13 @@ public class sendCovidDataDelegate implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         InformacoesProcessDTO pi = (InformacoesProcessDTO) delegateExecution.getVariable("processInstance");
         InformacoesDTO Informacoes = pi.getInformacoes();
+        Integer int_random = (Integer) delegateExecution.getVariable("int_random");
         String covidinformationLocal = pi.getInformacoes().getLocal();
         String to = pi.getInformacoes().getEmail();
         String subject = "[VACINA-JÁ] Resumo das informações in " + covidinformationLocal;
         Context context = new Context(Locale.getDefault());
         context.setVariable("Informacoes", Informacoes);
+        context.setVariable("int_random", int_random);
         String content = templateEngine.process("InformacoesProcess/InformacoesSummaryEmail", context);
         mailService.sendEmail(to, subject, content, false, true);
     }
