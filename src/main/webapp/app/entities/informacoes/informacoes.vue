@@ -37,6 +37,7 @@
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.hora')">Hora</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.tipoDeInformacao')">Tipo De Informacao</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.local')">Local</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.receberEmail')">Receber Email</span></th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -64,6 +65,7 @@
             <td>{{ informacoes.hora }}</td>
             <td>{{ informacoes.tipoDeInformacao }}</td>
             <td>{{ informacoes.local }}</td>
+            <td>{{ informacoes.receberEmail }}</td>
             <td class="text-right">
               <div class="btn-group">
                 <router-link :to="{ name: 'InformacoesView', params: { informacoesId: informacoes.id } }" custom v-slot="{ navigate }">

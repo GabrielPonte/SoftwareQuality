@@ -53,6 +53,7 @@ describe('Service Tests', () => {
         currentDate,
         'AAAAAAA',
         'AAAAAAA',
+        'AAAAAAA',
         'AAAAAAA'
       );
     });
@@ -104,6 +105,7 @@ describe('Service Tests', () => {
             hora: 'BBBBBB',
             tipoDeInformacao: 'BBBBBB',
             local: 'BBBBBB',
+            receberEmail: 'BBBBBB',
           },
           elemDefault
         );

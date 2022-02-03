@@ -282,6 +282,20 @@
                   />
                 </div>
               </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.receberEmail')">receberEmail</label>
+                  <input
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="receberEmail"
+                    id="informacoes-receberEmail"
+                    data-cy="receberEmail"
+                    v-model="informacoesProcess.informacoes.receberEmail"
+                  />
+                </div>
+              </div>
             </div>
           </template>
         </akip-show-process-instance>

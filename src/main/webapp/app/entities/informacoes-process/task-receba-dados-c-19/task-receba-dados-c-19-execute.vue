@@ -48,6 +48,26 @@
                 v-model="$v.taskContext.informacoesProcess.informacoes.local.$model"
               />
             </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskRecebaDadosC19.receberEmail')"
+                for="task-receba-dados-c-19-receberEmail"
+                >Receber Email</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                name="receberEmail"
+                id="task-receba-dados-c-19-receberEmail"
+                data-cy="receberEmail"
+                :class="{
+                  valid: !$v.taskContext.informacoesProcess.informacoes.receberEmail.$invalid,
+                  invalid: $v.taskContext.informacoesProcess.informacoes.receberEmail.$invalid,
+                }"
+                v-model="$v.taskContext.informacoesProcess.informacoes.receberEmail.$model"
+              />
+            </div>
           </template>
         </akip-show-task-instance>
         <br />

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+  <head>
+    <title>Informações de COVID-19</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <p>Dear <span th:text="${Informacoes.nomeCompleto}"></span>,</p>
+    <p>Agendamento Confirmado!</p>
+    <p>Informações do paciente</p>
+    <ul>
+      <li>
+        Nome Completo: <b><span th:text="${Informacoes.nomeCompleto}"></span></b>
+      </li>
+      <li>
+        Idade: <b><span th:text="${Informacoes.idade}"></span></b>
+      </li>
+      <li>
+        CPF: <b><span th:text="${Informacoes.cpf}"></span></b>
+      </li>
+      <li>
+        Quantidade de vacinas recebidas: <b><span th:text="${Informacoes.qtdVacinas}"></span></b>
+      </li>
+      <li>
+        Sintomas: <b><span th:text="${Informacoes.sintomas}"></span></b>
+      </li>
+    </ul>
+    <p>Residência do paciente</p>
+    <ul>
+      <li>
+        CEP: <b><span th:text="${Informacoes.cep}"></span></b>
+      </li>
+      <li>
+        Estado: <b><span th:text="${Informacoes.estado}"></span></b>
+      </li>
+      <li>
+        Cidade: <b><span th:text="${Informacoes.cidade}"></span></b>
+      </li>
+      <li>
+        Endereço: <b><span th:text="${Informacoes.endereco}"></span></b>
+      </li>
+      <li>
+        Complemento: <b><span th:text="${Informacoes.complemento}"></span></b>
+      </li>
+    </ul>
+    <p>Local agendado para realizar o teste de covid</p>
+    <ul>
+      <li>
+        Posto: <b><span th:text="${Informacoes.nomeDoPosto}"></span></b>
+      </li>
+      <li>
+        Local: <b><span th:text="${Informacoes.estadoDoPosto}"></span>, <span th:text="${Informacoes.cidadeDoPosto}"></span></b>
+      </li>
+      <li>
+        Data: <b><span th:text="${Informacoes.data}"></span></b>
+      </li>
+      <li>
+        Horário: <b><span th:text="${Informacoes.hora}"></span></b>
+      </li>
+      <li>Status: <b>Confirmado</b></li>
+    </ul>
+    <p>
+      Atenciosamente,
+      <br />
+      <em>Sistema Vacina-já</em>
+    </p>
+  </body>
+</html>

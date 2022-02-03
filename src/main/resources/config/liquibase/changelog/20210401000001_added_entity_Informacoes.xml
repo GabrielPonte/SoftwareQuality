@@ -71,6 +71,9 @@
             <column name="local" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="receber_email" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
     </changeSet>

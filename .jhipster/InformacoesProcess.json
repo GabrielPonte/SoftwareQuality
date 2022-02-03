@@ -75,6 +75,10 @@
     {
       "fieldName": "local",
       "fieldType": "String"
+    },
+    {
+      "fieldName": "receberEmail",
+      "fieldType": "String"
     }
   ],
   "relationships": [],

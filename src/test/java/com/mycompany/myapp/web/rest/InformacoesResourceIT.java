@@ -90,6 +90,9 @@ class InformacoesResourceIT {
     private static final String DEFAULT_LOCAL = "AAAAAAAAAA";
     private static final String UPDATED_LOCAL = "BBBBBBBBBB";
 
+    private static final String DEFAULT_RECEBER_EMAIL = "AAAAAAAAAA";
+    private static final String UPDATED_RECEBER_EMAIL = "BBBBBBBBBB";
+
     private static final String ENTITY_API_URL = "/api/informacoes";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
 
@@ -136,7 +139,8 @@ class InformacoesResourceIT {
             .data(DEFAULT_DATA)
             .hora(DEFAULT_HORA)
             .tipoDeInformacao(DEFAULT_TIPO_DE_INFORMACAO)
-            .local(DEFAULT_LOCAL);
+            .local(DEFAULT_LOCAL)
+            .receberEmail(DEFAULT_RECEBER_EMAIL);
         return informacoes;
     }
 
@@ -166,7 +170,8 @@ class InformacoesResourceIT {
             .data(UPDATED_DATA)
             .hora(UPDATED_HORA)
             .tipoDeInformacao(UPDATED_TIPO_DE_INFORMACAO)
-            .local(UPDATED_LOCAL);
+            .local(UPDATED_LOCAL)
+            .receberEmail(UPDATED_RECEBER_EMAIL);
         return informacoes;
     }
 
@@ -205,7 +210,8 @@ class InformacoesResourceIT {
             .andExpect(jsonPath("$.[*].data").value(hasItem(DEFAULT_DATA.toString())))
             .andExpect(jsonPath("$.[*].hora").value(hasItem(DEFAULT_HORA)))
             .andExpect(jsonPath("$.[*].tipoDeInformacao").value(hasItem(DEFAULT_TIPO_DE_INFORMACAO)))
-            .andExpect(jsonPath("$.[*].local").value(hasItem(DEFAULT_LOCAL)));
+            .andExpect(jsonPath("$.[*].local").value(hasItem(DEFAULT_LOCAL)))
+            .andExpect(jsonPath("$.[*].receberEmail").value(hasItem(DEFAULT_RECEBER_EMAIL)));
     }
 
     @Test
@@ -238,7 +244,8 @@ class InformacoesResourceIT {
             .andExpect(jsonPath("$.data").value(DEFAULT_DATA.toString()))
             .andExpect(jsonPath("$.hora").value(DEFAULT_HORA))
             .andExpect(jsonPath("$.tipoDeInformacao").value(DEFAULT_TIPO_DE_INFORMACAO))
-            .andExpect(jsonPath("$.local").value(DEFAULT_LOCAL));
+            .andExpect(jsonPath("$.local").value(DEFAULT_LOCAL))
+            .andExpect(jsonPath("$.receberEmail").value(DEFAULT_RECEBER_EMAIL));
     }
 
     @Test

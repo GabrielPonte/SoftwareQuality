@@ -19,6 +19,7 @@ export interface IInformacoes {
   hora?: string | null;
   tipoDeInformacao?: string | null;
   local?: string | null;
+  receberEmail?: string | null;
 }
 
 export class Informacoes implements IInformacoes {
@@ -42,6 +43,7 @@ export class Informacoes implements IInformacoes {
     public data?: Date | null,
     public hora?: string | null,
     public tipoDeInformacao?: string | null,
-    public local?: string | null
+    public local?: string | null,
+    public receberEmail?: string | null
   ) {}
 }

@@ -19,7 +19,8 @@
       },
       "id": "ID",
       "tipoDeInformacao": "Tipo De Informacao",
-      "local": "Local"
+      "local": "Local",
+      "receberEmail": "Receber Email"
     }
   }
 }
