@@ -24,8 +24,9 @@ public class covidDataDelegate implements JavaDelegate {
         String covidinformationLocal = pi.getInformacoes().getLocal();
         //random number
         Random rand = new Random(); //instance of random class
-        int upperbound = 1000000;
-        int int_random = rand.nextInt(upperbound);
+        Integer upperbound = 1000000;
+        Integer int_random = rand.nextInt(upperbound);
+        delegateExecution.setVariable("int_random", int_random);
 
         //print data
         System.out.println("=================================================");
