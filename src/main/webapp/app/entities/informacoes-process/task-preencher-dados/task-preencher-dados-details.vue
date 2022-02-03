@@ -45,27 +45,51 @@
               />
             </div>
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.CPF')">CPF</label>
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.cpf')">cpf</label>
               <input
                 readonly
                 type="text"
                 class="form-control"
-                name="CPF"
-                id="informacoes-CPF"
-                data-cy="CPF"
-                v-model="taskContext.informacoesProcess.informacoes.CPF"
+                name="cpf"
+                id="informacoes-cpf"
+                data-cy="cpf"
+                v-model="taskContext.informacoesProcess.informacoes.cpf"
               />
             </div>
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.CEP')">CEP</label>
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.cep')">cep</label>
               <input
                 readonly
                 type="text"
                 class="form-control"
-                name="CEP"
-                id="informacoes-CEP"
-                data-cy="CEP"
-                v-model="taskContext.informacoesProcess.informacoes.CEP"
+                name="cep"
+                id="informacoes-cep"
+                data-cy="cep"
+                v-model="taskContext.informacoesProcess.informacoes.cep"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.estado')">estado</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                name="estado"
+                id="informacoes-estado"
+                data-cy="estado"
+                v-model="taskContext.informacoesProcess.informacoes.estado"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.cidade')">cidade</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                name="cidade"
+                id="informacoes-cidade"
+                data-cy="cidade"
+                v-model="taskContext.informacoesProcess.informacoes.cidade"
               />
             </div>
             <div class="form-group">

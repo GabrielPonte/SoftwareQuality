@@ -9,54 +9,63 @@
           <template v-slot:body>
             <hr />
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.cidade')" for="task-busca-posto-cidade"
-                >Cidade</label
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskBuscaPosto.nomeDoPosto')"
+                for="task-busca-posto-nomeDoPosto"
+                >Nome Do Posto</label
               >
               <input
                 type="text"
                 class="form-control"
-                name="cidade"
-                id="task-busca-posto-cidade"
-                data-cy="cidade"
+                name="nomeDoPosto"
+                id="task-busca-posto-nomeDoPosto"
+                data-cy="nomeDoPosto"
                 :class="{
-                  valid: !$v.taskContext.informacoesProcess.informacoes.cidade.$invalid,
-                  invalid: $v.taskContext.informacoesProcess.informacoes.cidade.$invalid,
+                  valid: !$v.taskContext.informacoesProcess.informacoes.nomeDoPosto.$invalid,
+                  invalid: $v.taskContext.informacoesProcess.informacoes.nomeDoPosto.$invalid,
                 }"
-                v-model="$v.taskContext.informacoesProcess.informacoes.cidade.$model"
+                v-model="$v.taskContext.informacoesProcess.informacoes.nomeDoPosto.$model"
               />
             </div>
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.estado')" for="task-busca-posto-estado"
-                >Estado</label
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskBuscaPosto.estadoDoPosto')"
+                for="task-busca-posto-estadoDoPosto"
+                >Estado Do Posto</label
               >
               <input
                 type="text"
                 class="form-control"
-                name="estado"
-                id="task-busca-posto-estado"
-                data-cy="estado"
+                name="estadoDoPosto"
+                id="task-busca-posto-estadoDoPosto"
+                data-cy="estadoDoPosto"
                 :class="{
-                  valid: !$v.taskContext.informacoesProcess.informacoes.estado.$invalid,
-                  invalid: $v.taskContext.informacoesProcess.informacoes.estado.$invalid,
+                  valid: !$v.taskContext.informacoesProcess.informacoes.estadoDoPosto.$invalid,
+                  invalid: $v.taskContext.informacoesProcess.informacoes.estadoDoPosto.$invalid,
                 }"
-                v-model="$v.taskContext.informacoesProcess.informacoes.estado.$model"
+                v-model="$v.taskContext.informacoesProcess.informacoes.estadoDoPosto.$model"
               />
             </div>
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.nomePosto')" for="task-busca-posto-nomePosto"
-                >Nome Posto</label
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskBuscaPosto.cidadeDoPosto')"
+                for="task-busca-posto-cidadeDoPosto"
+                >Cidade Do Posto</label
               >
               <input
                 type="text"
                 class="form-control"
-                name="nomePosto"
-                id="task-busca-posto-nomePosto"
-                data-cy="nomePosto"
+                name="cidadeDoPosto"
+                id="task-busca-posto-cidadeDoPosto"
+                data-cy="cidadeDoPosto"
                 :class="{
-                  valid: !$v.taskContext.informacoesProcess.informacoes.nomePosto.$invalid,
-                  invalid: $v.taskContext.informacoesProcess.informacoes.nomePosto.$invalid,
+                  valid: !$v.taskContext.informacoesProcess.informacoes.cidadeDoPosto.$invalid,
+                  invalid: $v.taskContext.informacoesProcess.informacoes.cidadeDoPosto.$invalid,
                 }"
-                v-model="$v.taskContext.informacoesProcess.informacoes.nomePosto.$model"
+                v-model="$v.taskContext.informacoesProcess.informacoes.cidadeDoPosto.$model"
               />
             </div>
           </template>

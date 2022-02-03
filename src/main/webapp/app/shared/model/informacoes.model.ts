@@ -2,7 +2,7 @@ export interface IInformacoes {
   id?: number;
   opcao?: string | null;
   nomeCompleto?: string | null;
-  CPF?: string | null;
+  cpf?: string | null;
   email?: string | null;
   idade?: number | null;
   sintomas?: string | null;
@@ -11,8 +11,10 @@ export interface IInformacoes {
   estado?: string | null;
   endereco?: string | null;
   complemento?: string | null;
-  CEP?: string | null;
-  nomePosto?: string | null;
+  cep?: string | null;
+  nomeDoPosto?: string | null;
+  estadoDoPosto?: string | null;
+  cidadeDoPosto?: string | null;
   data?: Date | null;
   hora?: string | null;
   tipoDeInformacao?: string | null;
@@ -24,7 +26,7 @@ export class Informacoes implements IInformacoes {
     public id?: number,
     public opcao?: string | null,
     public nomeCompleto?: string | null,
-    public CPF?: string | null,
+    public cpf?: string | null,
     public email?: string | null,
     public idade?: number | null,
     public sintomas?: string | null,
@@ -33,8 +35,10 @@ export class Informacoes implements IInformacoes {
     public estado?: string | null,
     public endereco?: string | null,
     public complemento?: string | null,
-    public CEP?: string | null,
-    public nomePosto?: string | null,
+    public cep?: string | null,
+    public nomeDoPosto?: string | null,
+    public estadoDoPosto?: string | null,
+    public cidadeDoPosto?: string | null,
     public data?: Date | null,
     public hora?: string | null,
     public tipoDeInformacao?: string | null,

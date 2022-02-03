@@ -16,8 +16,8 @@ public interface TaskBuscaPostoMapper {
 
     @BeanMapping(ignoreByDefault = true)
     @Mapping(target = "id", source = "id")
-    @Mapping(target = "cidade", source = "cidade")
-    @Mapping(target = "estado", source = "estado")
-    @Mapping(target = "nomePosto", source = "nomePosto")
+    @Mapping(target = "nomeDoPosto", source = "nomeDoPosto")
+    @Mapping(target = "estadoDoPosto", source = "estadoDoPosto")
+    @Mapping(target = "cidadeDoPosto", source = "cidadeDoPosto")
     InformacoesDTO toInformacoesDTO(Informacoes informacoes);
 }

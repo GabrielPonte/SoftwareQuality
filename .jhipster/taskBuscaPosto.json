@@ -1,15 +1,15 @@
 {
   "fields": [
     {
-      "fieldName": "cidade",
+      "fieldName": "nomeDoPosto",
       "fieldType": "String"
     },
     {
-      "fieldName": "estado",
+      "fieldName": "estadoDoPosto",
       "fieldType": "String"
     },
     {
-      "fieldName": "nomePosto",
+      "fieldName": "cidadeDoPosto",
       "fieldType": "String"
     }
   ],

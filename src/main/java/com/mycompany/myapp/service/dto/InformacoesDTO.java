@@ -15,7 +15,7 @@ public class InformacoesDTO implements Serializable {
 
     private String nomeCompleto;
 
-    private String CPF;
+    private String cpf;
 
     private String email;
 
@@ -33,9 +33,13 @@ public class InformacoesDTO implements Serializable {
 
     private String complemento;
 
-    private String CEP;
+    private String cep;
 
-    private String nomePosto;
+    private String nomeDoPosto;
+
+    private String estadoDoPosto;
+
+    private String cidadeDoPosto;
 
     private LocalDate data;
 
@@ -69,12 +73,12 @@ public class InformacoesDTO implements Serializable {
         this.nomeCompleto = nomeCompleto;
     }
 
-    public String getCPF() {
-        return CPF;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEmail() {
@@ -141,20 +145,36 @@ public class InformacoesDTO implements Serializable {
         this.complemento = complemento;
     }
 
-    public String getCEP() {
-        return CEP;
+    public String getCep() {
+        return cep;
     }
 
-    public void setCEP(String CEP) {
-        this.CEP = CEP;
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 
-    public String getNomePosto() {
-        return nomePosto;
+    public String getNomeDoPosto() {
+        return nomeDoPosto;
     }
 
-    public void setNomePosto(String nomePosto) {
-        this.nomePosto = nomePosto;
+    public void setNomeDoPosto(String nomeDoPosto) {
+        this.nomeDoPosto = nomeDoPosto;
+    }
+
+    public String getEstadoDoPosto() {
+        return estadoDoPosto;
+    }
+
+    public void setEstadoDoPosto(String estadoDoPosto) {
+        this.estadoDoPosto = estadoDoPosto;
+    }
+
+    public String getCidadeDoPosto() {
+        return cidadeDoPosto;
+    }
+
+    public void setCidadeDoPosto(String cidadeDoPosto) {
+        this.cidadeDoPosto = cidadeDoPosto;
     }
 
     public LocalDate getData() {
@@ -217,7 +237,7 @@ public class InformacoesDTO implements Serializable {
             "id=" + getId() +
             ", opcao='" + getOpcao() + "'" +
             ", nomeCompleto='" + getNomeCompleto() + "'" +
-            ", CPF='" + getCPF() + "'" +
+            ", cpf='" + getCpf() + "'" +
             ", email='" + getEmail() + "'" +
             ", idade=" + getIdade() +
             ", sintomas='" + getSintomas() + "'" +
@@ -226,8 +246,10 @@ public class InformacoesDTO implements Serializable {
             ", estado='" + getEstado() + "'" +
             ", endereco='" + getEndereco() + "'" +
             ", complemento='" + getComplemento() + "'" +
-            ", CEP='" + getCEP() + "'" +
-            ", nomePosto='" + getNomePosto() + "'" +
+            ", cep='" + getCep() + "'" +
+            ", nomeDoPosto='" + getNomeDoPosto() + "'" +
+            ", estadoDoPosto='" + getEstadoDoPosto() + "'" +
+            ", cidadeDoPosto='" + getCidadeDoPosto() + "'" +
             ", data='" + getData() + "'" +
             ", hora='" + getHora() + "'" +
             ", tipoDeInformacao='" + getTipoDeInformacao() + "'" +

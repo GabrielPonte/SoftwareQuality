@@ -50,7 +50,13 @@
             <column name="cep" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="nome_posto" type="varchar(255)">
+            <column name="nome_do_posto" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="estado_do_posto" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cidade_do_posto" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="data" type="date">

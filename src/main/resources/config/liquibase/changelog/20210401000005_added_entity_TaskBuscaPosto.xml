@@ -14,13 +14,13 @@
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="cidade" type="varchar(255)">
+            <column name="nome_do_posto" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="estado" type="varchar(255)">
+            <column name="estado_do_posto" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="nome_posto" type="varchar(255)">
+            <column name="cidade_do_posto" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->

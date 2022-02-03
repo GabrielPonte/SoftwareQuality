@@ -9,7 +9,7 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "CPF",
+      "fieldName": "cpf",
       "fieldType": "String"
     },
     {
@@ -45,11 +45,19 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "CEP",
+      "fieldName": "cep",
       "fieldType": "String"
     },
     {
-      "fieldName": "nomePosto",
+      "fieldName": "nomeDoPosto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estadoDoPosto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cidadeDoPosto",
       "fieldType": "String"
     },
     {

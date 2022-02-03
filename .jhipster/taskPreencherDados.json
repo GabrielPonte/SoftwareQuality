@@ -16,11 +16,19 @@
       "fieldReadOnly": true
     },
     {
-      "fieldName": "CPF",
+      "fieldName": "cpf",
       "fieldType": "String"
     },
     {
-      "fieldName": "CEP",
+      "fieldName": "cep",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cidade",
       "fieldType": "String"
     },
     {

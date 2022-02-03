@@ -7,9 +7,9 @@ const validations: any = {
   taskContext: {
     informacoesProcess: {
       informacoes: {
-        cidade: {},
-        estado: {},
-        nomePosto: {},
+        nomeDoPosto: {},
+        estadoDoPosto: {},
+        cidadeDoPosto: {},
       },
     },
   },

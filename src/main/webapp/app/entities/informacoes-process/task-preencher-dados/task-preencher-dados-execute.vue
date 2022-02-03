@@ -66,37 +66,77 @@
               />
             </div>
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.CPF')" for="task-preencher-dados-CPF"
-                >CPF</label
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.cpf')" for="task-preencher-dados-cpf"
+                >Cpf</label
               >
               <input
                 type="text"
                 class="form-control"
-                name="CPF"
-                id="task-preencher-dados-CPF"
-                data-cy="CPF"
+                name="cpf"
+                id="task-preencher-dados-cpf"
+                data-cy="cpf"
                 :class="{
-                  valid: !$v.taskContext.informacoesProcess.informacoes.CPF.$invalid,
-                  invalid: $v.taskContext.informacoesProcess.informacoes.CPF.$invalid,
+                  valid: !$v.taskContext.informacoesProcess.informacoes.cpf.$invalid,
+                  invalid: $v.taskContext.informacoesProcess.informacoes.cpf.$invalid,
                 }"
-                v-model="$v.taskContext.informacoesProcess.informacoes.CPF.$model"
+                v-model="$v.taskContext.informacoesProcess.informacoes.cpf.$model"
               />
             </div>
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.CEP')" for="task-preencher-dados-CEP"
-                >CEP</label
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskPreencherDados.cep')" for="task-preencher-dados-cep"
+                >Cep</label
               >
               <input
                 type="text"
                 class="form-control"
-                name="CEP"
-                id="task-preencher-dados-CEP"
-                data-cy="CEP"
+                name="cep"
+                id="task-preencher-dados-cep"
+                data-cy="cep"
                 :class="{
-                  valid: !$v.taskContext.informacoesProcess.informacoes.CEP.$invalid,
-                  invalid: $v.taskContext.informacoesProcess.informacoes.CEP.$invalid,
+                  valid: !$v.taskContext.informacoesProcess.informacoes.cep.$invalid,
+                  invalid: $v.taskContext.informacoesProcess.informacoes.cep.$invalid,
                 }"
-                v-model="$v.taskContext.informacoesProcess.informacoes.CEP.$model"
+                v-model="$v.taskContext.informacoesProcess.informacoes.cep.$model"
+              />
+            </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskPreencherDados.estado')"
+                for="task-preencher-dados-estado"
+                >Estado</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                name="estado"
+                id="task-preencher-dados-estado"
+                data-cy="estado"
+                :class="{
+                  valid: !$v.taskContext.informacoesProcess.informacoes.estado.$invalid,
+                  invalid: $v.taskContext.informacoesProcess.informacoes.estado.$invalid,
+                }"
+                v-model="$v.taskContext.informacoesProcess.informacoes.estado.$model"
+              />
+            </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskPreencherDados.cidade')"
+                for="task-preencher-dados-cidade"
+                >Cidade</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                name="cidade"
+                id="task-preencher-dados-cidade"
+                data-cy="cidade"
+                :class="{
+                  valid: !$v.taskContext.informacoesProcess.informacoes.cidade.$invalid,
+                  invalid: $v.taskContext.informacoesProcess.informacoes.cidade.$invalid,
+                }"
+                v-model="$v.taskContext.informacoesProcess.informacoes.cidade.$model"
               />
             </div>
             <div class="form-group">

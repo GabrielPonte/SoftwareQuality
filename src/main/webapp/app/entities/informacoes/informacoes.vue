@@ -20,7 +20,7 @@
             <th scope="row"><span v-text="$t('global.field.id')">ID</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.opcao')">Opcao</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.nomeCompleto')">Nome Completo</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.CPF')">CPF</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.cpf')">Cpf</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.email')">Email</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.idade')">Idade</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.sintomas')">Sintomas</span></th>
@@ -29,8 +29,10 @@
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.estado')">Estado</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.endereco')">Endereco</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.complemento')">Complemento</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.CEP')">CEP</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.nomePosto')">Nome Posto</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.cep')">Cep</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.nomeDoPosto')">Nome Do Posto</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.estadoDoPosto')">Estado Do Posto</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.cidadeDoPosto')">Cidade Do Posto</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.data')">Data</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.hora')">Hora</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.tipoDeInformacao')">Tipo De Informacao</span></th>
@@ -45,7 +47,7 @@
             </td>
             <td>{{ informacoes.opcao }}</td>
             <td>{{ informacoes.nomeCompleto }}</td>
-            <td>{{ informacoes.CPF }}</td>
+            <td>{{ informacoes.cpf }}</td>
             <td>{{ informacoes.email }}</td>
             <td>{{ informacoes.idade }}</td>
             <td>{{ informacoes.sintomas }}</td>
@@ -54,8 +56,10 @@
             <td>{{ informacoes.estado }}</td>
             <td>{{ informacoes.endereco }}</td>
             <td>{{ informacoes.complemento }}</td>
-            <td>{{ informacoes.CEP }}</td>
-            <td>{{ informacoes.nomePosto }}</td>
+            <td>{{ informacoes.cep }}</td>
+            <td>{{ informacoes.nomeDoPosto }}</td>
+            <td>{{ informacoes.estadoDoPosto }}</td>
+            <td>{{ informacoes.cidadeDoPosto }}</td>
             <td>{{ informacoes.data }}</td>
             <td>{{ informacoes.hora }}</td>
             <td>{{ informacoes.tipoDeInformacao }}</td>

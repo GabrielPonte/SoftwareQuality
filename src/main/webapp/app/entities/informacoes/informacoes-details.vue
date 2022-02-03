@@ -19,10 +19,10 @@
             <span>{{ informacoes.nomeCompleto }}</span>
           </dd>
           <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.CPF')">CPF</span>
+            <span v-text="$t('softwareQualityApp.informacoes.cpf')">Cpf</span>
           </dt>
           <dd>
-            <span>{{ informacoes.CPF }}</span>
+            <span>{{ informacoes.cpf }}</span>
           </dd>
           <dt>
             <span v-text="$t('softwareQualityApp.informacoes.email')">Email</span>
@@ -73,16 +73,28 @@
             <span>{{ informacoes.complemento }}</span>
           </dd>
           <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.CEP')">CEP</span>
+            <span v-text="$t('softwareQualityApp.informacoes.cep')">Cep</span>
           </dt>
           <dd>
-            <span>{{ informacoes.CEP }}</span>
+            <span>{{ informacoes.cep }}</span>
           </dd>
           <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.nomePosto')">Nome Posto</span>
+            <span v-text="$t('softwareQualityApp.informacoes.nomeDoPosto')">Nome Do Posto</span>
           </dt>
           <dd>
-            <span>{{ informacoes.nomePosto }}</span>
+            <span>{{ informacoes.nomeDoPosto }}</span>
+          </dd>
+          <dt>
+            <span v-text="$t('softwareQualityApp.informacoes.estadoDoPosto')">Estado Do Posto</span>
+          </dt>
+          <dd>
+            <span>{{ informacoes.estadoDoPosto }}</span>
+          </dd>
+          <dt>
+            <span v-text="$t('softwareQualityApp.informacoes.cidadeDoPosto')">Cidade Do Posto</span>
+          </dt>
+          <dd>
+            <span>{{ informacoes.cidadeDoPosto }}</span>
           </dd>
           <dt>
             <span v-text="$t('softwareQualityApp.informacoes.data')">Data</span>
