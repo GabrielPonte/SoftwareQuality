@@ -120,6 +120,12 @@
           <dd>
             <span>{{ informacoes.local }}</span>
           </dd>
+          <dt>
+            <span v-text="$t('softwareQualityApp.informacoes.receberEmail')">Receber Email</span>
+          </dt>
+          <dd>
+            <span>{{ informacoes.receberEmail }}</span>
+          </dd>
         </dl>
         <button type="submit" v-on:click.prevent="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
           <font-awesome-icon icon="arrow-left"></font-awesome-icon>&nbsp;<span v-text="$t('entity.action.back')"> Back</span>

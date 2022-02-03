@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+  <head>
+    <title>Informações de COVID-19</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <p>Dear <span th:text="${Informacoes.nomeCompleto}">userName</span>,</p>
+    <p>Here is a summary of your travel</p>
+    <ul>
+      <li>
+        COVID INFORMATION DATA in: <b><span th:text="${Informacoes.local}"></span></b>
+      </li>
+      <li>Quantidade de <span th:text="${Informacoes.tipoDeInformacao}"></span>:<b></b></li>
+    </ul>
+    <p>
+      Att,
+      <br />
+      <em>Sistema Vacina-já</em>
+    </p>
+  </body>
+</html>

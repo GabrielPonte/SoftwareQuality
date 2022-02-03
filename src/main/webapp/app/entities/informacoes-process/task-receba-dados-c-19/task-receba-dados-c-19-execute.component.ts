@@ -9,6 +9,7 @@ const validations: any = {
       informacoes: {
         tipoDeInformacao: {},
         local: {},
+        receberEmail: {},
       },
     },
   },

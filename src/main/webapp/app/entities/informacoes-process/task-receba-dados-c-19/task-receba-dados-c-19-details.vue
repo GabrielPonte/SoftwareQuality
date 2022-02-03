@@ -34,6 +34,18 @@
                 v-model="taskContext.informacoesProcess.informacoes.local"
               />
             </div>
+            <div class="form-group">
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskRecebaDadosC19.receberEmail')">receberEmail</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                name="receberEmail"
+                id="informacoes-receberEmail"
+                data-cy="receberEmail"
+                v-model="taskContext.informacoesProcess.informacoes.receberEmail"
+              />
+            </div>
           </template>
         </akip-show-task-instance>
         <br />

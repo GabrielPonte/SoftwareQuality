@@ -75,6 +75,7 @@ public class TaskRecebaDadosC19Service {
             .orElseThrow();
         informacoesDTO.setTipoDeInformacao(taskRecebaDadosC19Context.getInformacoesProcess().getInformacoes().getTipoDeInformacao());
         informacoesDTO.setLocal(taskRecebaDadosC19Context.getInformacoesProcess().getInformacoes().getLocal());
+        informacoesDTO.setReceberEmail(taskRecebaDadosC19Context.getInformacoesProcess().getInformacoes().getReceberEmail());
         informacoesService.save(informacoesDTO);
     }
 

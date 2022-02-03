@@ -49,6 +49,8 @@ public class InformacoesDTO implements Serializable {
 
     private String local;
 
+    private String receberEmail;
+
     public Long getId() {
         return id;
     }
@@ -209,6 +211,14 @@ public class InformacoesDTO implements Serializable {
         this.local = local;
     }
 
+    public String getReceberEmail() {
+        return receberEmail;
+    }
+
+    public void setReceberEmail(String receberEmail) {
+        this.receberEmail = receberEmail;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -254,6 +264,7 @@ public class InformacoesDTO implements Serializable {
             ", hora='" + getHora() + "'" +
             ", tipoDeInformacao='" + getTipoDeInformacao() + "'" +
             ", local='" + getLocal() + "'" +
+            ", receberEmail='" + getReceberEmail() + "'" +
             "}";
     }
 }

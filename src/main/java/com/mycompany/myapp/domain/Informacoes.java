@@ -78,6 +78,9 @@ public class Informacoes implements Serializable {
     @Column(name = "local")
     private String local;
 
+    @Column(name = "receber_email")
+    private String receberEmail;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
         return id;
@@ -339,6 +342,19 @@ public class Informacoes implements Serializable {
         this.local = local;
     }
 
+    public String getReceberEmail() {
+        return this.receberEmail;
+    }
+
+    public Informacoes receberEmail(String receberEmail) {
+        this.receberEmail = receberEmail;
+        return this;
+    }
+
+    public void setReceberEmail(String receberEmail) {
+        this.receberEmail = receberEmail;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
@@ -382,6 +398,7 @@ public class Informacoes implements Serializable {
             ", hora='" + getHora() + "'" +
             ", tipoDeInformacao='" + getTipoDeInformacao() + "'" +
             ", local='" + getLocal() + "'" +
+            ", receberEmail='" + getReceberEmail() + "'" +
             "}";
     }
 }

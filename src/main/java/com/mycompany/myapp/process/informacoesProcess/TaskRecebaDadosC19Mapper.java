@@ -18,5 +18,6 @@ public interface TaskRecebaDadosC19Mapper {
     @Mapping(target = "id", source = "id")
     @Mapping(target = "tipoDeInformacao", source = "tipoDeInformacao")
     @Mapping(target = "local", source = "local")
+    @Mapping(target = "receberEmail", source = "receberEmail")
     InformacoesDTO toInformacoesDTO(Informacoes informacoes);
 }
