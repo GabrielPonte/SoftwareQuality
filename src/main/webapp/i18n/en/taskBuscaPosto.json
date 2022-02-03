@@ -18,9 +18,9 @@
         "title": "Task Busca Posto"
       },
       "id": "ID",
-      "cidade": "Cidade",
-      "estado": "Estado",
-      "nomePosto": "Nome Posto"
+      "nomeDoPosto": "Nome Do Posto",
+      "estadoDoPosto": "Estado Do Posto",
+      "cidadeDoPosto": "Cidade Do Posto"
     }
   }
 }

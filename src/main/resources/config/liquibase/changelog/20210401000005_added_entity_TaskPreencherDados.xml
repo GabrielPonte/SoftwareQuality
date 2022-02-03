@@ -29,6 +29,12 @@
             <column name="cep" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="estado" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cidade" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="endereco" type="varchar(255)">
                 <constraints nullable="true" />
             </column>

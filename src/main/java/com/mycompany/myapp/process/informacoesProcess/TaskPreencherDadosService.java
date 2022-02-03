@@ -76,8 +76,10 @@ public class TaskPreencherDadosService {
         informacoesDTO.setNomeCompleto(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getNomeCompleto());
         informacoesDTO.setEmail(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getEmail());
         informacoesDTO.setIdade(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getIdade());
-        informacoesDTO.setCPF(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getCPF());
-        informacoesDTO.setCEP(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getCEP());
+        informacoesDTO.setCpf(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getCpf());
+        informacoesDTO.setCep(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getCep());
+        informacoesDTO.setEstado(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getEstado());
+        informacoesDTO.setCidade(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getCidade());
         informacoesDTO.setEndereco(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getEndereco());
         informacoesDTO.setComplemento(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getComplemento());
         informacoesDTO.setQtdVacinas(taskPreencherDadosContext.getInformacoesProcess().getInformacoes().getQtdVacinas());

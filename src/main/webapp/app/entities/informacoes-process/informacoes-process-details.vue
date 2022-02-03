@@ -44,15 +44,15 @@
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.CPF')">CPF</label>
+                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.cpf')">cpf</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="CPF"
-                    id="informacoes-CPF"
-                    data-cy="CPF"
-                    v-model="informacoesProcess.informacoes.CPF"
+                    name="cpf"
+                    id="informacoes-cpf"
+                    data-cy="cpf"
+                    v-model="informacoesProcess.informacoes.cpf"
                   />
                 </div>
               </div>
@@ -170,29 +170,57 @@
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.CEP')">CEP</label>
+                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.cep')">cep</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="CEP"
-                    id="informacoes-CEP"
-                    data-cy="CEP"
-                    v-model="informacoesProcess.informacoes.CEP"
+                    name="cep"
+                    id="informacoes-cep"
+                    data-cy="cep"
+                    v-model="informacoesProcess.informacoes.cep"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.nomePosto')">nomePosto</label>
+                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.nomeDoPosto')">nomeDoPosto</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="nomePosto"
-                    id="informacoes-nomePosto"
-                    data-cy="nomePosto"
-                    v-model="informacoesProcess.informacoes.nomePosto"
+                    name="nomeDoPosto"
+                    id="informacoes-nomeDoPosto"
+                    data-cy="nomeDoPosto"
+                    v-model="informacoesProcess.informacoes.nomeDoPosto"
+                  />
+                </div>
+              </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.estadoDoPosto')">estadoDoPosto</label>
+                  <input
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="estadoDoPosto"
+                    id="informacoes-estadoDoPosto"
+                    data-cy="estadoDoPosto"
+                    v-model="informacoesProcess.informacoes.estadoDoPosto"
+                  />
+                </div>
+              </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.cidadeDoPosto')">cidadeDoPosto</label>
+                  <input
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="cidadeDoPosto"
+                    id="informacoes-cidadeDoPosto"
+                    data-cy="cidadeDoPosto"
+                    v-model="informacoesProcess.informacoes.cidadeDoPosto"
                   />
                 </div>
               </div>

@@ -28,7 +28,7 @@ public class Informacoes implements Serializable {
     private String nomeCompleto;
 
     @Column(name = "cpf")
-    private String CPF;
+    private String cpf;
 
     @Column(name = "email")
     private String email;
@@ -55,10 +55,16 @@ public class Informacoes implements Serializable {
     private String complemento;
 
     @Column(name = "cep")
-    private String CEP;
+    private String cep;
 
-    @Column(name = "nome_posto")
-    private String nomePosto;
+    @Column(name = "nome_do_posto")
+    private String nomeDoPosto;
+
+    @Column(name = "estado_do_posto")
+    private String estadoDoPosto;
+
+    @Column(name = "cidade_do_posto")
+    private String cidadeDoPosto;
 
     @Column(name = "data")
     private LocalDate data;
@@ -112,17 +118,17 @@ public class Informacoes implements Serializable {
         this.nomeCompleto = nomeCompleto;
     }
 
-    public String getCPF() {
-        return this.CPF;
+    public String getCpf() {
+        return this.cpf;
     }
 
-    public Informacoes CPF(String CPF) {
-        this.CPF = CPF;
+    public Informacoes cpf(String cpf) {
+        this.cpf = cpf;
         return this;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEmail() {
@@ -229,30 +235,56 @@ public class Informacoes implements Serializable {
         this.complemento = complemento;
     }
 
-    public String getCEP() {
-        return this.CEP;
+    public String getCep() {
+        return this.cep;
     }
 
-    public Informacoes CEP(String CEP) {
-        this.CEP = CEP;
+    public Informacoes cep(String cep) {
+        this.cep = cep;
         return this;
     }
 
-    public void setCEP(String CEP) {
-        this.CEP = CEP;
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 
-    public String getNomePosto() {
-        return this.nomePosto;
+    public String getNomeDoPosto() {
+        return this.nomeDoPosto;
     }
 
-    public Informacoes nomePosto(String nomePosto) {
-        this.nomePosto = nomePosto;
+    public Informacoes nomeDoPosto(String nomeDoPosto) {
+        this.nomeDoPosto = nomeDoPosto;
         return this;
     }
 
-    public void setNomePosto(String nomePosto) {
-        this.nomePosto = nomePosto;
+    public void setNomeDoPosto(String nomeDoPosto) {
+        this.nomeDoPosto = nomeDoPosto;
+    }
+
+    public String getEstadoDoPosto() {
+        return this.estadoDoPosto;
+    }
+
+    public Informacoes estadoDoPosto(String estadoDoPosto) {
+        this.estadoDoPosto = estadoDoPosto;
+        return this;
+    }
+
+    public void setEstadoDoPosto(String estadoDoPosto) {
+        this.estadoDoPosto = estadoDoPosto;
+    }
+
+    public String getCidadeDoPosto() {
+        return this.cidadeDoPosto;
+    }
+
+    public Informacoes cidadeDoPosto(String cidadeDoPosto) {
+        this.cidadeDoPosto = cidadeDoPosto;
+        return this;
+    }
+
+    public void setCidadeDoPosto(String cidadeDoPosto) {
+        this.cidadeDoPosto = cidadeDoPosto;
     }
 
     public LocalDate getData() {
@@ -333,7 +365,7 @@ public class Informacoes implements Serializable {
             "id=" + getId() +
             ", opcao='" + getOpcao() + "'" +
             ", nomeCompleto='" + getNomeCompleto() + "'" +
-            ", CPF='" + getCPF() + "'" +
+            ", cpf='" + getCpf() + "'" +
             ", email='" + getEmail() + "'" +
             ", idade=" + getIdade() +
             ", sintomas='" + getSintomas() + "'" +
@@ -342,8 +374,10 @@ public class Informacoes implements Serializable {
             ", estado='" + getEstado() + "'" +
             ", endereco='" + getEndereco() + "'" +
             ", complemento='" + getComplemento() + "'" +
-            ", CEP='" + getCEP() + "'" +
-            ", nomePosto='" + getNomePosto() + "'" +
+            ", cep='" + getCep() + "'" +
+            ", nomeDoPosto='" + getNomeDoPosto() + "'" +
+            ", estadoDoPosto='" + getEstadoDoPosto() + "'" +
+            ", cidadeDoPosto='" + getCidadeDoPosto() + "'" +
             ", data='" + getData() + "'" +
             ", hora='" + getHora() + "'" +
             ", tipoDeInformacao='" + getTipoDeInformacao() + "'" +

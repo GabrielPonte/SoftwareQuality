@@ -9,39 +9,39 @@
           <template v-slot:body>
             <hr />
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.cidade')">cidade</label>
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.nomeDoPosto')">nomeDoPosto</label>
               <input
                 readonly
                 type="text"
                 class="form-control"
-                name="cidade"
-                id="informacoes-cidade"
-                data-cy="cidade"
-                v-model="taskContext.informacoesProcess.informacoes.cidade"
+                name="nomeDoPosto"
+                id="informacoes-nomeDoPosto"
+                data-cy="nomeDoPosto"
+                v-model="taskContext.informacoesProcess.informacoes.nomeDoPosto"
               />
             </div>
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.estado')">estado</label>
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.estadoDoPosto')">estadoDoPosto</label>
               <input
                 readonly
                 type="text"
                 class="form-control"
-                name="estado"
-                id="informacoes-estado"
-                data-cy="estado"
-                v-model="taskContext.informacoesProcess.informacoes.estado"
+                name="estadoDoPosto"
+                id="informacoes-estadoDoPosto"
+                data-cy="estadoDoPosto"
+                v-model="taskContext.informacoesProcess.informacoes.estadoDoPosto"
               />
             </div>
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.nomePosto')">nomePosto</label>
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskBuscaPosto.cidadeDoPosto')">cidadeDoPosto</label>
               <input
                 readonly
                 type="text"
                 class="form-control"
-                name="nomePosto"
-                id="informacoes-nomePosto"
-                data-cy="nomePosto"
-                v-model="taskContext.informacoesProcess.informacoes.nomePosto"
+                name="cidadeDoPosto"
+                id="informacoes-cidadeDoPosto"
+                data-cy="cidadeDoPosto"
+                v-model="taskContext.informacoesProcess.informacoes.cidadeDoPosto"
               />
             </div>
           </template>
