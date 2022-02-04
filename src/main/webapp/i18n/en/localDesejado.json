@@ -1,0 +1,24 @@
+{
+  "softwareQualityApp": {
+    "localDesejado": {
+      "home": {
+        "title": "Local Desejados",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Local Desejado",
+        "createOrEditLabel": "Create or edit a Local Desejado",
+        "notFound": "No Local Desejados found"
+      },
+      "created": "A new Local Desejado is created with identifier {{ param }}",
+      "updated": "A Local Desejado is updated with identifier {{ param }}",
+      "deleted": "A Local Desejado is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Local Desejado {{ id }}?"
+      },
+      "detail": {
+        "title": "Local Desejado"
+      },
+      "id": "ID",
+      "localCovid": "Local Covid"
+    }
+  }
+}

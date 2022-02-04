@@ -33,6 +33,7 @@ import UserOAuth2Service from '@/entities/user/user.oauth2.service';
 
 import InformacoesService from '@/entities/informacoes/informacoes.service';
 import InformacoesProcessService from '@/entities/informacoes-process/informacoes-process.service';
+import LocalDesejadoService from '@/entities/local-desejado/local-desejado.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -98,6 +99,7 @@ new Vue({
     translationService: () => translationService,
     informacoesService: () => new InformacoesService(),
     informacoesProcessService: () => new InformacoesProcessService(),
+    localDesejadoService: () => new LocalDesejadoService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },

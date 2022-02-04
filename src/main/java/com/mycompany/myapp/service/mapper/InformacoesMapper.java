@@ -7,5 +7,8 @@ import org.mapstruct.*;
 /**
  * Mapper for the entity {@link Informacoes} and its DTO {@link InformacoesDTO}.
  */
-@Mapper(componentModel = "spring", uses = {})
-public interface InformacoesMapper extends EntityMapper<InformacoesDTO, Informacoes> {}
+@Mapper(componentModel = "spring", uses = { LocalDesejadoMapper.class })
+public interface InformacoesMapper extends EntityMapper<InformacoesDTO, Informacoes> {
+    @Mapping(target = "localDesejado", source = "localDesejado", qualifiedByName = "localCovid")
+    InformacoesDTO toDto(Informacoes s);
+}

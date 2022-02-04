@@ -19,6 +19,7 @@
         "taskBuscaPosto": "Task Busca Posto",
         "taskPreencherDados": "Task Preencher Dados",
         "taskRecebaDadosC19": "Task Receba Dados C 19",
+        "localDesejado": "Local Desejado",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

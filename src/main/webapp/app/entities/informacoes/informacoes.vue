@@ -38,6 +38,7 @@
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.tipoDeInformacao')">Tipo De Informacao</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.local')">Local</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.receberEmail')">Receber Email</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.localDesejado')">Local Desejado</span></th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -66,6 +67,13 @@
             <td>{{ informacoes.tipoDeInformacao }}</td>
             <td>{{ informacoes.local }}</td>
             <td>{{ informacoes.receberEmail }}</td>
+            <td>
+              <div v-if="informacoes.localDesejado">
+                <router-link :to="{ name: 'LocalDesejadoView', params: { localDesejadoId: informacoes.localDesejado.id } }">{{
+                  informacoes.localDesejado.localCovid
+                }}</router-link>
+              </div>
+            </td>
             <td class="text-right">
               <div class="btn-group">
                 <router-link :to="{ name: 'InformacoesView', params: { informacoesId: informacoes.id } }" custom v-slot="{ navigate }">

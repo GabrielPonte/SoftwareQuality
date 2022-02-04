@@ -7,23 +7,14 @@
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <!--
-        Added the entity TaskRecebaDadosC19.
+        Added the entity LocalDesejado.
     -->
-    <changeSet id="20210401000006-1" author="jhipster">
-        <createTable tableName="task_receba_dadosc19">
+    <changeSet id="20210401000001-1" author="jhipster">
+        <createTable tableName="local_desejado">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="tipo_de_informacao" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="local" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="receber_email" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="local_desejado_id" type="bigint">
+            <column name="local_covid" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->

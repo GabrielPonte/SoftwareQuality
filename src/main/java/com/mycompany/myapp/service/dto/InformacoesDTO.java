@@ -51,6 +51,8 @@ public class InformacoesDTO implements Serializable {
 
     private String receberEmail;
 
+    private LocalDesejadoDTO localDesejado;
+
     public Long getId() {
         return id;
     }
@@ -219,6 +221,14 @@ public class InformacoesDTO implements Serializable {
         this.receberEmail = receberEmail;
     }
 
+    public LocalDesejadoDTO getLocalDesejado() {
+        return localDesejado;
+    }
+
+    public void setLocalDesejado(LocalDesejadoDTO localDesejado) {
+        this.localDesejado = localDesejado;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -265,6 +275,7 @@ public class InformacoesDTO implements Serializable {
             ", tipoDeInformacao='" + getTipoDeInformacao() + "'" +
             ", local='" + getLocal() + "'" +
             ", receberEmail='" + getReceberEmail() + "'" +
+            ", localDesejado=" + getLocalDesejado() +
             "}";
     }
 }

@@ -81,7 +81,14 @@
       "fieldType": "String"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "relationshipName": "localDesejado",
+      "otherEntityName": "localDesejado",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "localCovid"
+    }
+  ],
   "entityType": "process-binding",
   "processBpmnId": "InformacoesProcess",
   "domainEntityName": "Informacoes",
