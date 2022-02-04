@@ -68,6 +68,35 @@
                 v-model="$v.taskContext.informacoesProcess.informacoes.receberEmail.$model"
               />
             </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskRecebaDadosC19.localDesejado')"
+                for="task-receba-dados-c-19-localDesejado"
+                >Local Desejado</label
+              >
+              <select
+                class="form-control"
+                id="task-receba-dados-c-19-localDesejado"
+                data-cy="localDesejado"
+                name="localDesejado"
+                v-model="taskContext.informacoesProcess.informacoes.localDesejado"
+              >
+                <option v-bind:value="null"></option>
+                <option
+                  v-bind:value="
+                    taskContext.informacoesProcess.informacoes.localDesejado &&
+                    localDesejadoOption.id === taskContext.informacoesProcess.informacoes.localDesejado.id
+                      ? taskContext.informacoesProcess.informacoes.localDesejado
+                      : localDesejadoOption
+                  "
+                  v-for="localDesejadoOption in localDesejados"
+                  :key="localDesejadoOption.id"
+                >
+                  {{ localDesejadoOption.localCovid }}
+                </option>
+              </select>
+            </div>
           </template>
         </akip-show-task-instance>
         <br />

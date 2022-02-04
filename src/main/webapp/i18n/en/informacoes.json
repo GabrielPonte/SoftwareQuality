@@ -29,7 +29,8 @@
       "hora": "Hora",
       "tipoDeInformacao": "Tipo De Informacao",
       "local": "Local",
-      "receberEmail": "Receber Email"
+      "receberEmail": "Receber Email",
+      "localDesejado": "Local Desejado"
     }
   }
 }

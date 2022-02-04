@@ -2,6 +2,7 @@ package com.mycompany.myapp.covid.delegates;
 
 import com.mycompany.myapp.domain.Informacoes;
 import com.mycompany.myapp.service.dto.InformacoesProcessDTO;
+import com.mycompany.myapp.service.dto.LocalDesejadoDTO;
 import java.util.Random;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
@@ -21,6 +22,7 @@ public class covidDataDelegate implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         InformacoesProcessDTO pi = (InformacoesProcessDTO) delegateExecution.getVariable("processInstance");
         String covidInformationType = pi.getInformacoes().getTipoDeInformacao();
+        //String covidinformationLocal = (String)delegateExecution.getVariable("localCovid");
         String covidinformationLocal = pi.getInformacoes().getLocal();
         //random number
         Random rand = new Random(); //instance of random class

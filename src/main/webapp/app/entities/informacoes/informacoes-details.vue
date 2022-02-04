@@ -126,6 +126,16 @@
           <dd>
             <span>{{ informacoes.receberEmail }}</span>
           </dd>
+          <dt>
+            <span v-text="$t('softwareQualityApp.informacoes.localDesejado')">Local Desejado</span>
+          </dt>
+          <dd>
+            <div v-if="informacoes.localDesejado">
+              <router-link :to="{ name: 'LocalDesejadoView', params: { localDesejadoId: informacoes.localDesejado.id } }">{{
+                informacoes.localDesejado.localCovid
+              }}</router-link>
+            </div>
+          </dd>
         </dl>
         <button type="submit" v-on:click.prevent="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
           <font-awesome-icon icon="arrow-left"></font-awesome-icon>&nbsp;<span v-text="$t('entity.action.back')"> Back</span>

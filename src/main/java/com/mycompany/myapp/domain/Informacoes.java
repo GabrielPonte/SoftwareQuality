@@ -81,6 +81,9 @@ public class Informacoes implements Serializable {
     @Column(name = "receber_email")
     private String receberEmail;
 
+    @ManyToOne
+    private LocalDesejado localDesejado;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
         return id;
@@ -353,6 +356,19 @@ public class Informacoes implements Serializable {
 
     public void setReceberEmail(String receberEmail) {
         this.receberEmail = receberEmail;
+    }
+
+    public LocalDesejado getLocalDesejado() {
+        return this.localDesejado;
+    }
+
+    public Informacoes localDesejado(LocalDesejado localDesejado) {
+        this.setLocalDesejado(localDesejado);
+        return this;
+    }
+
+    public void setLocalDesejado(LocalDesejado localDesejado) {
+        this.localDesejado = localDesejado;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

@@ -46,6 +46,34 @@
                 v-model="taskContext.informacoesProcess.informacoes.receberEmail"
               />
             </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskRecebaDadosC19.localDesejado')"
+                for="task-receba-dados-c-19-localDesejado"
+                >Local Desejado</label
+              >
+              <input
+                v-if="taskContext.informacoesProcess.informacoes.localDesejado"
+                readonly
+                type="text"
+                class="form-control"
+                name="localDesejado"
+                id="informacoes-localDesejado"
+                data-cy="localDesejado"
+                :value="taskContext.informacoesProcess.informacoes.localDesejado.localCovid"
+              />
+              <input
+                v-else
+                readonly
+                type="text"
+                class="form-control"
+                name="localDesejado"
+                id="informacoes-localDesejado"
+                data-cy="localDesejado"
+                value=""
+              />
+            </div>
           </template>
         </akip-show-task-instance>
         <br />

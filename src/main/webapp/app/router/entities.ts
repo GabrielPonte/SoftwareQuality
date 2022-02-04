@@ -28,6 +28,12 @@ const InformacoesProcess_TaskPreencherDadosExecute = () => import('@/entities/in
 const InformacoesProcess_TaskRecebaDadosC19Details = () => import('@/entities/informacoes-process/task-receba-dados-c-19/task-receba-dados-c-19-details.vue');
 // prettier-ignore
 const InformacoesProcess_TaskRecebaDadosC19Execute = () => import('@/entities/informacoes-process/task-receba-dados-c-19/task-receba-dados-c-19-execute.vue');
+// prettier-ignore
+const LocalDesejado = () => import('@/entities/local-desejado/local-desejado.vue');
+// prettier-ignore
+const LocalDesejadoUpdate = () => import('@/entities/local-desejado/local-desejado-update.vue');
+// prettier-ignore
+const LocalDesejadoDetails = () => import('@/entities/local-desejado/local-desejado-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 export default [
@@ -107,6 +113,30 @@ export default [
     path: '/process-definition/InformacoesProcess/task/taskRecebaDadosC19/:taskInstanceId/execute',
     name: 'InformacoesProcess_TaskRecebaDadosC19Execute',
     component: InformacoesProcess_TaskRecebaDadosC19Execute,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/local-desejado',
+    name: 'LocalDesejado',
+    component: LocalDesejado,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/local-desejado/new',
+    name: 'LocalDesejadoCreate',
+    component: LocalDesejadoUpdate,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/local-desejado/:localDesejadoId/edit',
+    name: 'LocalDesejadoEdit',
+    component: LocalDesejadoUpdate,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/local-desejado/:localDesejadoId/view',
+    name: 'LocalDesejadoView',
+    component: LocalDesejadoDetails,
     meta: { authorities: [Authority.USER] },
   },
   // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here

@@ -1,3 +1,5 @@
+import { ILocalDesejado } from '@/shared/model/local-desejado.model';
+
 export interface IInformacoes {
   id?: number;
   opcao?: string | null;
@@ -20,6 +22,7 @@ export interface IInformacoes {
   tipoDeInformacao?: string | null;
   local?: string | null;
   receberEmail?: string | null;
+  localDesejado?: ILocalDesejado | null;
 }
 
 export class Informacoes implements IInformacoes {
@@ -44,6 +47,7 @@ export class Informacoes implements IInformacoes {
     public hora?: string | null,
     public tipoDeInformacao?: string | null,
     public local?: string | null,
-    public receberEmail?: string | null
+    public receberEmail?: string | null,
+    public localDesejado?: ILocalDesejado | null
   ) {}
 }

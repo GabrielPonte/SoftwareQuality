@@ -296,6 +296,36 @@
                   />
                 </div>
               </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label
+                    class="form-control-label"
+                    v-text="$t('softwareQualityApp.informacoesProcess.localDesejado')"
+                    for="informacoes-process-localDesejado"
+                    >Local Desejado</label
+                  >
+                  <input
+                    v-if="informacoesProcess.informacoes.localDesejado"
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="localDesejado"
+                    id="informacoes-localDesejado"
+                    data-cy="localDesejado"
+                    :value="informacoesProcess.informacoes.localDesejado.localCovid"
+                  />
+                  <input
+                    v-else
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="localDesejado"
+                    id="informacoes-localDesejado"
+                    data-cy="localDesejado"
+                    value=""
+                  />
+                </div>
+              </div>
             </div>
           </template>
         </akip-show-process-instance>
