@@ -16,16 +16,22 @@
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000001_added_entity_Informacoes.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000001_added_entity_LocalDesejado.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000001_added_entity_OpcaoEscolhida.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000001_added_entity_PostoSaude.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000001_added_entity_RecebaEmail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000001_added_entity_TipoInformacao.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000002_added_entity_InformacoesProcess.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000002_added_entity_InformacoesStartForm.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000004_added_entity_TaskAgendar.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000005_added_entity_TaskBuscaPosto.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000005_added_entity_TaskPreencherDados.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000006_added_entity_TaskRecebaDadosC19.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210401000001_added_entity_LocalDesejado.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20210401000001_added_entity_constraints_Informacoes.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000002_added_entity_constraints_InformacoesProcess.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000002_added_entity_constraints_InformacoesStartForm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210401000005_added_entity_constraints_TaskBuscaPosto.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210401000006_added_entity_constraints_TaskRecebaDadosC19.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->

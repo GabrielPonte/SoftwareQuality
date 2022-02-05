@@ -94,6 +94,35 @@
                     v-model.number="$v.informacoesProcess.informacoes.idade.$model"
                   />
                 </div>
+                <div class="form-group">
+                  <label
+                    class="form-control-label"
+                    v-text="$t('softwareQualityApp.informacoesStartForm.opcaoEscolhida')"
+                    for="informacoes-start-form-opcaoEscolhida"
+                    >Opcao Escolhida</label
+                  >
+                  <select
+                    class="form-control"
+                    id="informacoes-start-form-opcaoEscolhida"
+                    data-cy="opcaoEscolhida"
+                    name="opcaoEscolhida"
+                    v-model="informacoesProcess.informacoes.opcaoEscolhida"
+                  >
+                    <option v-bind:value="null"></option>
+                    <option
+                      v-bind:value="
+                        informacoesProcess.informacoes.opcaoEscolhida &&
+                        opcaoEscolhidaOption.id === informacoesProcess.informacoes.opcaoEscolhida.id
+                          ? informacoesProcess.informacoes.opcaoEscolhida
+                          : opcaoEscolhidaOption
+                      "
+                      v-for="opcaoEscolhidaOption in opcaoEscolhidas"
+                      :key="opcaoEscolhidaOption.id"
+                    >
+                      {{ opcaoEscolhidaOption.opcaoInicial }}
+                    </option>
+                  </select>
+                </div>
               </div>
             </template>
           </akip-show-process-definition>

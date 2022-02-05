@@ -53,6 +53,6 @@
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
     "languages": ["en"],
-    "entities": ["Informacoes", "LocalDesejado"]
+    "entities": ["Informacoes", "LocalDesejado", "OpcaoEscolhida", "PostoSaude", "RecebaEmail", "TipoInformacao"]
   }
 }

@@ -1,4 +1,8 @@
 import { ILocalDesejado } from '@/shared/model/local-desejado.model';
+import { IOpcaoEscolhida } from '@/shared/model/opcao-escolhida.model';
+import { IPostoSaude } from '@/shared/model/posto-saude.model';
+import { IRecebaEmail } from '@/shared/model/receba-email.model';
+import { ITipoInformacao } from '@/shared/model/tipo-informacao.model';
 
 export interface IInformacoes {
   id?: number;
@@ -23,6 +27,10 @@ export interface IInformacoes {
   local?: string | null;
   receberEmail?: string | null;
   localDesejado?: ILocalDesejado | null;
+  opcaoEscolhida?: IOpcaoEscolhida | null;
+  postoSaude?: IPostoSaude | null;
+  recebaEmail?: IRecebaEmail | null;
+  tipoInformacao?: ITipoInformacao | null;
 }
 
 export class Informacoes implements IInformacoes {
@@ -48,6 +56,10 @@ export class Informacoes implements IInformacoes {
     public tipoDeInformacao?: string | null,
     public local?: string | null,
     public receberEmail?: string | null,
-    public localDesejado?: ILocalDesejado | null
+    public localDesejado?: ILocalDesejado | null,
+    public opcaoEscolhida?: IOpcaoEscolhida | null,
+    public postoSaude?: IPostoSaude | null,
+    public recebaEmail?: IRecebaEmail | null,
+    public tipoInformacao?: ITipoInformacao | null
   ) {}
 }

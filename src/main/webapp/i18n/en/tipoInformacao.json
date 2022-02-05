@@ -1,0 +1,24 @@
+{
+  "softwareQualityApp": {
+    "tipoInformacao": {
+      "home": {
+        "title": "Tipo Informacaos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tipo Informacao",
+        "createOrEditLabel": "Create or edit a Tipo Informacao",
+        "notFound": "No Tipo Informacaos found"
+      },
+      "created": "A new Tipo Informacao is created with identifier {{ param }}",
+      "updated": "A Tipo Informacao is updated with identifier {{ param }}",
+      "deleted": "A Tipo Informacao is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tipo Informacao {{ id }}?"
+      },
+      "detail": {
+        "title": "Tipo Informacao"
+      },
+      "id": "ID",
+      "tipoInfo": "Tipo Info"
+    }
+  }
+}

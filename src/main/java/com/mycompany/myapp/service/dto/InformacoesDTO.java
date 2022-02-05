@@ -53,6 +53,14 @@ public class InformacoesDTO implements Serializable {
 
     private LocalDesejadoDTO localDesejado;
 
+    private OpcaoEscolhidaDTO opcaoEscolhida;
+
+    private PostoSaudeDTO postoSaude;
+
+    private RecebaEmailDTO recebaEmail;
+
+    private TipoInformacaoDTO tipoInformacao;
+
     public Long getId() {
         return id;
     }
@@ -229,6 +237,38 @@ public class InformacoesDTO implements Serializable {
         this.localDesejado = localDesejado;
     }
 
+    public OpcaoEscolhidaDTO getOpcaoEscolhida() {
+        return opcaoEscolhida;
+    }
+
+    public void setOpcaoEscolhida(OpcaoEscolhidaDTO opcaoEscolhida) {
+        this.opcaoEscolhida = opcaoEscolhida;
+    }
+
+    public PostoSaudeDTO getPostoSaude() {
+        return postoSaude;
+    }
+
+    public void setPostoSaude(PostoSaudeDTO postoSaude) {
+        this.postoSaude = postoSaude;
+    }
+
+    public RecebaEmailDTO getRecebaEmail() {
+        return recebaEmail;
+    }
+
+    public void setRecebaEmail(RecebaEmailDTO recebaEmail) {
+        this.recebaEmail = recebaEmail;
+    }
+
+    public TipoInformacaoDTO getTipoInformacao() {
+        return tipoInformacao;
+    }
+
+    public void setTipoInformacao(TipoInformacaoDTO tipoInformacao) {
+        this.tipoInformacao = tipoInformacao;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -276,6 +316,10 @@ public class InformacoesDTO implements Serializable {
             ", local='" + getLocal() + "'" +
             ", receberEmail='" + getReceberEmail() + "'" +
             ", localDesejado=" + getLocalDesejado() +
+            ", opcaoEscolhida=" + getOpcaoEscolhida() +
+            ", postoSaude=" + getPostoSaude() +
+            ", recebaEmail=" + getRecebaEmail() +
+            ", tipoInformacao=" + getTipoInformacao() +
             "}";
     }
 }

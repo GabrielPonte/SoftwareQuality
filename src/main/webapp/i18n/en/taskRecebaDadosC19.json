@@ -21,7 +21,9 @@
       "tipoDeInformacao": "Tipo De Informacao",
       "local": "Local",
       "receberEmail": "Receber Email",
-      "localDesejado": "Local Desejado"
+      "localDesejado": "Local Desejado",
+      "tipoInformacao": "Tipo Informacao",
+      "recebaEmail": "Receba Email"
     }
   }
 }

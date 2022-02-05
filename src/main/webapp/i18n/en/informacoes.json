@@ -30,7 +30,11 @@
       "tipoDeInformacao": "Tipo De Informacao",
       "local": "Local",
       "receberEmail": "Receber Email",
-      "localDesejado": "Local Desejado"
+      "localDesejado": "Local Desejado",
+      "opcaoEscolhida": "Opcao Escolhida",
+      "postoSaude": "Posto Saude",
+      "recebaEmail": "Receba Email",
+      "tipoInformacao": "Tipo Informacao"
     }
   }
 }

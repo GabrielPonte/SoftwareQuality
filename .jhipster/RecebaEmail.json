@@ -1,0 +1,18 @@
+{
+  "fields": [
+    {
+      "fieldName": "opcaoEmail",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "domain",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "RecebaEmail",
+  "changelogDate": "20210401000001",
+  "skipFakeData": true
+}

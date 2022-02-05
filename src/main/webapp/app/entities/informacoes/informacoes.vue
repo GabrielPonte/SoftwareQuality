@@ -39,6 +39,10 @@
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.local')">Local</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.receberEmail')">Receber Email</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.localDesejado')">Local Desejado</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.opcaoEscolhida')">Opcao Escolhida</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.postoSaude')">Posto Saude</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.recebaEmail')">Receba Email</span></th>
+            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.tipoInformacao')">Tipo Informacao</span></th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -71,6 +75,34 @@
               <div v-if="informacoes.localDesejado">
                 <router-link :to="{ name: 'LocalDesejadoView', params: { localDesejadoId: informacoes.localDesejado.id } }">{{
                   informacoes.localDesejado.localCovid
+                }}</router-link>
+              </div>
+            </td>
+            <td>
+              <div v-if="informacoes.opcaoEscolhida">
+                <router-link :to="{ name: 'OpcaoEscolhidaView', params: { opcaoEscolhidaId: informacoes.opcaoEscolhida.id } }">{{
+                  informacoes.opcaoEscolhida.opcaoInicial
+                }}</router-link>
+              </div>
+            </td>
+            <td>
+              <div v-if="informacoes.postoSaude">
+                <router-link :to="{ name: 'PostoSaudeView', params: { postoSaudeId: informacoes.postoSaude.id } }">{{
+                  informacoes.postoSaude.nomePosto
+                }}</router-link>
+              </div>
+            </td>
+            <td>
+              <div v-if="informacoes.recebaEmail">
+                <router-link :to="{ name: 'RecebaEmailView', params: { recebaEmailId: informacoes.recebaEmail.id } }">{{
+                  informacoes.recebaEmail.opcaoEmail
+                }}</router-link>
+              </div>
+            </td>
+            <td>
+              <div v-if="informacoes.tipoInformacao">
+                <router-link :to="{ name: 'TipoInformacaoView', params: { tipoInformacaoId: informacoes.tipoInformacao.id } }">{{
+                  informacoes.tipoInformacao.tipoInfo
                 }}</router-link>
               </div>
             </td>

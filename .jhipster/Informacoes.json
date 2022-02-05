@@ -87,6 +87,30 @@
       "otherEntityName": "localDesejado",
       "relationshipType": "many-to-one",
       "otherEntityField": "localCovid"
+    },
+    {
+      "relationshipName": "opcaoEscolhida",
+      "otherEntityName": "opcaoEscolhida",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "opcaoInicial"
+    },
+    {
+      "relationshipName": "postoSaude",
+      "otherEntityName": "postoSaude",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "nomePosto"
+    },
+    {
+      "relationshipName": "recebaEmail",
+      "otherEntityName": "recebaEmail",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "opcaoEmail"
+    },
+    {
+      "relationshipName": "tipoInformacao",
+      "otherEntityName": "tipoInformacao",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "tipoInfo"
     }
   ],
   "entityType": "domain",

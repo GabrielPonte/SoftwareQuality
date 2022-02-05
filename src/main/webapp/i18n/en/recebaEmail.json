@@ -1,0 +1,24 @@
+{
+  "softwareQualityApp": {
+    "recebaEmail": {
+      "home": {
+        "title": "Receba Emails",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Receba Email",
+        "createOrEditLabel": "Create or edit a Receba Email",
+        "notFound": "No Receba Emails found"
+      },
+      "created": "A new Receba Email is created with identifier {{ param }}",
+      "updated": "A Receba Email is updated with identifier {{ param }}",
+      "deleted": "A Receba Email is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Receba Email {{ id }}?"
+      },
+      "detail": {
+        "title": "Receba Email"
+      },
+      "id": "ID",
+      "opcaoEmail": "Opcao Email"
+    }
+  }
+}
