@@ -13,5 +13,29 @@
                                  constraintName="fk_informacoes_process__local_desejado_id"
                                  referencedColumnNames="id"
                                  referencedTableName="local_desejado"/>
+
+        <addForeignKeyConstraint baseColumnNames="opcao_escolhida_id"
+                                 baseTableName="informacoes_process"
+                                 constraintName="fk_informacoes_process__opcao_escolhida_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="opcao_escolhida"/>
+
+        <addForeignKeyConstraint baseColumnNames="posto_saude_id"
+                                 baseTableName="informacoes_process"
+                                 constraintName="fk_informacoes_process__posto_saude_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="posto_saude"/>
+
+        <addForeignKeyConstraint baseColumnNames="receba_email_id"
+                                 baseTableName="informacoes_process"
+                                 constraintName="fk_informacoes_process__receba_email_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="receba_email"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_informacao_id"
+                                 baseTableName="informacoes_process"
+                                 constraintName="fk_informacoes_process__tipo_informacao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_informacao"/>
     </changeSet>
 </databaseChangeLog>

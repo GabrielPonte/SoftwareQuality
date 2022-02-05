@@ -1,5 +1,8 @@
 import { Component, Vue, Inject } from 'vue-property-decorator';
 
+import PostoSaudeService from '@/entities/posto-saude/posto-saude.service';
+import { IPostoSaude } from '@/shared/model/posto-saude.model';
+
 import TaskBuscaPostoService from './task-busca-posto.service';
 import { TaskBuscaPostoContext } from './task-busca-posto.model';
 
@@ -21,6 +24,10 @@ const validations: any = {
 export default class TaskBuscaPostoExecuteComponent extends Vue {
   private taskBuscaPostoService: TaskBuscaPostoService = new TaskBuscaPostoService();
   private taskContext: TaskBuscaPostoContext = {};
+
+  @Inject('postoSaudeService') private postoSaudeService: () => PostoSaudeService;
+
+  public postoSaudes: IPostoSaude[] = [];
   public isSaving = false;
 
   beforeRouteEnter(to, from, next) {
@@ -28,6 +35,7 @@ export default class TaskBuscaPostoExecuteComponent extends Vue {
       if (to.params.taskInstanceId) {
         vm.claimTaskInstance(to.params.taskInstanceId);
       }
+      vm.initRelationships();
     });
   }
 
@@ -47,5 +55,11 @@ export default class TaskBuscaPostoExecuteComponent extends Vue {
     });
   }
 
-  public initRelationships(): void {}
+  public initRelationships(): void {
+    this.postoSaudeService()
+      .retrieve()
+      .then(res => {
+        this.postoSaudes = res.data;
+      });
+  }
 }

@@ -17,7 +17,14 @@
       "fieldType": "Integer"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "relationshipName": "opcaoEscolhida",
+      "otherEntityName": "opcaoEscolhida",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "opcaoInicial"
+    }
+  ],
   "entityType": "start-form",
   "processBpmnId": "InformacoesProcess",
   "processEntityName": "InformacoesProcess",

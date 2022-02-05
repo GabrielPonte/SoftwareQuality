@@ -41,6 +41,22 @@
             <font-awesome-icon icon="asterisk" />
             <span v-text="$t('global.menu.entities.localDesejado')">Local Desejado</span>
           </b-dropdown-item>
+          <b-dropdown-item to="/opcao-escolhida">
+            <font-awesome-icon icon="asterisk" />
+            <span v-text="$t('global.menu.entities.opcaoEscolhida')">Opcao Escolhida</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/posto-saude">
+            <font-awesome-icon icon="asterisk" />
+            <span v-text="$t('global.menu.entities.postoSaude')">Posto Saude</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/receba-email">
+            <font-awesome-icon icon="asterisk" />
+            <span v-text="$t('global.menu.entities.recebaEmail')">Receba Email</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/tipo-informacao">
+            <font-awesome-icon icon="asterisk" />
+            <span v-text="$t('global.menu.entities.tipoInformacao')">Tipo Informacao</span>
+          </b-dropdown-item>
           <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
         </b-nav-item-dropdown>
         <b-nav-item-dropdown

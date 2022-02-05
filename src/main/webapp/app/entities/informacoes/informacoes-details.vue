@@ -136,6 +136,46 @@
               }}</router-link>
             </div>
           </dd>
+          <dt>
+            <span v-text="$t('softwareQualityApp.informacoes.opcaoEscolhida')">Opcao Escolhida</span>
+          </dt>
+          <dd>
+            <div v-if="informacoes.opcaoEscolhida">
+              <router-link :to="{ name: 'OpcaoEscolhidaView', params: { opcaoEscolhidaId: informacoes.opcaoEscolhida.id } }">{{
+                informacoes.opcaoEscolhida.opcaoInicial
+              }}</router-link>
+            </div>
+          </dd>
+          <dt>
+            <span v-text="$t('softwareQualityApp.informacoes.postoSaude')">Posto Saude</span>
+          </dt>
+          <dd>
+            <div v-if="informacoes.postoSaude">
+              <router-link :to="{ name: 'PostoSaudeView', params: { postoSaudeId: informacoes.postoSaude.id } }">{{
+                informacoes.postoSaude.nomePosto
+              }}</router-link>
+            </div>
+          </dd>
+          <dt>
+            <span v-text="$t('softwareQualityApp.informacoes.recebaEmail')">Receba Email</span>
+          </dt>
+          <dd>
+            <div v-if="informacoes.recebaEmail">
+              <router-link :to="{ name: 'RecebaEmailView', params: { recebaEmailId: informacoes.recebaEmail.id } }">{{
+                informacoes.recebaEmail.opcaoEmail
+              }}</router-link>
+            </div>
+          </dd>
+          <dt>
+            <span v-text="$t('softwareQualityApp.informacoes.tipoInformacao')">Tipo Informacao</span>
+          </dt>
+          <dd>
+            <div v-if="informacoes.tipoInformacao">
+              <router-link :to="{ name: 'TipoInformacaoView', params: { tipoInformacaoId: informacoes.tipoInformacao.id } }">{{
+                informacoes.tipoInformacao.tipoInfo
+              }}</router-link>
+            </div>
+          </dd>
         </dl>
         <button type="submit" v-on:click.prevent="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
           <font-awesome-icon icon="arrow-left"></font-awesome-icon>&nbsp;<span v-text="$t('entity.action.back')"> Back</span>

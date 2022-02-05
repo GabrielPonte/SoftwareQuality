@@ -13,7 +13,14 @@
       "fieldType": "String"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "relationshipName": "postoSaude",
+      "otherEntityName": "postoSaude",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "nomePosto"
+    }
+  ],
   "entityType": "user-task-form",
   "processBpmnId": "InformacoesProcess",
   "processEntityName": "InformacoesProcess",

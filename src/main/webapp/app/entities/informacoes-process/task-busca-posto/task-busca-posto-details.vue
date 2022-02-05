@@ -44,6 +44,34 @@
                 v-model="taskContext.informacoesProcess.informacoes.cidadeDoPosto"
               />
             </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskBuscaPosto.postoSaude')"
+                for="task-busca-posto-postoSaude"
+                >Posto Saude</label
+              >
+              <input
+                v-if="taskContext.informacoesProcess.informacoes.postoSaude"
+                readonly
+                type="text"
+                class="form-control"
+                name="postoSaude"
+                id="informacoes-postoSaude"
+                data-cy="postoSaude"
+                :value="taskContext.informacoesProcess.informacoes.postoSaude.nomePosto"
+              />
+              <input
+                v-else
+                readonly
+                type="text"
+                class="form-control"
+                name="postoSaude"
+                id="informacoes-postoSaude"
+                data-cy="postoSaude"
+                value=""
+              />
+            </div>
           </template>
         </akip-show-task-instance>
         <br />

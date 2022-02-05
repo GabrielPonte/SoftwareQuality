@@ -84,6 +84,18 @@ public class Informacoes implements Serializable {
     @ManyToOne
     private LocalDesejado localDesejado;
 
+    @ManyToOne
+    private OpcaoEscolhida opcaoEscolhida;
+
+    @ManyToOne
+    private PostoSaude postoSaude;
+
+    @ManyToOne
+    private RecebaEmail recebaEmail;
+
+    @ManyToOne
+    private TipoInformacao tipoInformacao;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
         return id;
@@ -369,6 +381,58 @@ public class Informacoes implements Serializable {
 
     public void setLocalDesejado(LocalDesejado localDesejado) {
         this.localDesejado = localDesejado;
+    }
+
+    public OpcaoEscolhida getOpcaoEscolhida() {
+        return this.opcaoEscolhida;
+    }
+
+    public Informacoes opcaoEscolhida(OpcaoEscolhida opcaoEscolhida) {
+        this.setOpcaoEscolhida(opcaoEscolhida);
+        return this;
+    }
+
+    public void setOpcaoEscolhida(OpcaoEscolhida opcaoEscolhida) {
+        this.opcaoEscolhida = opcaoEscolhida;
+    }
+
+    public PostoSaude getPostoSaude() {
+        return this.postoSaude;
+    }
+
+    public Informacoes postoSaude(PostoSaude postoSaude) {
+        this.setPostoSaude(postoSaude);
+        return this;
+    }
+
+    public void setPostoSaude(PostoSaude postoSaude) {
+        this.postoSaude = postoSaude;
+    }
+
+    public RecebaEmail getRecebaEmail() {
+        return this.recebaEmail;
+    }
+
+    public Informacoes recebaEmail(RecebaEmail recebaEmail) {
+        this.setRecebaEmail(recebaEmail);
+        return this;
+    }
+
+    public void setRecebaEmail(RecebaEmail recebaEmail) {
+        this.recebaEmail = recebaEmail;
+    }
+
+    public TipoInformacao getTipoInformacao() {
+        return this.tipoInformacao;
+    }
+
+    public Informacoes tipoInformacao(TipoInformacao tipoInformacao) {
+        this.setTipoInformacao(tipoInformacao);
+        return this;
+    }
+
+    public void setTipoInformacao(TipoInformacao tipoInformacao) {
+        this.tipoInformacao = tipoInformacao;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

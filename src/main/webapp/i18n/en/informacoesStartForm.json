@@ -21,7 +21,8 @@
       "opcao": "Opcao",
       "nomeCompleto": "Nome Completo",
       "email": "Email",
-      "idade": "Idade"
+      "idade": "Idade",
+      "opcaoEscolhida": "Opcao Escolhida"
     }
   }
 }

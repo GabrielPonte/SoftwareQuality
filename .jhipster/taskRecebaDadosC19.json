@@ -19,6 +19,18 @@
       "otherEntityName": "localDesejado",
       "relationshipType": "many-to-one",
       "otherEntityField": "localCovid"
+    },
+    {
+      "relationshipName": "tipoInformacao",
+      "otherEntityName": "tipoInformacao",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "tipoInfo"
+    },
+    {
+      "relationshipName": "recebaEmail",
+      "otherEntityName": "recebaEmail",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "opcaoEmail"
     }
   ],
   "entityType": "user-task-form",

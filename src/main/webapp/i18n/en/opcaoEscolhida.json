@@ -1,0 +1,24 @@
+{
+  "softwareQualityApp": {
+    "opcaoEscolhida": {
+      "home": {
+        "title": "Opcao Escolhidas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Opcao Escolhida",
+        "createOrEditLabel": "Create or edit a Opcao Escolhida",
+        "notFound": "No Opcao Escolhidas found"
+      },
+      "created": "A new Opcao Escolhida is created with identifier {{ param }}",
+      "updated": "A Opcao Escolhida is updated with identifier {{ param }}",
+      "deleted": "A Opcao Escolhida is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Opcao Escolhida {{ id }}?"
+      },
+      "detail": {
+        "title": "Opcao Escolhida"
+      },
+      "id": "ID",
+      "opcaoInicial": "Opcao Inicial"
+    }
+  }
+}

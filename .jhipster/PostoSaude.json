@@ -1,0 +1,26 @@
+{
+  "fields": [
+    {
+      "fieldName": "nomePosto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estadoPosto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cidadePosto",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "domain",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "PostoSaude",
+  "changelogDate": "20210401000001",
+  "skipFakeData": true
+}

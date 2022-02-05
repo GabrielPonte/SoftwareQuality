@@ -326,6 +326,126 @@
                   />
                 </div>
               </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label
+                    class="form-control-label"
+                    v-text="$t('softwareQualityApp.informacoesProcess.opcaoEscolhida')"
+                    for="informacoes-process-opcaoEscolhida"
+                    >Opcao Escolhida</label
+                  >
+                  <input
+                    v-if="informacoesProcess.informacoes.opcaoEscolhida"
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="opcaoEscolhida"
+                    id="informacoes-opcaoEscolhida"
+                    data-cy="opcaoEscolhida"
+                    :value="informacoesProcess.informacoes.opcaoEscolhida.opcaoInicial"
+                  />
+                  <input
+                    v-else
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="opcaoEscolhida"
+                    id="informacoes-opcaoEscolhida"
+                    data-cy="opcaoEscolhida"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label
+                    class="form-control-label"
+                    v-text="$t('softwareQualityApp.informacoesProcess.postoSaude')"
+                    for="informacoes-process-postoSaude"
+                    >Posto Saude</label
+                  >
+                  <input
+                    v-if="informacoesProcess.informacoes.postoSaude"
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="postoSaude"
+                    id="informacoes-postoSaude"
+                    data-cy="postoSaude"
+                    :value="informacoesProcess.informacoes.postoSaude.nomePosto"
+                  />
+                  <input
+                    v-else
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="postoSaude"
+                    id="informacoes-postoSaude"
+                    data-cy="postoSaude"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label
+                    class="form-control-label"
+                    v-text="$t('softwareQualityApp.informacoesProcess.recebaEmail')"
+                    for="informacoes-process-recebaEmail"
+                    >Receba Email</label
+                  >
+                  <input
+                    v-if="informacoesProcess.informacoes.recebaEmail"
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="recebaEmail"
+                    id="informacoes-recebaEmail"
+                    data-cy="recebaEmail"
+                    :value="informacoesProcess.informacoes.recebaEmail.opcaoEmail"
+                  />
+                  <input
+                    v-else
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="recebaEmail"
+                    id="informacoes-recebaEmail"
+                    data-cy="recebaEmail"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="card-body py-0">
+                <div class="form-group">
+                  <label
+                    class="form-control-label"
+                    v-text="$t('softwareQualityApp.informacoesProcess.tipoInformacao')"
+                    for="informacoes-process-tipoInformacao"
+                    >Tipo Informacao</label
+                  >
+                  <input
+                    v-if="informacoesProcess.informacoes.tipoInformacao"
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="tipoInformacao"
+                    id="informacoes-tipoInformacao"
+                    data-cy="tipoInformacao"
+                    :value="informacoesProcess.informacoes.tipoInformacao.tipoInfo"
+                  />
+                  <input
+                    v-else
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="tipoInformacao"
+                    id="informacoes-tipoInformacao"
+                    data-cy="tipoInformacao"
+                    value=""
+                  />
+                </div>
+              </div>
             </div>
           </template>
         </akip-show-process-instance>

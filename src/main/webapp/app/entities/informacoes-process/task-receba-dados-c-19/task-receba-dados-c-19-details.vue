@@ -74,6 +74,62 @@
                 value=""
               />
             </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskRecebaDadosC19.tipoInformacao')"
+                for="task-receba-dados-c-19-tipoInformacao"
+                >Tipo Informacao</label
+              >
+              <input
+                v-if="taskContext.informacoesProcess.informacoes.tipoInformacao"
+                readonly
+                type="text"
+                class="form-control"
+                name="tipoInformacao"
+                id="informacoes-tipoInformacao"
+                data-cy="tipoInformacao"
+                :value="taskContext.informacoesProcess.informacoes.tipoInformacao.tipoInfo"
+              />
+              <input
+                v-else
+                readonly
+                type="text"
+                class="form-control"
+                name="tipoInformacao"
+                id="informacoes-tipoInformacao"
+                data-cy="tipoInformacao"
+                value=""
+              />
+            </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskRecebaDadosC19.recebaEmail')"
+                for="task-receba-dados-c-19-recebaEmail"
+                >Receba Email</label
+              >
+              <input
+                v-if="taskContext.informacoesProcess.informacoes.recebaEmail"
+                readonly
+                type="text"
+                class="form-control"
+                name="recebaEmail"
+                id="informacoes-recebaEmail"
+                data-cy="recebaEmail"
+                :value="taskContext.informacoesProcess.informacoes.recebaEmail.opcaoEmail"
+              />
+              <input
+                v-else
+                readonly
+                type="text"
+                class="form-control"
+                name="recebaEmail"
+                id="informacoes-recebaEmail"
+                data-cy="recebaEmail"
+                value=""
+              />
+            </div>
           </template>
         </akip-show-task-instance>
         <br />

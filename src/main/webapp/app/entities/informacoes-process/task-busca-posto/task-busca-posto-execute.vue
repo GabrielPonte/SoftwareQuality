@@ -68,6 +68,35 @@
                 v-model="$v.taskContext.informacoesProcess.informacoes.cidadeDoPosto.$model"
               />
             </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskBuscaPosto.postoSaude')"
+                for="task-busca-posto-postoSaude"
+                >Posto Saude</label
+              >
+              <select
+                class="form-control"
+                id="task-busca-posto-postoSaude"
+                data-cy="postoSaude"
+                name="postoSaude"
+                v-model="taskContext.informacoesProcess.informacoes.postoSaude"
+              >
+                <option v-bind:value="null"></option>
+                <option
+                  v-bind:value="
+                    taskContext.informacoesProcess.informacoes.postoSaude &&
+                    postoSaudeOption.id === taskContext.informacoesProcess.informacoes.postoSaude.id
+                      ? taskContext.informacoesProcess.informacoes.postoSaude
+                      : postoSaudeOption
+                  "
+                  v-for="postoSaudeOption in postoSaudes"
+                  :key="postoSaudeOption.id"
+                >
+                  {{ postoSaudeOption.nomePosto }}
+                </option>
+              </select>
+            </div>
           </template>
         </akip-show-task-instance>
         <br />

@@ -13,13 +13,17 @@
         "taskInstance": "All Tasks",
         "myCandidateTasks": "My Tasks",
         "informacoes": "Informacoes",
+        "localDesejado": "Local Desejado",
+        "opcaoEscolhida": "Opcao Escolhida",
+        "postoSaude": "Posto Saude",
+        "recebaEmail": "Receba Email",
+        "tipoInformacao": "Tipo Informacao",
         "informacoesProcess": "Informacoes Process",
         "informacoesStartForm": "Informacoes Start Form",
         "taskAgendar": "Task Agendar",
         "taskBuscaPosto": "Task Busca Posto",
         "taskPreencherDados": "Task Preencher Dados",
         "taskRecebaDadosC19": "Task Receba Dados C 19",
-        "localDesejado": "Local Desejado",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

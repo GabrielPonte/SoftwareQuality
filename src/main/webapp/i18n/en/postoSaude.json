@@ -1,0 +1,26 @@
+{
+  "softwareQualityApp": {
+    "postoSaude": {
+      "home": {
+        "title": "Posto Saudes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Posto Saude",
+        "createOrEditLabel": "Create or edit a Posto Saude",
+        "notFound": "No Posto Saudes found"
+      },
+      "created": "A new Posto Saude is created with identifier {{ param }}",
+      "updated": "A Posto Saude is updated with identifier {{ param }}",
+      "deleted": "A Posto Saude is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Posto Saude {{ id }}?"
+      },
+      "detail": {
+        "title": "Posto Saude"
+      },
+      "id": "ID",
+      "nomePosto": "Nome Posto",
+      "estadoPosto": "Estado Posto",
+      "cidadePosto": "Cidade Posto"
+    }
+  }
+}

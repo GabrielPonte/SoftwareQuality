@@ -97,6 +97,64 @@
                 </option>
               </select>
             </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskRecebaDadosC19.tipoInformacao')"
+                for="task-receba-dados-c-19-tipoInformacao"
+                >Tipo Informacao</label
+              >
+              <select
+                class="form-control"
+                id="task-receba-dados-c-19-tipoInformacao"
+                data-cy="tipoInformacao"
+                name="tipoInformacao"
+                v-model="taskContext.informacoesProcess.informacoes.tipoInformacao"
+              >
+                <option v-bind:value="null"></option>
+                <option
+                  v-bind:value="
+                    taskContext.informacoesProcess.informacoes.tipoInformacao &&
+                    tipoInformacaoOption.id === taskContext.informacoesProcess.informacoes.tipoInformacao.id
+                      ? taskContext.informacoesProcess.informacoes.tipoInformacao
+                      : tipoInformacaoOption
+                  "
+                  v-for="tipoInformacaoOption in tipoInformacaos"
+                  :key="tipoInformacaoOption.id"
+                >
+                  {{ tipoInformacaoOption.tipoInfo }}
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskRecebaDadosC19.recebaEmail')"
+                for="task-receba-dados-c-19-recebaEmail"
+                >Receba Email</label
+              >
+              <select
+                class="form-control"
+                id="task-receba-dados-c-19-recebaEmail"
+                data-cy="recebaEmail"
+                name="recebaEmail"
+                v-model="taskContext.informacoesProcess.informacoes.recebaEmail"
+              >
+                <option v-bind:value="null"></option>
+                <option
+                  v-bind:value="
+                    taskContext.informacoesProcess.informacoes.recebaEmail &&
+                    recebaEmailOption.id === taskContext.informacoesProcess.informacoes.recebaEmail.id
+                      ? taskContext.informacoesProcess.informacoes.recebaEmail
+                      : recebaEmailOption
+                  "
+                  v-for="recebaEmailOption in recebaEmails"
+                  :key="recebaEmailOption.id"
+                >
+                  {{ recebaEmailOption.opcaoEmail }}
+                </option>
+              </select>
+            </div>
           </template>
         </akip-show-task-instance>
         <br />

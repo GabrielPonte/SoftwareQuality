@@ -26,6 +26,12 @@
             <column name="local_desejado_id" type="bigint">
                 <constraints nullable="true" />
             </column>
+            <column name="tipo_informacao_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="receba_email_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
     </changeSet>
