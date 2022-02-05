@@ -11,28 +11,28 @@
             <div class="form-group">
               <label
                 class="form-control-label"
-                v-text="$t('softwareQualityApp.taskBuscaPosto.postoSaude')"
-                for="task-busca-posto-postoSaude"
-                >Posto Saude</label
+                v-text="$t('softwareQualityApp.taskInitialOption.opcaoEscolhida')"
+                for="task-initial-option-opcaoEscolhida"
+                >Opcao Escolhida</label
               >
               <input
-                v-if="taskContext.informacoesProcess.informacoes.postoSaude"
+                v-if="taskContext.informacoesProcess.informacoes.opcaoEscolhida"
                 readonly
                 type="text"
                 class="form-control"
-                name="postoSaude"
-                id="informacoes-postoSaude"
-                data-cy="postoSaude"
-                :value="taskContext.informacoesProcess.informacoes.postoSaude.nomePosto"
+                name="opcaoEscolhida"
+                id="informacoes-opcaoEscolhida"
+                data-cy="opcaoEscolhida"
+                :value="taskContext.informacoesProcess.informacoes.opcaoEscolhida.opcaoInicial"
               />
               <input
                 v-else
                 readonly
                 type="text"
                 class="form-control"
-                name="postoSaude"
-                id="informacoes-postoSaude"
-                data-cy="postoSaude"
+                name="opcaoEscolhida"
+                id="informacoes-opcaoEscolhida"
+                data-cy="opcaoEscolhida"
                 value=""
               />
             </div>
@@ -45,7 +45,7 @@
 
         <router-link
           v-if="taskContext.taskInstance.status == 'NEW' || taskContext.taskInstance.status == 'ASSIGNED'"
-          :to="`/process-definition/InformacoesProcess/task/taskBuscaPosto/${taskContext.taskInstance.id}/execute`"
+          :to="`/process-definition/InformacoesProcess/task/taskInitialOption/${taskContext.taskInstance.id}/execute`"
           tag="button"
           class="btn btn-primary"
           data-cy="entityDetailsButton"
@@ -57,4 +57,4 @@
   </div>
 </template>
 
-<script lang="ts" src="./task-busca-posto-details.component.ts"></script>
+<script lang="ts" src="./task-initial-option-details.component.ts"></script>

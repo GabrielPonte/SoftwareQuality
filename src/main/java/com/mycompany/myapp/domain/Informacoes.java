@@ -21,9 +21,6 @@ public class Informacoes implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "opcao")
-    private String opcao;
-
     @Column(name = "nome_completo")
     private String nomeCompleto;
 
@@ -57,29 +54,11 @@ public class Informacoes implements Serializable {
     @Column(name = "cep")
     private String cep;
 
-    @Column(name = "nome_do_posto")
-    private String nomeDoPosto;
-
-    @Column(name = "estado_do_posto")
-    private String estadoDoPosto;
-
-    @Column(name = "cidade_do_posto")
-    private String cidadeDoPosto;
-
     @Column(name = "data")
     private LocalDate data;
 
     @Column(name = "hora")
     private String hora;
-
-    @Column(name = "tipo_de_informacao")
-    private String tipoDeInformacao;
-
-    @Column(name = "local")
-    private String local;
-
-    @Column(name = "receber_email")
-    private String receberEmail;
 
     @ManyToOne
     private LocalDesejado localDesejado;
@@ -108,19 +87,6 @@ public class Informacoes implements Serializable {
     public Informacoes id(Long id) {
         this.id = id;
         return this;
-    }
-
-    public String getOpcao() {
-        return this.opcao;
-    }
-
-    public Informacoes opcao(String opcao) {
-        this.opcao = opcao;
-        return this;
-    }
-
-    public void setOpcao(String opcao) {
-        this.opcao = opcao;
     }
 
     public String getNomeCompleto() {
@@ -266,45 +232,6 @@ public class Informacoes implements Serializable {
         this.cep = cep;
     }
 
-    public String getNomeDoPosto() {
-        return this.nomeDoPosto;
-    }
-
-    public Informacoes nomeDoPosto(String nomeDoPosto) {
-        this.nomeDoPosto = nomeDoPosto;
-        return this;
-    }
-
-    public void setNomeDoPosto(String nomeDoPosto) {
-        this.nomeDoPosto = nomeDoPosto;
-    }
-
-    public String getEstadoDoPosto() {
-        return this.estadoDoPosto;
-    }
-
-    public Informacoes estadoDoPosto(String estadoDoPosto) {
-        this.estadoDoPosto = estadoDoPosto;
-        return this;
-    }
-
-    public void setEstadoDoPosto(String estadoDoPosto) {
-        this.estadoDoPosto = estadoDoPosto;
-    }
-
-    public String getCidadeDoPosto() {
-        return this.cidadeDoPosto;
-    }
-
-    public Informacoes cidadeDoPosto(String cidadeDoPosto) {
-        this.cidadeDoPosto = cidadeDoPosto;
-        return this;
-    }
-
-    public void setCidadeDoPosto(String cidadeDoPosto) {
-        this.cidadeDoPosto = cidadeDoPosto;
-    }
-
     public LocalDate getData() {
         return this.data;
     }
@@ -329,45 +256,6 @@ public class Informacoes implements Serializable {
 
     public void setHora(String hora) {
         this.hora = hora;
-    }
-
-    public String getTipoDeInformacao() {
-        return this.tipoDeInformacao;
-    }
-
-    public Informacoes tipoDeInformacao(String tipoDeInformacao) {
-        this.tipoDeInformacao = tipoDeInformacao;
-        return this;
-    }
-
-    public void setTipoDeInformacao(String tipoDeInformacao) {
-        this.tipoDeInformacao = tipoDeInformacao;
-    }
-
-    public String getLocal() {
-        return this.local;
-    }
-
-    public Informacoes local(String local) {
-        this.local = local;
-        return this;
-    }
-
-    public void setLocal(String local) {
-        this.local = local;
-    }
-
-    public String getReceberEmail() {
-        return this.receberEmail;
-    }
-
-    public Informacoes receberEmail(String receberEmail) {
-        this.receberEmail = receberEmail;
-        return this;
-    }
-
-    public void setReceberEmail(String receberEmail) {
-        this.receberEmail = receberEmail;
     }
 
     public LocalDesejado getLocalDesejado() {
@@ -459,7 +347,6 @@ public class Informacoes implements Serializable {
     public String toString() {
         return "Informacoes{" +
             "id=" + getId() +
-            ", opcao='" + getOpcao() + "'" +
             ", nomeCompleto='" + getNomeCompleto() + "'" +
             ", cpf='" + getCpf() + "'" +
             ", email='" + getEmail() + "'" +
@@ -471,14 +358,8 @@ public class Informacoes implements Serializable {
             ", endereco='" + getEndereco() + "'" +
             ", complemento='" + getComplemento() + "'" +
             ", cep='" + getCep() + "'" +
-            ", nomeDoPosto='" + getNomeDoPosto() + "'" +
-            ", estadoDoPosto='" + getEstadoDoPosto() + "'" +
-            ", cidadeDoPosto='" + getCidadeDoPosto() + "'" +
             ", data='" + getData() + "'" +
             ", hora='" + getHora() + "'" +
-            ", tipoDeInformacao='" + getTipoDeInformacao() + "'" +
-            ", local='" + getLocal() + "'" +
-            ", receberEmail='" + getReceberEmail() + "'" +
             "}";
     }
 }

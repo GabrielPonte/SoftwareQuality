@@ -16,20 +16,6 @@
               </h5>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.opcao')">opcao</label>
-                  <input
-                    readonly
-                    type="text"
-                    class="form-control"
-                    name="opcao"
-                    id="informacoes-opcao"
-                    data-cy="opcao"
-                    v-model="informacoesProcess.informacoes.opcao"
-                  />
-                </div>
-              </div>
-              <div class="card-body py-0">
-                <div class="form-group">
                   <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.nomeCompleto')">nomeCompleto</label>
                   <input
                     readonly
@@ -184,48 +170,6 @@
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.nomeDoPosto')">nomeDoPosto</label>
-                  <input
-                    readonly
-                    type="text"
-                    class="form-control"
-                    name="nomeDoPosto"
-                    id="informacoes-nomeDoPosto"
-                    data-cy="nomeDoPosto"
-                    v-model="informacoesProcess.informacoes.nomeDoPosto"
-                  />
-                </div>
-              </div>
-              <div class="card-body py-0">
-                <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.estadoDoPosto')">estadoDoPosto</label>
-                  <input
-                    readonly
-                    type="text"
-                    class="form-control"
-                    name="estadoDoPosto"
-                    id="informacoes-estadoDoPosto"
-                    data-cy="estadoDoPosto"
-                    v-model="informacoesProcess.informacoes.estadoDoPosto"
-                  />
-                </div>
-              </div>
-              <div class="card-body py-0">
-                <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.cidadeDoPosto')">cidadeDoPosto</label>
-                  <input
-                    readonly
-                    type="text"
-                    class="form-control"
-                    name="cidadeDoPosto"
-                    id="informacoes-cidadeDoPosto"
-                    data-cy="cidadeDoPosto"
-                    v-model="informacoesProcess.informacoes.cidadeDoPosto"
-                  />
-                </div>
-              </div>
-              <div class="card-body py-0">
-                <div class="form-group">
                   <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.data')">data</label>
                   <input
                     readonly
@@ -249,50 +193,6 @@
                     id="informacoes-hora"
                     data-cy="hora"
                     v-model="informacoesProcess.informacoes.hora"
-                  />
-                </div>
-              </div>
-              <div class="card-body py-0">
-                <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.tipoDeInformacao')"
-                    >tipoDeInformacao</label
-                  >
-                  <input
-                    readonly
-                    type="text"
-                    class="form-control"
-                    name="tipoDeInformacao"
-                    id="informacoes-tipoDeInformacao"
-                    data-cy="tipoDeInformacao"
-                    v-model="informacoesProcess.informacoes.tipoDeInformacao"
-                  />
-                </div>
-              </div>
-              <div class="card-body py-0">
-                <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.local')">local</label>
-                  <input
-                    readonly
-                    type="text"
-                    class="form-control"
-                    name="local"
-                    id="informacoes-local"
-                    data-cy="local"
-                    v-model="informacoesProcess.informacoes.local"
-                  />
-                </div>
-              </div>
-              <div class="card-body py-0">
-                <div class="form-group">
-                  <label class="form-control-label" v-text="$t('softwareQualityApp.informacoesProcess.receberEmail')">receberEmail</label>
-                  <input
-                    readonly
-                    type="text"
-                    class="form-control"
-                    name="receberEmail"
-                    id="informacoes-receberEmail"
-                    data-cy="receberEmail"
-                    v-model="informacoesProcess.informacoes.receberEmail"
                   />
                 </div>
               </div>

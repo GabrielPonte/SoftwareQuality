@@ -18,11 +18,9 @@
         "title": "Informacoes Start Form"
       },
       "id": "ID",
-      "opcao": "Opcao",
       "nomeCompleto": "Nome Completo",
       "email": "Email",
-      "idade": "Idade",
-      "opcaoEscolhida": "Opcao Escolhida"
+      "idade": "Idade"
     }
   }
 }

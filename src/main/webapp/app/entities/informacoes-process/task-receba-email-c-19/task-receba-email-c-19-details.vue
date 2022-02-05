@@ -9,18 +9,6 @@
           <template v-slot:body>
             <hr />
             <div class="form-group">
-              <label class="form-control-label" v-text="$t('softwareQualityApp.taskRecebaEmailC19.receberEmail')">receberEmail</label>
-              <input
-                readonly
-                type="text"
-                class="form-control"
-                name="receberEmail"
-                id="informacoes-receberEmail"
-                data-cy="receberEmail"
-                v-model="taskContext.informacoesProcess.informacoes.receberEmail"
-              />
-            </div>
-            <div class="form-group">
               <label
                 class="form-control-label"
                 v-text="$t('softwareQualityApp.taskRecebaEmailC19.recebaEmail')"

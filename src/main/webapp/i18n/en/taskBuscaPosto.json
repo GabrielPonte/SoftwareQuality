@@ -18,9 +18,6 @@
         "title": "Task Busca Posto"
       },
       "id": "ID",
-      "nomeDoPosto": "Nome Do Posto",
-      "estadoDoPosto": "Estado Do Posto",
-      "cidadeDoPosto": "Cidade Do Posto",
       "postoSaude": "Posto Saude"
     }
   }

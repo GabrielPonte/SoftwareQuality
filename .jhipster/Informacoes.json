@@ -1,10 +1,6 @@
 {
   "fields": [
     {
-      "fieldName": "opcao",
-      "fieldType": "String"
-    },
-    {
       "fieldName": "nomeCompleto",
       "fieldType": "String"
     },
@@ -49,35 +45,11 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "nomeDoPosto",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "estadoDoPosto",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "cidadeDoPosto",
-      "fieldType": "String"
-    },
-    {
       "fieldName": "data",
       "fieldType": "LocalDate"
     },
     {
       "fieldName": "hora",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "tipoDeInformacao",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "local",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "receberEmail",
       "fieldType": "String"
     }
   ],

@@ -11,29 +11,29 @@
             <div class="form-group">
               <label
                 class="form-control-label"
-                v-text="$t('softwareQualityApp.taskRecebaEmailC19.recebaEmail')"
-                for="task-receba-email-c-19-recebaEmail"
-                >Receba Email</label
+                v-text="$t('softwareQualityApp.taskInitialOption.opcaoEscolhida')"
+                for="task-initial-option-opcaoEscolhida"
+                >Opcao Escolhida</label
               >
               <select
                 class="form-control"
-                id="task-receba-email-c-19-recebaEmail"
-                data-cy="recebaEmail"
-                name="recebaEmail"
-                v-model="taskContext.informacoesProcess.informacoes.recebaEmail"
+                id="task-initial-option-opcaoEscolhida"
+                data-cy="opcaoEscolhida"
+                name="opcaoEscolhida"
+                v-model="taskContext.informacoesProcess.informacoes.opcaoEscolhida"
               >
                 <option v-bind:value="null"></option>
                 <option
                   v-bind:value="
-                    taskContext.informacoesProcess.informacoes.recebaEmail &&
-                    recebaEmailOption.id === taskContext.informacoesProcess.informacoes.recebaEmail.id
-                      ? taskContext.informacoesProcess.informacoes.recebaEmail
-                      : recebaEmailOption
+                    taskContext.informacoesProcess.informacoes.opcaoEscolhida &&
+                    opcaoEscolhidaOption.id === taskContext.informacoesProcess.informacoes.opcaoEscolhida.id
+                      ? taskContext.informacoesProcess.informacoes.opcaoEscolhida
+                      : opcaoEscolhidaOption
                   "
-                  v-for="recebaEmailOption in recebaEmails"
-                  :key="recebaEmailOption.id"
+                  v-for="opcaoEscolhidaOption in opcaoEscolhidas"
+                  :key="opcaoEscolhidaOption.id"
                 >
-                  {{ recebaEmailOption.opcaoEmail }}
+                  {{ opcaoEscolhidaOption.opcaoInicial }}
                 </option>
               </select>
             </div>
@@ -51,4 +51,4 @@
   </div>
 </template>
 
-<script lang="ts" src="./task-receba-email-c-19-execute.component.ts"></script>
+<script lang="ts" src="./task-initial-option-execute.component.ts"></script>

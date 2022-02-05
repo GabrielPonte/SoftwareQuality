@@ -14,9 +14,6 @@
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="receber_email" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="receba_email_id" type="bigint">
                 <constraints nullable="true" />
             </column>

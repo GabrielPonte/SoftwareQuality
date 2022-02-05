@@ -73,9 +73,6 @@ public class TaskBuscaPostoService {
         InformacoesDTO informacoesDTO = informacoesService
             .findOne(taskBuscaPostoContext.getInformacoesProcess().getInformacoes().getId())
             .orElseThrow();
-        informacoesDTO.setNomeDoPosto(taskBuscaPostoContext.getInformacoesProcess().getInformacoes().getNomeDoPosto());
-        informacoesDTO.setEstadoDoPosto(taskBuscaPostoContext.getInformacoesProcess().getInformacoes().getEstadoDoPosto());
-        informacoesDTO.setCidadeDoPosto(taskBuscaPostoContext.getInformacoesProcess().getInformacoes().getCidadeDoPosto());
         informacoesDTO.setPostoSaude(taskBuscaPostoContext.getInformacoesProcess().getInformacoes().getPostoSaude());
         informacoesService.save(informacoesDTO);
     }

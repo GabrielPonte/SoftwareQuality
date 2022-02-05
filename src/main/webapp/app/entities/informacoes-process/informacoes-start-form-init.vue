@@ -17,26 +17,6 @@
                 <div class="form-group">
                   <label
                     class="form-control-label"
-                    v-text="$t('softwareQualityApp.informacoesStartForm.opcao')"
-                    for="informacoes-start-form-opcao"
-                    >Opcao</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="opcao"
-                    id="informacoes-start-form-opcao"
-                    data-cy="opcao"
-                    :class="{
-                      valid: !$v.informacoesProcess.informacoes.opcao.$invalid,
-                      invalid: $v.informacoesProcess.informacoes.opcao.$invalid,
-                    }"
-                    v-model="$v.informacoesProcess.informacoes.opcao.$model"
-                  />
-                </div>
-                <div class="form-group">
-                  <label
-                    class="form-control-label"
                     v-text="$t('softwareQualityApp.informacoesStartForm.nomeCompleto')"
                     for="informacoes-start-form-nomeCompleto"
                     >Nome Completo</label
@@ -93,35 +73,6 @@
                     }"
                     v-model.number="$v.informacoesProcess.informacoes.idade.$model"
                   />
-                </div>
-                <div class="form-group">
-                  <label
-                    class="form-control-label"
-                    v-text="$t('softwareQualityApp.informacoesStartForm.opcaoEscolhida')"
-                    for="informacoes-start-form-opcaoEscolhida"
-                    >Opcao Escolhida</label
-                  >
-                  <select
-                    class="form-control"
-                    id="informacoes-start-form-opcaoEscolhida"
-                    data-cy="opcaoEscolhida"
-                    name="opcaoEscolhida"
-                    v-model="informacoesProcess.informacoes.opcaoEscolhida"
-                  >
-                    <option v-bind:value="null"></option>
-                    <option
-                      v-bind:value="
-                        informacoesProcess.informacoes.opcaoEscolhida &&
-                        opcaoEscolhidaOption.id === informacoesProcess.informacoes.opcaoEscolhida.id
-                          ? informacoesProcess.informacoes.opcaoEscolhida
-                          : opcaoEscolhidaOption
-                      "
-                      v-for="opcaoEscolhidaOption in opcaoEscolhidas"
-                      :key="opcaoEscolhidaOption.id"
-                    >
-                      {{ opcaoEscolhidaOption.opcaoInicial }}
-                    </option>
-                  </select>
                 </div>
               </div>
             </template>

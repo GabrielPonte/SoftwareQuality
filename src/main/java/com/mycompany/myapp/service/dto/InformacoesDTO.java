@@ -11,8 +11,6 @@ public class InformacoesDTO implements Serializable {
 
     private Long id;
 
-    private String opcao;
-
     private String nomeCompleto;
 
     private String cpf;
@@ -35,21 +33,9 @@ public class InformacoesDTO implements Serializable {
 
     private String cep;
 
-    private String nomeDoPosto;
-
-    private String estadoDoPosto;
-
-    private String cidadeDoPosto;
-
     private LocalDate data;
 
     private String hora;
-
-    private String tipoDeInformacao;
-
-    private String local;
-
-    private String receberEmail;
 
     private LocalDesejadoDTO localDesejado;
 
@@ -67,14 +53,6 @@ public class InformacoesDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getOpcao() {
-        return opcao;
-    }
-
-    public void setOpcao(String opcao) {
-        this.opcao = opcao;
     }
 
     public String getNomeCompleto() {
@@ -165,30 +143,6 @@ public class InformacoesDTO implements Serializable {
         this.cep = cep;
     }
 
-    public String getNomeDoPosto() {
-        return nomeDoPosto;
-    }
-
-    public void setNomeDoPosto(String nomeDoPosto) {
-        this.nomeDoPosto = nomeDoPosto;
-    }
-
-    public String getEstadoDoPosto() {
-        return estadoDoPosto;
-    }
-
-    public void setEstadoDoPosto(String estadoDoPosto) {
-        this.estadoDoPosto = estadoDoPosto;
-    }
-
-    public String getCidadeDoPosto() {
-        return cidadeDoPosto;
-    }
-
-    public void setCidadeDoPosto(String cidadeDoPosto) {
-        this.cidadeDoPosto = cidadeDoPosto;
-    }
-
     public LocalDate getData() {
         return data;
     }
@@ -203,30 +157,6 @@ public class InformacoesDTO implements Serializable {
 
     public void setHora(String hora) {
         this.hora = hora;
-    }
-
-    public String getTipoDeInformacao() {
-        return tipoDeInformacao;
-    }
-
-    public void setTipoDeInformacao(String tipoDeInformacao) {
-        this.tipoDeInformacao = tipoDeInformacao;
-    }
-
-    public String getLocal() {
-        return local;
-    }
-
-    public void setLocal(String local) {
-        this.local = local;
-    }
-
-    public String getReceberEmail() {
-        return receberEmail;
-    }
-
-    public void setReceberEmail(String receberEmail) {
-        this.receberEmail = receberEmail;
     }
 
     public LocalDesejadoDTO getLocalDesejado() {
@@ -295,7 +225,6 @@ public class InformacoesDTO implements Serializable {
     public String toString() {
         return "InformacoesDTO{" +
             "id=" + getId() +
-            ", opcao='" + getOpcao() + "'" +
             ", nomeCompleto='" + getNomeCompleto() + "'" +
             ", cpf='" + getCpf() + "'" +
             ", email='" + getEmail() + "'" +
@@ -307,14 +236,8 @@ public class InformacoesDTO implements Serializable {
             ", endereco='" + getEndereco() + "'" +
             ", complemento='" + getComplemento() + "'" +
             ", cep='" + getCep() + "'" +
-            ", nomeDoPosto='" + getNomeDoPosto() + "'" +
-            ", estadoDoPosto='" + getEstadoDoPosto() + "'" +
-            ", cidadeDoPosto='" + getCidadeDoPosto() + "'" +
             ", data='" + getData() + "'" +
             ", hora='" + getHora() + "'" +
-            ", tipoDeInformacao='" + getTipoDeInformacao() + "'" +
-            ", local='" + getLocal() + "'" +
-            ", receberEmail='" + getReceberEmail() + "'" +
             ", localDesejado=" + getLocalDesejado() +
             ", opcaoEscolhida=" + getOpcaoEscolhida() +
             ", postoSaude=" + getPostoSaude() +

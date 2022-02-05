@@ -38,22 +38,15 @@ describe('Service Tests', () => {
         'AAAAAAA',
         'AAAAAAA',
         'AAAAAAA',
-        'AAAAAAA',
         0,
         'AAAAAAA',
         0,
-        'AAAAAAA',
-        'AAAAAAA',
-        'AAAAAAA',
         'AAAAAAA',
         'AAAAAAA',
         'AAAAAAA',
         'AAAAAAA',
         'AAAAAAA',
         currentDate,
-        'AAAAAAA',
-        'AAAAAAA',
-        'AAAAAAA',
         'AAAAAAA'
       );
     });
@@ -86,7 +79,6 @@ describe('Service Tests', () => {
       it('should return a list of Informacoes', async () => {
         const returnedFromService = Object.assign(
           {
-            opcao: 'BBBBBB',
             nomeCompleto: 'BBBBBB',
             cpf: 'BBBBBB',
             email: 'BBBBBB',
@@ -98,14 +90,8 @@ describe('Service Tests', () => {
             endereco: 'BBBBBB',
             complemento: 'BBBBBB',
             cep: 'BBBBBB',
-            nomeDoPosto: 'BBBBBB',
-            estadoDoPosto: 'BBBBBB',
-            cidadeDoPosto: 'BBBBBB',
             data: dayjs(currentDate).format(DATE_FORMAT),
             hora: 'BBBBBB',
-            tipoDeInformacao: 'BBBBBB',
-            local: 'BBBBBB',
-            receberEmail: 'BBBBBB',
           },
           elemDefault
         );

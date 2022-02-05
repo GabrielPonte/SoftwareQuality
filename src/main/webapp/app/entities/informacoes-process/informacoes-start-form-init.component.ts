@@ -1,8 +1,5 @@
 import { Component, Vue, Inject } from 'vue-property-decorator';
 
-import OpcaoEscolhidaService from '@/entities/opcao-escolhida/opcao-escolhida.service'; //
-import { IOpcaoEscolhida } from '@/shared/model/opcao-escolhida.model';
-
 import { IInformacoesProcess, InformacoesProcess } from '@/shared/model/informacoes-process.model';
 
 import { ProcessInstance, ProcessDefinitionService } from 'akip-vue-community';
@@ -13,7 +10,6 @@ import InformacoesProcessService from './informacoes-process.service';
 const validations: any = {
   informacoesProcess: {
     informacoes: {
-      opcao: {},
       nomeCompleto: {},
       email: {},
       idade: {},
@@ -31,10 +27,6 @@ export default class InformacoesStartFormInitComponent extends Vue {
 
   public bpmnProcessDefinitionId: string = 'InformacoesProcess';
   public informacoesProcess: IInformacoesProcess = new InformacoesProcess();
-
-  @Inject('opcaoEscolhidaService') private opcaoEscolhidaService: () => OpcaoEscolhidaService;
-
-  public opcaoEscolhidas: IOpcaoEscolhida[] = [];
 
   public isSaving = false;
   public currentLanguage = '';
@@ -88,10 +80,5 @@ export default class InformacoesStartFormInitComponent extends Vue {
       this.informacoesProcess.processInstance = new ProcessInstance();
       this.informacoesProcess.processInstance.processDefinition = res;
     });
-    this.opcaoEscolhidaService()
-      .retrieve()
-      .then(res => {
-        this.opcaoEscolhidas = res.data;
-      });
   }
 }

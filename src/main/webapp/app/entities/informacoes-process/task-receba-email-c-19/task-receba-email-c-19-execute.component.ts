@@ -9,9 +9,7 @@ import { TaskRecebaEmailC19Context } from './task-receba-email-c-19.model';
 const validations: any = {
   taskContext: {
     informacoesProcess: {
-      informacoes: {
-        receberEmail: {},
-      },
+      informacoes: {},
     },
   },
 };
