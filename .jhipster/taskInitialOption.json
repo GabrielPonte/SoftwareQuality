@@ -2,16 +2,16 @@
   "fields": [],
   "relationships": [
     {
-      "relationshipName": "postoSaude",
-      "otherEntityName": "postoSaude",
+      "relationshipName": "opcaoEscolhida",
+      "otherEntityName": "opcaoEscolhida",
       "relationshipType": "many-to-one",
-      "otherEntityField": "nomePosto"
+      "otherEntityField": "opcaoInicial"
     }
   ],
   "entityType": "user-task-form",
   "processBpmnId": "InformacoesProcess",
   "processEntityName": "InformacoesProcess",
-  "taskBpmnId": "taskBuscaPosto",
+  "taskBpmnId": "taskInitialOption",
   "domainEntityName": "Informacoes",
   "service": "serviceClass",
   "dto": "mapstruct",
@@ -19,6 +19,6 @@
   "readOnly": false,
   "pagination": "no",
   "skipFakeData": true,
-  "name": "taskBuscaPosto",
-  "changelogDate": "20210401000005"
+  "name": "taskInitialOption",
+  "changelogDate": "20210401000006"
 }

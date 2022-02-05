@@ -1,10 +1,6 @@
 {
   "fields": [
     {
-      "fieldName": "opcao",
-      "fieldType": "String"
-    },
-    {
       "fieldName": "nomeCompleto",
       "fieldType": "String"
     },
@@ -17,14 +13,7 @@
       "fieldType": "Integer"
     }
   ],
-  "relationships": [
-    {
-      "relationshipName": "opcaoEscolhida",
-      "otherEntityName": "opcaoEscolhida",
-      "relationshipType": "many-to-one",
-      "otherEntityField": "opcaoInicial"
-    }
-  ],
+  "relationships": [],
   "entityType": "start-form",
   "processBpmnId": "InformacoesProcess",
   "processEntityName": "InformacoesProcess",

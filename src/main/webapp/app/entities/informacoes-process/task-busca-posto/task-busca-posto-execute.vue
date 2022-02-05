@@ -11,66 +11,6 @@
             <div class="form-group">
               <label
                 class="form-control-label"
-                v-text="$t('softwareQualityApp.taskBuscaPosto.nomeDoPosto')"
-                for="task-busca-posto-nomeDoPosto"
-                >Nome Do Posto</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                name="nomeDoPosto"
-                id="task-busca-posto-nomeDoPosto"
-                data-cy="nomeDoPosto"
-                :class="{
-                  valid: !$v.taskContext.informacoesProcess.informacoes.nomeDoPosto.$invalid,
-                  invalid: $v.taskContext.informacoesProcess.informacoes.nomeDoPosto.$invalid,
-                }"
-                v-model="$v.taskContext.informacoesProcess.informacoes.nomeDoPosto.$model"
-              />
-            </div>
-            <div class="form-group">
-              <label
-                class="form-control-label"
-                v-text="$t('softwareQualityApp.taskBuscaPosto.estadoDoPosto')"
-                for="task-busca-posto-estadoDoPosto"
-                >Estado Do Posto</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                name="estadoDoPosto"
-                id="task-busca-posto-estadoDoPosto"
-                data-cy="estadoDoPosto"
-                :class="{
-                  valid: !$v.taskContext.informacoesProcess.informacoes.estadoDoPosto.$invalid,
-                  invalid: $v.taskContext.informacoesProcess.informacoes.estadoDoPosto.$invalid,
-                }"
-                v-model="$v.taskContext.informacoesProcess.informacoes.estadoDoPosto.$model"
-              />
-            </div>
-            <div class="form-group">
-              <label
-                class="form-control-label"
-                v-text="$t('softwareQualityApp.taskBuscaPosto.cidadeDoPosto')"
-                for="task-busca-posto-cidadeDoPosto"
-                >Cidade Do Posto</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                name="cidadeDoPosto"
-                id="task-busca-posto-cidadeDoPosto"
-                data-cy="cidadeDoPosto"
-                :class="{
-                  valid: !$v.taskContext.informacoesProcess.informacoes.cidadeDoPosto.$invalid,
-                  invalid: $v.taskContext.informacoesProcess.informacoes.cidadeDoPosto.$invalid,
-                }"
-                v-model="$v.taskContext.informacoesProcess.informacoes.cidadeDoPosto.$model"
-              />
-            </div>
-            <div class="form-group">
-              <label
-                class="form-control-label"
                 v-text="$t('softwareQualityApp.taskBuscaPosto.postoSaude')"
                 for="task-busca-posto-postoSaude"
                 >Posto Saude</label

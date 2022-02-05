@@ -33,9 +33,6 @@ import org.springframework.transaction.annotation.Transactional;
 @WithMockUser
 class InformacoesResourceIT {
 
-    private static final String DEFAULT_OPCAO = "AAAAAAAAAA";
-    private static final String UPDATED_OPCAO = "BBBBBBBBBB";
-
     private static final String DEFAULT_NOME_COMPLETO = "AAAAAAAAAA";
     private static final String UPDATED_NOME_COMPLETO = "BBBBBBBBBB";
 
@@ -69,29 +66,11 @@ class InformacoesResourceIT {
     private static final String DEFAULT_CEP = "AAAAAAAAAA";
     private static final String UPDATED_CEP = "BBBBBBBBBB";
 
-    private static final String DEFAULT_NOME_DO_POSTO = "AAAAAAAAAA";
-    private static final String UPDATED_NOME_DO_POSTO = "BBBBBBBBBB";
-
-    private static final String DEFAULT_ESTADO_DO_POSTO = "AAAAAAAAAA";
-    private static final String UPDATED_ESTADO_DO_POSTO = "BBBBBBBBBB";
-
-    private static final String DEFAULT_CIDADE_DO_POSTO = "AAAAAAAAAA";
-    private static final String UPDATED_CIDADE_DO_POSTO = "BBBBBBBBBB";
-
     private static final LocalDate DEFAULT_DATA = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_DATA = LocalDate.now(ZoneId.systemDefault());
 
     private static final String DEFAULT_HORA = "AAAAAAAAAA";
     private static final String UPDATED_HORA = "BBBBBBBBBB";
-
-    private static final String DEFAULT_TIPO_DE_INFORMACAO = "AAAAAAAAAA";
-    private static final String UPDATED_TIPO_DE_INFORMACAO = "BBBBBBBBBB";
-
-    private static final String DEFAULT_LOCAL = "AAAAAAAAAA";
-    private static final String UPDATED_LOCAL = "BBBBBBBBBB";
-
-    private static final String DEFAULT_RECEBER_EMAIL = "AAAAAAAAAA";
-    private static final String UPDATED_RECEBER_EMAIL = "BBBBBBBBBB";
 
     private static final String ENTITY_API_URL = "/api/informacoes";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -121,7 +100,6 @@ class InformacoesResourceIT {
      */
     public static Informacoes createEntity(EntityManager em) {
         Informacoes informacoes = new Informacoes()
-            .opcao(DEFAULT_OPCAO)
             .nomeCompleto(DEFAULT_NOME_COMPLETO)
             .cpf(DEFAULT_CPF)
             .email(DEFAULT_EMAIL)
@@ -133,14 +111,8 @@ class InformacoesResourceIT {
             .endereco(DEFAULT_ENDERECO)
             .complemento(DEFAULT_COMPLEMENTO)
             .cep(DEFAULT_CEP)
-            .nomeDoPosto(DEFAULT_NOME_DO_POSTO)
-            .estadoDoPosto(DEFAULT_ESTADO_DO_POSTO)
-            .cidadeDoPosto(DEFAULT_CIDADE_DO_POSTO)
             .data(DEFAULT_DATA)
-            .hora(DEFAULT_HORA)
-            .tipoDeInformacao(DEFAULT_TIPO_DE_INFORMACAO)
-            .local(DEFAULT_LOCAL)
-            .receberEmail(DEFAULT_RECEBER_EMAIL);
+            .hora(DEFAULT_HORA);
         return informacoes;
     }
 
@@ -152,7 +124,6 @@ class InformacoesResourceIT {
      */
     public static Informacoes createUpdatedEntity(EntityManager em) {
         Informacoes informacoes = new Informacoes()
-            .opcao(UPDATED_OPCAO)
             .nomeCompleto(UPDATED_NOME_COMPLETO)
             .cpf(UPDATED_CPF)
             .email(UPDATED_EMAIL)
@@ -164,14 +135,8 @@ class InformacoesResourceIT {
             .endereco(UPDATED_ENDERECO)
             .complemento(UPDATED_COMPLEMENTO)
             .cep(UPDATED_CEP)
-            .nomeDoPosto(UPDATED_NOME_DO_POSTO)
-            .estadoDoPosto(UPDATED_ESTADO_DO_POSTO)
-            .cidadeDoPosto(UPDATED_CIDADE_DO_POSTO)
             .data(UPDATED_DATA)
-            .hora(UPDATED_HORA)
-            .tipoDeInformacao(UPDATED_TIPO_DE_INFORMACAO)
-            .local(UPDATED_LOCAL)
-            .receberEmail(UPDATED_RECEBER_EMAIL);
+            .hora(UPDATED_HORA);
         return informacoes;
     }
 
@@ -192,7 +157,6 @@ class InformacoesResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(informacoes.getId().intValue())))
-            .andExpect(jsonPath("$.[*].opcao").value(hasItem(DEFAULT_OPCAO)))
             .andExpect(jsonPath("$.[*].nomeCompleto").value(hasItem(DEFAULT_NOME_COMPLETO)))
             .andExpect(jsonPath("$.[*].cpf").value(hasItem(DEFAULT_CPF)))
             .andExpect(jsonPath("$.[*].email").value(hasItem(DEFAULT_EMAIL)))
@@ -204,14 +168,8 @@ class InformacoesResourceIT {
             .andExpect(jsonPath("$.[*].endereco").value(hasItem(DEFAULT_ENDERECO)))
             .andExpect(jsonPath("$.[*].complemento").value(hasItem(DEFAULT_COMPLEMENTO)))
             .andExpect(jsonPath("$.[*].cep").value(hasItem(DEFAULT_CEP)))
-            .andExpect(jsonPath("$.[*].nomeDoPosto").value(hasItem(DEFAULT_NOME_DO_POSTO)))
-            .andExpect(jsonPath("$.[*].estadoDoPosto").value(hasItem(DEFAULT_ESTADO_DO_POSTO)))
-            .andExpect(jsonPath("$.[*].cidadeDoPosto").value(hasItem(DEFAULT_CIDADE_DO_POSTO)))
             .andExpect(jsonPath("$.[*].data").value(hasItem(DEFAULT_DATA.toString())))
-            .andExpect(jsonPath("$.[*].hora").value(hasItem(DEFAULT_HORA)))
-            .andExpect(jsonPath("$.[*].tipoDeInformacao").value(hasItem(DEFAULT_TIPO_DE_INFORMACAO)))
-            .andExpect(jsonPath("$.[*].local").value(hasItem(DEFAULT_LOCAL)))
-            .andExpect(jsonPath("$.[*].receberEmail").value(hasItem(DEFAULT_RECEBER_EMAIL)));
+            .andExpect(jsonPath("$.[*].hora").value(hasItem(DEFAULT_HORA)));
     }
 
     @Test
@@ -226,7 +184,6 @@ class InformacoesResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(informacoes.getId().intValue()))
-            .andExpect(jsonPath("$.opcao").value(DEFAULT_OPCAO))
             .andExpect(jsonPath("$.nomeCompleto").value(DEFAULT_NOME_COMPLETO))
             .andExpect(jsonPath("$.cpf").value(DEFAULT_CPF))
             .andExpect(jsonPath("$.email").value(DEFAULT_EMAIL))
@@ -238,14 +195,8 @@ class InformacoesResourceIT {
             .andExpect(jsonPath("$.endereco").value(DEFAULT_ENDERECO))
             .andExpect(jsonPath("$.complemento").value(DEFAULT_COMPLEMENTO))
             .andExpect(jsonPath("$.cep").value(DEFAULT_CEP))
-            .andExpect(jsonPath("$.nomeDoPosto").value(DEFAULT_NOME_DO_POSTO))
-            .andExpect(jsonPath("$.estadoDoPosto").value(DEFAULT_ESTADO_DO_POSTO))
-            .andExpect(jsonPath("$.cidadeDoPosto").value(DEFAULT_CIDADE_DO_POSTO))
             .andExpect(jsonPath("$.data").value(DEFAULT_DATA.toString()))
-            .andExpect(jsonPath("$.hora").value(DEFAULT_HORA))
-            .andExpect(jsonPath("$.tipoDeInformacao").value(DEFAULT_TIPO_DE_INFORMACAO))
-            .andExpect(jsonPath("$.local").value(DEFAULT_LOCAL))
-            .andExpect(jsonPath("$.receberEmail").value(DEFAULT_RECEBER_EMAIL));
+            .andExpect(jsonPath("$.hora").value(DEFAULT_HORA));
     }
 
     @Test

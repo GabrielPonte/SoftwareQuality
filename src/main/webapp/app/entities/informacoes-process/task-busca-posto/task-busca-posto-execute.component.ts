@@ -9,11 +9,7 @@ import { TaskBuscaPostoContext } from './task-busca-posto.model';
 const validations: any = {
   taskContext: {
     informacoesProcess: {
-      informacoes: {
-        nomeDoPosto: {},
-        estadoDoPosto: {},
-        cidadeDoPosto: {},
-      },
+      informacoes: {},
     },
   },
 };

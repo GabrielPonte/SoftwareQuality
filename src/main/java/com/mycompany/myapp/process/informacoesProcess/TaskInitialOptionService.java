@@ -12,7 +12,7 @@ import org.akip.service.mapper.TaskInstanceMapper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TaskRecebaEmailC19Service {
+public class TaskInitialOptionService {
 
     private final TaskInstanceService taskInstanceService;
 
@@ -24,17 +24,17 @@ public class TaskRecebaEmailC19Service {
 
     private final TaskInstanceMapper taskInstanceMapper;
 
-    private final TaskRecebaEmailC19Mapper taskRecebaEmailC19Mapper;
+    private final TaskInitialOptionMapper taskInitialOptionMapper;
 
     private final InformacoesProcessMapper informacoesProcessMapper;
 
-    public TaskRecebaEmailC19Service(
+    public TaskInitialOptionService(
         TaskInstanceService taskInstanceService,
         InformacoesService informacoesService,
         TaskInstanceRepository taskInstanceRepository,
         InformacoesProcessRepository informacoesProcessRepository,
         TaskInstanceMapper taskInstanceMapper,
-        TaskRecebaEmailC19Mapper taskRecebaEmailC19Mapper,
+        TaskInitialOptionMapper taskInitialOptionMapper,
         InformacoesProcessMapper informacoesProcessMapper
     ) {
         this.taskInstanceService = taskInstanceService;
@@ -42,11 +42,11 @@ public class TaskRecebaEmailC19Service {
         this.taskInstanceRepository = taskInstanceRepository;
         this.informacoesProcessRepository = informacoesProcessRepository;
         this.taskInstanceMapper = taskInstanceMapper;
-        this.taskRecebaEmailC19Mapper = taskRecebaEmailC19Mapper;
+        this.taskInitialOptionMapper = taskInitialOptionMapper;
         this.informacoesProcessMapper = informacoesProcessMapper;
     }
 
-    public TaskRecebaEmailC19ContextDTO loadContext(Long taskInstanceId) {
+    public TaskInitialOptionContextDTO loadContext(Long taskInstanceId) {
         TaskInstanceDTO taskInstanceDTO = taskInstanceRepository
             .findById(taskInstanceId)
             .map(taskInstanceMapper::toDTOLoadTaskContext)
@@ -54,35 +54,35 @@ public class TaskRecebaEmailC19Service {
 
         InformacoesProcessDTO informacoesProcess = informacoesProcessRepository
             .findByProcessInstanceId(taskInstanceDTO.getProcessInstance().getId())
-            .map(taskRecebaEmailC19Mapper::toInformacoesProcessDTO)
+            .map(taskInitialOptionMapper::toInformacoesProcessDTO)
             .orElseThrow();
 
-        TaskRecebaEmailC19ContextDTO taskRecebaEmailC19Context = new TaskRecebaEmailC19ContextDTO();
-        taskRecebaEmailC19Context.setTaskInstance(taskInstanceDTO);
-        taskRecebaEmailC19Context.setInformacoesProcess(informacoesProcess);
+        TaskInitialOptionContextDTO taskInitialOptionContext = new TaskInitialOptionContextDTO();
+        taskInitialOptionContext.setTaskInstance(taskInstanceDTO);
+        taskInitialOptionContext.setInformacoesProcess(informacoesProcess);
 
-        return taskRecebaEmailC19Context;
+        return taskInitialOptionContext;
     }
 
-    public TaskRecebaEmailC19ContextDTO claim(Long taskInstanceId) {
+    public TaskInitialOptionContextDTO claim(Long taskInstanceId) {
         taskInstanceService.claim(taskInstanceId);
         return loadContext(taskInstanceId);
     }
 
-    public void save(TaskRecebaEmailC19ContextDTO taskRecebaEmailC19Context) {
+    public void save(TaskInitialOptionContextDTO taskInitialOptionContext) {
         InformacoesDTO informacoesDTO = informacoesService
-            .findOne(taskRecebaEmailC19Context.getInformacoesProcess().getInformacoes().getId())
+            .findOne(taskInitialOptionContext.getInformacoesProcess().getInformacoes().getId())
             .orElseThrow();
-        informacoesDTO.setRecebaEmail(taskRecebaEmailC19Context.getInformacoesProcess().getInformacoes().getRecebaEmail());
+        informacoesDTO.setOpcaoEscolhida(taskInitialOptionContext.getInformacoesProcess().getInformacoes().getOpcaoEscolhida());
         informacoesService.save(informacoesDTO);
     }
 
-    public void complete(TaskRecebaEmailC19ContextDTO taskRecebaEmailC19Context) {
-        save(taskRecebaEmailC19Context);
+    public void complete(TaskInitialOptionContextDTO taskInitialOptionContext) {
+        save(taskInitialOptionContext);
         InformacoesProcessDTO informacoesProcess = informacoesProcessRepository
-            .findByProcessInstanceId(taskRecebaEmailC19Context.getInformacoesProcess().getProcessInstance().getId())
+            .findByProcessInstanceId(taskInitialOptionContext.getInformacoesProcess().getProcessInstance().getId())
             .map(informacoesProcessMapper::toDto)
             .orElseThrow();
-        taskInstanceService.complete(taskRecebaEmailC19Context.getTaskInstance(), informacoesProcess);
+        taskInstanceService.complete(taskInitialOptionContext.getTaskInstance(), informacoesProcess);
     }
 }

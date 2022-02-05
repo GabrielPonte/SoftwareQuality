@@ -7,12 +7,6 @@
         </h2>
         <dl class="row jh-entity-details">
           <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.opcao')">Opcao</span>
-          </dt>
-          <dd>
-            <span>{{ informacoes.opcao }}</span>
-          </dd>
-          <dt>
             <span v-text="$t('softwareQualityApp.informacoes.nomeCompleto')">Nome Completo</span>
           </dt>
           <dd>
@@ -79,24 +73,6 @@
             <span>{{ informacoes.cep }}</span>
           </dd>
           <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.nomeDoPosto')">Nome Do Posto</span>
-          </dt>
-          <dd>
-            <span>{{ informacoes.nomeDoPosto }}</span>
-          </dd>
-          <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.estadoDoPosto')">Estado Do Posto</span>
-          </dt>
-          <dd>
-            <span>{{ informacoes.estadoDoPosto }}</span>
-          </dd>
-          <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.cidadeDoPosto')">Cidade Do Posto</span>
-          </dt>
-          <dd>
-            <span>{{ informacoes.cidadeDoPosto }}</span>
-          </dd>
-          <dt>
             <span v-text="$t('softwareQualityApp.informacoes.data')">Data</span>
           </dt>
           <dd>
@@ -107,24 +83,6 @@
           </dt>
           <dd>
             <span>{{ informacoes.hora }}</span>
-          </dd>
-          <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.tipoDeInformacao')">Tipo De Informacao</span>
-          </dt>
-          <dd>
-            <span>{{ informacoes.tipoDeInformacao }}</span>
-          </dd>
-          <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.local')">Local</span>
-          </dt>
-          <dd>
-            <span>{{ informacoes.local }}</span>
-          </dd>
-          <dt>
-            <span v-text="$t('softwareQualityApp.informacoes.receberEmail')">Receber Email</span>
-          </dt>
-          <dd>
-            <span>{{ informacoes.receberEmail }}</span>
           </dd>
           <dt>
             <span v-text="$t('softwareQualityApp.informacoes.localDesejado')">Local Desejado</span>

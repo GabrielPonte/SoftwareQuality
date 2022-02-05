@@ -55,6 +55,10 @@ const InformacoesProcess_TaskPreencherDadosDetails = () => import('@/entities/in
 // prettier-ignore
 const InformacoesProcess_TaskPreencherDadosExecute = () => import('@/entities/informacoes-process/task-preencher-dados/task-preencher-dados-execute.vue');
 // prettier-ignore
+const InformacoesProcess_TaskInitialOptionDetails = () => import('@/entities/informacoes-process/task-initial-option/task-initial-option-details.vue');
+// prettier-ignore
+const InformacoesProcess_TaskInitialOptionExecute = () => import('@/entities/informacoes-process/task-initial-option/task-initial-option-execute.vue');
+// prettier-ignore
 const InformacoesProcess_TaskRecebaDadosC19Details = () => import('@/entities/informacoes-process/task-receba-dados-c-19/task-receba-dados-c-19-details.vue');
 // prettier-ignore
 const InformacoesProcess_TaskRecebaDadosC19Execute = () => import('@/entities/informacoes-process/task-receba-dados-c-19/task-receba-dados-c-19-execute.vue');
@@ -253,6 +257,18 @@ export default [
     path: '/process-definition/InformacoesProcess/task/taskPreencherDados/:taskInstanceId/execute',
     name: 'InformacoesProcess_TaskPreencherDadosExecute',
     component: InformacoesProcess_TaskPreencherDadosExecute,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/process-definition/InformacoesProcess/task/taskInitialOption/:taskInstanceId/view',
+    name: 'InformacoesProcess_TaskInitialOptionDetails',
+    component: InformacoesProcess_TaskInitialOptionDetails,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/process-definition/InformacoesProcess/task/taskInitialOption/:taskInstanceId/execute',
+    name: 'InformacoesProcess_TaskInitialOptionExecute',
+    component: InformacoesProcess_TaskInitialOptionExecute,
     meta: { authorities: [Authority.USER] },
   },
   {

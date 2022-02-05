@@ -18,7 +18,6 @@
         <thead>
           <tr>
             <th scope="row"><span v-text="$t('global.field.id')">ID</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.opcao')">Opcao</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.nomeCompleto')">Nome Completo</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.cpf')">Cpf</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.email')">Email</span></th>
@@ -30,14 +29,8 @@
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.endereco')">Endereco</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.complemento')">Complemento</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.cep')">Cep</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.nomeDoPosto')">Nome Do Posto</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.estadoDoPosto')">Estado Do Posto</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.cidadeDoPosto')">Cidade Do Posto</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.data')">Data</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.hora')">Hora</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.tipoDeInformacao')">Tipo De Informacao</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.local')">Local</span></th>
-            <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.receberEmail')">Receber Email</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.localDesejado')">Local Desejado</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.opcaoEscolhida')">Opcao Escolhida</span></th>
             <th scope="row"><span v-text="$t('softwareQualityApp.informacoes.postoSaude')">Posto Saude</span></th>
@@ -51,7 +44,6 @@
             <td>
               <router-link :to="{ name: 'InformacoesView', params: { informacoesId: informacoes.id } }">{{ informacoes.id }}</router-link>
             </td>
-            <td>{{ informacoes.opcao }}</td>
             <td>{{ informacoes.nomeCompleto }}</td>
             <td>{{ informacoes.cpf }}</td>
             <td>{{ informacoes.email }}</td>
@@ -63,14 +55,8 @@
             <td>{{ informacoes.endereco }}</td>
             <td>{{ informacoes.complemento }}</td>
             <td>{{ informacoes.cep }}</td>
-            <td>{{ informacoes.nomeDoPosto }}</td>
-            <td>{{ informacoes.estadoDoPosto }}</td>
-            <td>{{ informacoes.cidadeDoPosto }}</td>
             <td>{{ informacoes.data }}</td>
             <td>{{ informacoes.hora }}</td>
-            <td>{{ informacoes.tipoDeInformacao }}</td>
-            <td>{{ informacoes.local }}</td>
-            <td>{{ informacoes.receberEmail }}</td>
             <td>
               <div v-if="informacoes.localDesejado">
                 <router-link :to="{ name: 'LocalDesejadoView', params: { localDesejadoId: informacoes.localDesejado.id } }">{{
