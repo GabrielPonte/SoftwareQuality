@@ -1,17 +1,22 @@
 {
-  "fields": [],
+  "fields": [
+    {
+      "fieldName": "receberEmail",
+      "fieldType": "String"
+    }
+  ],
   "relationships": [
     {
-      "relationshipName": "tipoInformacao",
-      "otherEntityName": "tipoInformacao",
+      "relationshipName": "recebaEmail",
+      "otherEntityName": "recebaEmail",
       "relationshipType": "many-to-one",
-      "otherEntityField": "tipoInfo"
+      "otherEntityField": "opcaoEmail"
     }
   ],
   "entityType": "user-task-form",
   "processBpmnId": "InformacoesProcess",
   "processEntityName": "InformacoesProcess",
-  "taskBpmnId": "taskRecebaDadosC19",
+  "taskBpmnId": "taskRecebaEmailC19",
   "domainEntityName": "Informacoes",
   "service": "serviceClass",
   "dto": "mapstruct",
@@ -19,6 +24,6 @@
   "readOnly": false,
   "pagination": "no",
   "skipFakeData": true,
-  "name": "taskRecebaDadosC19",
+  "name": "taskRecebaEmailC19",
   "changelogDate": "20210401000006"
 }

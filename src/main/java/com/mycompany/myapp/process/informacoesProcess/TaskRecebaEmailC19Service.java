@@ -12,7 +12,7 @@ import org.akip.service.mapper.TaskInstanceMapper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TaskRecebaDadosC19Service {
+public class TaskRecebaEmailC19Service {
 
     private final TaskInstanceService taskInstanceService;
 
@@ -24,17 +24,17 @@ public class TaskRecebaDadosC19Service {
 
     private final TaskInstanceMapper taskInstanceMapper;
 
-    private final TaskRecebaDadosC19Mapper taskRecebaDadosC19Mapper;
+    private final TaskRecebaEmailC19Mapper taskRecebaEmailC19Mapper;
 
     private final InformacoesProcessMapper informacoesProcessMapper;
 
-    public TaskRecebaDadosC19Service(
+    public TaskRecebaEmailC19Service(
         TaskInstanceService taskInstanceService,
         InformacoesService informacoesService,
         TaskInstanceRepository taskInstanceRepository,
         InformacoesProcessRepository informacoesProcessRepository,
         TaskInstanceMapper taskInstanceMapper,
-        TaskRecebaDadosC19Mapper taskRecebaDadosC19Mapper,
+        TaskRecebaEmailC19Mapper taskRecebaEmailC19Mapper,
         InformacoesProcessMapper informacoesProcessMapper
     ) {
         this.taskInstanceService = taskInstanceService;
@@ -42,11 +42,11 @@ public class TaskRecebaDadosC19Service {
         this.taskInstanceRepository = taskInstanceRepository;
         this.informacoesProcessRepository = informacoesProcessRepository;
         this.taskInstanceMapper = taskInstanceMapper;
-        this.taskRecebaDadosC19Mapper = taskRecebaDadosC19Mapper;
+        this.taskRecebaEmailC19Mapper = taskRecebaEmailC19Mapper;
         this.informacoesProcessMapper = informacoesProcessMapper;
     }
 
-    public TaskRecebaDadosC19ContextDTO loadContext(Long taskInstanceId) {
+    public TaskRecebaEmailC19ContextDTO loadContext(Long taskInstanceId) {
         TaskInstanceDTO taskInstanceDTO = taskInstanceRepository
             .findById(taskInstanceId)
             .map(taskInstanceMapper::toDTOLoadTaskContext)
@@ -54,35 +54,36 @@ public class TaskRecebaDadosC19Service {
 
         InformacoesProcessDTO informacoesProcess = informacoesProcessRepository
             .findByProcessInstanceId(taskInstanceDTO.getProcessInstance().getId())
-            .map(taskRecebaDadosC19Mapper::toInformacoesProcessDTO)
+            .map(taskRecebaEmailC19Mapper::toInformacoesProcessDTO)
             .orElseThrow();
 
-        TaskRecebaDadosC19ContextDTO taskRecebaDadosC19Context = new TaskRecebaDadosC19ContextDTO();
-        taskRecebaDadosC19Context.setTaskInstance(taskInstanceDTO);
-        taskRecebaDadosC19Context.setInformacoesProcess(informacoesProcess);
+        TaskRecebaEmailC19ContextDTO taskRecebaEmailC19Context = new TaskRecebaEmailC19ContextDTO();
+        taskRecebaEmailC19Context.setTaskInstance(taskInstanceDTO);
+        taskRecebaEmailC19Context.setInformacoesProcess(informacoesProcess);
 
-        return taskRecebaDadosC19Context;
+        return taskRecebaEmailC19Context;
     }
 
-    public TaskRecebaDadosC19ContextDTO claim(Long taskInstanceId) {
+    public TaskRecebaEmailC19ContextDTO claim(Long taskInstanceId) {
         taskInstanceService.claim(taskInstanceId);
         return loadContext(taskInstanceId);
     }
 
-    public void save(TaskRecebaDadosC19ContextDTO taskRecebaDadosC19Context) {
+    public void save(TaskRecebaEmailC19ContextDTO taskRecebaEmailC19Context) {
         InformacoesDTO informacoesDTO = informacoesService
-            .findOne(taskRecebaDadosC19Context.getInformacoesProcess().getInformacoes().getId())
+            .findOne(taskRecebaEmailC19Context.getInformacoesProcess().getInformacoes().getId())
             .orElseThrow();
-        informacoesDTO.setTipoInformacao(taskRecebaDadosC19Context.getInformacoesProcess().getInformacoes().getTipoInformacao());
+        informacoesDTO.setReceberEmail(taskRecebaEmailC19Context.getInformacoesProcess().getInformacoes().getReceberEmail());
+        informacoesDTO.setRecebaEmail(taskRecebaEmailC19Context.getInformacoesProcess().getInformacoes().getRecebaEmail());
         informacoesService.save(informacoesDTO);
     }
 
-    public void complete(TaskRecebaDadosC19ContextDTO taskRecebaDadosC19Context) {
-        save(taskRecebaDadosC19Context);
+    public void complete(TaskRecebaEmailC19ContextDTO taskRecebaEmailC19Context) {
+        save(taskRecebaEmailC19Context);
         InformacoesProcessDTO informacoesProcess = informacoesProcessRepository
-            .findByProcessInstanceId(taskRecebaDadosC19Context.getInformacoesProcess().getProcessInstance().getId())
+            .findByProcessInstanceId(taskRecebaEmailC19Context.getInformacoesProcess().getProcessInstance().getId())
             .map(informacoesProcessMapper::toDto)
             .orElseThrow();
-        taskInstanceService.complete(taskRecebaDadosC19Context.getTaskInstance(), informacoesProcess);
+        taskInstanceService.complete(taskRecebaEmailC19Context.getTaskInstance(), informacoesProcess);
     }
 }

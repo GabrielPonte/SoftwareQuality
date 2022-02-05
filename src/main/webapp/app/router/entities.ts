@@ -58,6 +58,14 @@ const InformacoesProcess_TaskPreencherDadosExecute = () => import('@/entities/in
 const InformacoesProcess_TaskRecebaDadosC19Details = () => import('@/entities/informacoes-process/task-receba-dados-c-19/task-receba-dados-c-19-details.vue');
 // prettier-ignore
 const InformacoesProcess_TaskRecebaDadosC19Execute = () => import('@/entities/informacoes-process/task-receba-dados-c-19/task-receba-dados-c-19-execute.vue');
+// prettier-ignore
+const InformacoesProcess_TaskRecebaEmailC19Details = () => import('@/entities/informacoes-process/task-receba-email-c-19/task-receba-email-c-19-details.vue');
+// prettier-ignore
+const InformacoesProcess_TaskRecebaEmailC19Execute = () => import('@/entities/informacoes-process/task-receba-email-c-19/task-receba-email-c-19-execute.vue');
+// prettier-ignore
+const InformacoesProcess_TaskRecebaLocalC19Details = () => import('@/entities/informacoes-process/task-receba-local-c-19/task-receba-local-c-19-details.vue');
+// prettier-ignore
+const InformacoesProcess_TaskRecebaLocalC19Execute = () => import('@/entities/informacoes-process/task-receba-local-c-19/task-receba-local-c-19-execute.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 export default [
@@ -257,6 +265,30 @@ export default [
     path: '/process-definition/InformacoesProcess/task/taskRecebaDadosC19/:taskInstanceId/execute',
     name: 'InformacoesProcess_TaskRecebaDadosC19Execute',
     component: InformacoesProcess_TaskRecebaDadosC19Execute,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/process-definition/InformacoesProcess/task/taskRecebaEmailC19/:taskInstanceId/view',
+    name: 'InformacoesProcess_TaskRecebaEmailC19Details',
+    component: InformacoesProcess_TaskRecebaEmailC19Details,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/process-definition/InformacoesProcess/task/taskRecebaEmailC19/:taskInstanceId/execute',
+    name: 'InformacoesProcess_TaskRecebaEmailC19Execute',
+    component: InformacoesProcess_TaskRecebaEmailC19Execute,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/process-definition/InformacoesProcess/task/taskRecebaLocalC19/:taskInstanceId/view',
+    name: 'InformacoesProcess_TaskRecebaLocalC19Details',
+    component: InformacoesProcess_TaskRecebaLocalC19Details,
+    meta: { authorities: [Authority.USER] },
+  },
+  {
+    path: '/process-definition/InformacoesProcess/task/taskRecebaLocalC19/:taskInstanceId/execute',
+    name: 'InformacoesProcess_TaskRecebaLocalC19Execute',
+    component: InformacoesProcess_TaskRecebaLocalC19Execute,
     meta: { authorities: [Authority.USER] },
   },
   // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
