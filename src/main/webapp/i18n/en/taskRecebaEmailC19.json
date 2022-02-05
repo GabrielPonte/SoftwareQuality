@@ -1,0 +1,25 @@
+{
+  "softwareQualityApp": {
+    "taskRecebaEmailC19": {
+      "home": {
+        "title": "Task Receba Email C 19 S",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Receba Email C 19",
+        "createOrEditLabel": "Create or edit a Task Receba Email C 19",
+        "notFound": "No Task Receba Email C 19 S found"
+      },
+      "created": "A new Task Receba Email C 19 is created with identifier {{ param }}",
+      "updated": "A Task Receba Email C 19 is updated with identifier {{ param }}",
+      "deleted": "A Task Receba Email C 19 is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Receba Email C 19 {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Receba Email C 19"
+      },
+      "id": "ID",
+      "receberEmail": "Receber Email",
+      "recebaEmail": "Receba Email"
+    }
+  }
+}

@@ -9,30 +9,42 @@
           <template v-slot:body>
             <hr />
             <div class="form-group">
-              <label
-                class="form-control-label"
-                v-text="$t('softwareQualityApp.taskRecebaDadosC19.tipoInformacao')"
-                for="task-receba-dados-c-19-tipoInformacao"
-                >Tipo Informacao</label
-              >
+              <label class="form-control-label" v-text="$t('softwareQualityApp.taskRecebaEmailC19.receberEmail')">receberEmail</label>
               <input
-                v-if="taskContext.informacoesProcess.informacoes.tipoInformacao"
                 readonly
                 type="text"
                 class="form-control"
-                name="tipoInformacao"
-                id="informacoes-tipoInformacao"
-                data-cy="tipoInformacao"
-                :value="taskContext.informacoesProcess.informacoes.tipoInformacao.tipoInfo"
+                name="receberEmail"
+                id="informacoes-receberEmail"
+                data-cy="receberEmail"
+                v-model="taskContext.informacoesProcess.informacoes.receberEmail"
+              />
+            </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
+                v-text="$t('softwareQualityApp.taskRecebaEmailC19.recebaEmail')"
+                for="task-receba-email-c-19-recebaEmail"
+                >Receba Email</label
+              >
+              <input
+                v-if="taskContext.informacoesProcess.informacoes.recebaEmail"
+                readonly
+                type="text"
+                class="form-control"
+                name="recebaEmail"
+                id="informacoes-recebaEmail"
+                data-cy="recebaEmail"
+                :value="taskContext.informacoesProcess.informacoes.recebaEmail.opcaoEmail"
               />
               <input
                 v-else
                 readonly
                 type="text"
                 class="form-control"
-                name="tipoInformacao"
-                id="informacoes-tipoInformacao"
-                data-cy="tipoInformacao"
+                name="recebaEmail"
+                id="informacoes-recebaEmail"
+                data-cy="recebaEmail"
                 value=""
               />
             </div>
@@ -45,7 +57,7 @@
 
         <router-link
           v-if="taskContext.taskInstance.status == 'NEW' || taskContext.taskInstance.status == 'ASSIGNED'"
-          :to="`/process-definition/InformacoesProcess/task/taskRecebaDadosC19/${taskContext.taskInstance.id}/execute`"
+          :to="`/process-definition/InformacoesProcess/task/taskRecebaEmailC19/${taskContext.taskInstance.id}/execute`"
           tag="button"
           class="btn btn-primary"
           data-cy="entityDetailsButton"
@@ -57,4 +69,4 @@
   </div>
 </template>
 
-<script lang="ts" src="./task-receba-dados-c-19-details.component.ts"></script>
+<script lang="ts" src="./task-receba-email-c-19-details.component.ts"></script>

@@ -11,28 +11,28 @@
             <div class="form-group">
               <label
                 class="form-control-label"
-                v-text="$t('softwareQualityApp.taskRecebaDadosC19.tipoInformacao')"
-                for="task-receba-dados-c-19-tipoInformacao"
-                >Tipo Informacao</label
+                v-text="$t('softwareQualityApp.taskRecebaLocalC19.localDesejado')"
+                for="task-receba-local-c-19-localDesejado"
+                >Local Desejado</label
               >
               <input
-                v-if="taskContext.informacoesProcess.informacoes.tipoInformacao"
+                v-if="taskContext.informacoesProcess.informacoes.localDesejado"
                 readonly
                 type="text"
                 class="form-control"
-                name="tipoInformacao"
-                id="informacoes-tipoInformacao"
-                data-cy="tipoInformacao"
-                :value="taskContext.informacoesProcess.informacoes.tipoInformacao.tipoInfo"
+                name="localDesejado"
+                id="informacoes-localDesejado"
+                data-cy="localDesejado"
+                :value="taskContext.informacoesProcess.informacoes.localDesejado.localCovid"
               />
               <input
                 v-else
                 readonly
                 type="text"
                 class="form-control"
-                name="tipoInformacao"
-                id="informacoes-tipoInformacao"
-                data-cy="tipoInformacao"
+                name="localDesejado"
+                id="informacoes-localDesejado"
+                data-cy="localDesejado"
                 value=""
               />
             </div>
@@ -45,7 +45,7 @@
 
         <router-link
           v-if="taskContext.taskInstance.status == 'NEW' || taskContext.taskInstance.status == 'ASSIGNED'"
-          :to="`/process-definition/InformacoesProcess/task/taskRecebaDadosC19/${taskContext.taskInstance.id}/execute`"
+          :to="`/process-definition/InformacoesProcess/task/taskRecebaLocalC19/${taskContext.taskInstance.id}/execute`"
           tag="button"
           class="btn btn-primary"
           data-cy="entityDetailsButton"
@@ -57,4 +57,4 @@
   </div>
 </template>
 
-<script lang="ts" src="./task-receba-dados-c-19-details.component.ts"></script>
+<script lang="ts" src="./task-receba-local-c-19-details.component.ts"></script>

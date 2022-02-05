@@ -12,7 +12,7 @@ import org.akip.service.mapper.TaskInstanceMapper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TaskRecebaDadosC19Service {
+public class TaskRecebaLocalC19Service {
 
     private final TaskInstanceService taskInstanceService;
 
@@ -24,17 +24,17 @@ public class TaskRecebaDadosC19Service {
 
     private final TaskInstanceMapper taskInstanceMapper;
 
-    private final TaskRecebaDadosC19Mapper taskRecebaDadosC19Mapper;
+    private final TaskRecebaLocalC19Mapper taskRecebaLocalC19Mapper;
 
     private final InformacoesProcessMapper informacoesProcessMapper;
 
-    public TaskRecebaDadosC19Service(
+    public TaskRecebaLocalC19Service(
         TaskInstanceService taskInstanceService,
         InformacoesService informacoesService,
         TaskInstanceRepository taskInstanceRepository,
         InformacoesProcessRepository informacoesProcessRepository,
         TaskInstanceMapper taskInstanceMapper,
-        TaskRecebaDadosC19Mapper taskRecebaDadosC19Mapper,
+        TaskRecebaLocalC19Mapper taskRecebaLocalC19Mapper,
         InformacoesProcessMapper informacoesProcessMapper
     ) {
         this.taskInstanceService = taskInstanceService;
@@ -42,11 +42,11 @@ public class TaskRecebaDadosC19Service {
         this.taskInstanceRepository = taskInstanceRepository;
         this.informacoesProcessRepository = informacoesProcessRepository;
         this.taskInstanceMapper = taskInstanceMapper;
-        this.taskRecebaDadosC19Mapper = taskRecebaDadosC19Mapper;
+        this.taskRecebaLocalC19Mapper = taskRecebaLocalC19Mapper;
         this.informacoesProcessMapper = informacoesProcessMapper;
     }
 
-    public TaskRecebaDadosC19ContextDTO loadContext(Long taskInstanceId) {
+    public TaskRecebaLocalC19ContextDTO loadContext(Long taskInstanceId) {
         TaskInstanceDTO taskInstanceDTO = taskInstanceRepository
             .findById(taskInstanceId)
             .map(taskInstanceMapper::toDTOLoadTaskContext)
@@ -54,35 +54,35 @@ public class TaskRecebaDadosC19Service {
 
         InformacoesProcessDTO informacoesProcess = informacoesProcessRepository
             .findByProcessInstanceId(taskInstanceDTO.getProcessInstance().getId())
-            .map(taskRecebaDadosC19Mapper::toInformacoesProcessDTO)
+            .map(taskRecebaLocalC19Mapper::toInformacoesProcessDTO)
             .orElseThrow();
 
-        TaskRecebaDadosC19ContextDTO taskRecebaDadosC19Context = new TaskRecebaDadosC19ContextDTO();
-        taskRecebaDadosC19Context.setTaskInstance(taskInstanceDTO);
-        taskRecebaDadosC19Context.setInformacoesProcess(informacoesProcess);
+        TaskRecebaLocalC19ContextDTO taskRecebaLocalC19Context = new TaskRecebaLocalC19ContextDTO();
+        taskRecebaLocalC19Context.setTaskInstance(taskInstanceDTO);
+        taskRecebaLocalC19Context.setInformacoesProcess(informacoesProcess);
 
-        return taskRecebaDadosC19Context;
+        return taskRecebaLocalC19Context;
     }
 
-    public TaskRecebaDadosC19ContextDTO claim(Long taskInstanceId) {
+    public TaskRecebaLocalC19ContextDTO claim(Long taskInstanceId) {
         taskInstanceService.claim(taskInstanceId);
         return loadContext(taskInstanceId);
     }
 
-    public void save(TaskRecebaDadosC19ContextDTO taskRecebaDadosC19Context) {
+    public void save(TaskRecebaLocalC19ContextDTO taskRecebaLocalC19Context) {
         InformacoesDTO informacoesDTO = informacoesService
-            .findOne(taskRecebaDadosC19Context.getInformacoesProcess().getInformacoes().getId())
+            .findOne(taskRecebaLocalC19Context.getInformacoesProcess().getInformacoes().getId())
             .orElseThrow();
-        informacoesDTO.setTipoInformacao(taskRecebaDadosC19Context.getInformacoesProcess().getInformacoes().getTipoInformacao());
+        informacoesDTO.setLocalDesejado(taskRecebaLocalC19Context.getInformacoesProcess().getInformacoes().getLocalDesejado());
         informacoesService.save(informacoesDTO);
     }
 
-    public void complete(TaskRecebaDadosC19ContextDTO taskRecebaDadosC19Context) {
-        save(taskRecebaDadosC19Context);
+    public void complete(TaskRecebaLocalC19ContextDTO taskRecebaLocalC19Context) {
+        save(taskRecebaLocalC19Context);
         InformacoesProcessDTO informacoesProcess = informacoesProcessRepository
-            .findByProcessInstanceId(taskRecebaDadosC19Context.getInformacoesProcess().getProcessInstance().getId())
+            .findByProcessInstanceId(taskRecebaLocalC19Context.getInformacoesProcess().getProcessInstance().getId())
             .map(informacoesProcessMapper::toDto)
             .orElseThrow();
-        taskInstanceService.complete(taskRecebaDadosC19Context.getTaskInstance(), informacoesProcess);
+        taskInstanceService.complete(taskRecebaLocalC19Context.getTaskInstance(), informacoesProcess);
     }
 }

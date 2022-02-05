@@ -4,14 +4,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
     <!--
-        Added the constraints for entity TaskRecebaDadosC19.
+        Added the constraints for entity TaskRecebaLocalC19.
     -->
     <changeSet id="20210401000006-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="tipo_informacao_id"
-                                 baseTableName="task_receba_dadosc19"
-                                 constraintName="fk_task_receba_dadosc19__tipo_informacao_id"
+        <addForeignKeyConstraint baseColumnNames="local_desejado_id"
+                                 baseTableName="task_receba_localc19"
+                                 constraintName="fk_task_receba_localc19__local_desejado_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="tipo_informacao"/>
+                                 referencedTableName="local_desejado"/>
     </changeSet>
 </databaseChangeLog>

@@ -2,16 +2,16 @@
   "fields": [],
   "relationships": [
     {
-      "relationshipName": "tipoInformacao",
-      "otherEntityName": "tipoInformacao",
+      "relationshipName": "localDesejado",
+      "otherEntityName": "localDesejado",
       "relationshipType": "many-to-one",
-      "otherEntityField": "tipoInfo"
+      "otherEntityField": "localCovid"
     }
   ],
   "entityType": "user-task-form",
   "processBpmnId": "InformacoesProcess",
   "processEntityName": "InformacoesProcess",
-  "taskBpmnId": "taskRecebaDadosC19",
+  "taskBpmnId": "taskRecebaLocalC19",
   "domainEntityName": "Informacoes",
   "service": "serviceClass",
   "dto": "mapstruct",
@@ -19,6 +19,6 @@
   "readOnly": false,
   "pagination": "no",
   "skipFakeData": true,
-  "name": "taskRecebaDadosC19",
+  "name": "taskRecebaLocalC19",
   "changelogDate": "20210401000006"
 }
