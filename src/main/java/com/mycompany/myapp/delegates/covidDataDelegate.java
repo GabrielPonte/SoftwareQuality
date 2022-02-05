@@ -85,10 +85,10 @@ public class covidDataDelegate implements JavaDelegate {
         System.out.println("=================================================");
         System.out.println("============== SISTEMA VACINA JÁ ================");
         System.out.println("=================================================");
-        System.out.println("Info:" + covidInformationType);
-        System.out.println("Local:" + covidinformationLocal);
-        System.out.println("Email:" + email_str);
-        System.out.println("Opcao:" + escolha_str);
+        System.out.println("Opcao Inicial Escolhida: " + escolha_str);
+        System.out.println("Opção de receber Email: " + email_str);
+        System.out.println("Info: " + covidInformationType);
+        System.out.println("Local: " + covidinformationLocal);
         //System.out.println("Posto:" + posto_str);
         System.out.println("=================================================");
         System.out.println("=================================================");
@@ -107,11 +107,7 @@ public class covidDataDelegate implements JavaDelegate {
         System.out.println("COVID INFORMATION DATA in " + covidinformationLocal + ":");
         System.out.println("      " + covidInformationType + ": " + int_random + ".");
         System.out.println("=================================================");
-        // // //Confirming the flight
-        // // informationTypeService.confirmFlight(pi.getInformacoes().getTipoDeInformacao());
-
-        // // //Confirming the hotel booking
-        // // informationLocalService.confirmReservation(pi.getInformacoes().getLocal());
-
+        System.out.println("=================================================");
+        System.out.println("=================================================");
     }
 }

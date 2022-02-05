@@ -1,7 +1,23 @@
 package com.mycompany.myapp.covid.delegates;
 
 import com.mycompany.myapp.domain.Informacoes;
+import com.mycompany.myapp.domain.LocalDesejado;
+import com.mycompany.myapp.domain.OpcaoEscolhida;
+import com.mycompany.myapp.domain.PostoSaude;
+import com.mycompany.myapp.domain.RecebaEmail;
+import com.mycompany.myapp.domain.TipoInformacao;
+import com.mycompany.myapp.repository.LocalDesejadoRepository;
+import com.mycompany.myapp.repository.OpcaoEscolhidaRepository;
+import com.mycompany.myapp.repository.PostoSaudeRepository;
+import com.mycompany.myapp.repository.RecebaEmailRepository;
+import com.mycompany.myapp.repository.TipoInformacaoRepository;
+import com.mycompany.myapp.service.dto.InformacoesDTO;
 import com.mycompany.myapp.service.dto.InformacoesProcessDTO;
+import com.mycompany.myapp.service.dto.LocalDesejadoDTO;
+import com.mycompany.myapp.service.dto.OpcaoEscolhidaDTO;
+import com.mycompany.myapp.service.dto.PostoSaudeDTO;
+import com.mycompany.myapp.service.dto.RecebaEmailDTO;
+import com.mycompany.myapp.service.dto.TipoInformacaoDTO;
 import java.time.LocalDate;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
@@ -11,15 +27,30 @@ import org.springframework.stereotype.Component;
 @Component
 public class agendamentoDelegate implements JavaDelegate {
 
-    // @Autowired
-    // InformationTypeService informationTypeService;
+    private final LocalDesejadoRepository localDesejadoRepo;
+    private final TipoInformacaoRepository tipoInformacaoRepo;
+    private final RecebaEmailRepository recebaEmailRepo;
+    private final OpcaoEscolhidaRepository opcaoEscolhidaRepo;
+    private final PostoSaudeRepository postoSaudeRepo;
 
-    // @Autowired
-    // InformationLocalService informationLocalService;
+    public agendamentoDelegate(
+        LocalDesejadoRepository localDesejadoRepo,
+        TipoInformacaoRepository tipoInformacaoRepo,
+        RecebaEmailRepository recebaEmailRepo,
+        OpcaoEscolhidaRepository opcaoEscolhidaRepo,
+        PostoSaudeRepository postoSaudeRepo
+    ) {
+        this.localDesejadoRepo = localDesejadoRepo;
+        this.tipoInformacaoRepo = tipoInformacaoRepo;
+        this.recebaEmailRepo = recebaEmailRepo;
+        this.opcaoEscolhidaRepo = opcaoEscolhidaRepo;
+        this.postoSaudeRepo = postoSaudeRepo;
+    }
 
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
         InformacoesProcessDTO pi = (InformacoesProcessDTO) delegateExecution.getVariable("processInstance");
+        InformacoesDTO informacoesDTO = pi.getInformacoes();
         String nomeCompleto = pi.getInformacoes().getNomeCompleto();
         String email = pi.getInformacoes().getEmail();
         Integer idade = pi.getInformacoes().getIdade();
@@ -31,12 +62,33 @@ public class agendamentoDelegate implements JavaDelegate {
         String sintomas = pi.getInformacoes().getSintomas();
         String cidade = pi.getInformacoes().getCidade();
         String estado = pi.getInformacoes().getEstado();
-        String nomeDoPosto = pi.getInformacoes().getNomeDoPosto();
-        String estadoDoPosto = pi.getInformacoes().getEstadoDoPosto();
-        String cidadeDoPosto = pi.getInformacoes().getCidadeDoPosto();
         LocalDate localDate = pi.getInformacoes().getData();
         String hora = pi.getInformacoes().getHora();
 
+        String escolha_str = "error";
+        String nomePosto = "error";
+        String estadoPosto = "error";
+        String cidadePosto = "error";
+
+        if (informacoesDTO.getOpcaoEscolhida() != null) {
+            OpcaoEscolhida opcaoEscolhida = this.opcaoEscolhidaRepo.findById(informacoesDTO.getOpcaoEscolhida().getId()).get();
+            escolha_str = opcaoEscolhida.getOpcaoInicial();
+        }
+        if (informacoesDTO.getPostoSaude() != null) {
+            PostoSaude postoSaude = this.postoSaudeRepo.findById(informacoesDTO.getPostoSaude().getId()).get();
+            nomePosto = postoSaude.getNomePosto();
+            estadoPosto = postoSaude.getEstadoPosto();
+            cidadePosto = postoSaude.getCidadePosto();
+        }
+        System.out.println("=================================================");
+        System.out.println("============== SISTEMA VACINA JÁ ================");
+        System.out.println("=================================================");
+        System.out.println("Opcao Inicial Escolhida: " + escolha_str);
+        System.out.println("Posto: " + nomePosto);
+        System.out.println("Local: " + estadoPosto + ", " + cidadePosto);
+        System.out.println("=================================================");
+        System.out.println("=================================================");
+        System.out.println("=================================================");
         //print data
         System.out.println("=================================================");
         System.out.println("             AGENDAMENTO CONFIRMADO              ");
@@ -60,16 +112,10 @@ public class agendamentoDelegate implements JavaDelegate {
         System.out.println("=================================================");
         System.out.println("Agendamento para teste de covid");
         System.out.println("=================================================");
-        System.out.println("Posto: " + nomeDoPosto);
-        System.out.println("Local: " + estadoDoPosto + ", " + cidadeDoPosto);
+        System.out.println("Posto: " + nomePosto);
+        System.out.println("Local: " + estadoPosto + ", " + cidadePosto);
         System.out.println("Data: " + localDate);
         System.out.println("Hora: " + hora);
         System.out.println("=================================================");
-        // // //Confirming the flight
-        // // informationTypeService.confirmFlight(pi.getInformacoes().getTipoDeInformacao());
-
-        // // //Confirming the hotel booking
-        // // informationLocalService.confirmReservation(pi.getInformacoes().getLocal());
-
     }
 }
