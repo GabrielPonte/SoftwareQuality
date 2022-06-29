@@ -1,0 +1,12 @@
+docker container run --name agilekip.v0.0.12 -v ${PWD}:/home/jhipster/app -d -t agilekip/generator-jhipster-agilekip:v0.0.12
+
+
+docker container exec -it agilekip.v0.0.12 bash
+cd SoftwareQuality
+jhipster --blueprints agilekip --skip-jhipster-dependencies
+
+docker container exec -it agilekip.v0.0.12 bash
+cd SoftwareQuality
+jhipster entity Informacoes --regenerate
+
+exit
